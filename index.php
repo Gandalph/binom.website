@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/funkcije.js" ></script>
 </head>
 <body>
+<!-- ovo je samo neki komentar koji sam dodao -->
 <div id="wrapper">
     <div id="slide-top" href="#top">⇪</div>
     <header>
