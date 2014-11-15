@@ -1,0 +1,151 @@
+@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);
+html {
+    background-color: #f0f0f0;
+}
+
+#nav-wrapper {
+    height: 70px;
+    width: 100%;
+    background-color: #f95625;
+    color: white;
+    z-index: 1
+}
+
+#nav {
+    height: 70px;
+    width: 950px;
+    margin: 0 auto;
+    z-index: 2
+}
+
+.navBar {
+    width: 500px;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 3
+}
+
+.navBar-link {
+    display: inline-block;
+    /*margin-left: 50px;*/
+    /*position: relative;*/
+    font-family: 'BenchNine', sans-serif;
+    font-size: 24px;
+    width: 100px;
+    height: 70px;
+    font-weight: bold;
+}
+
+.navBar-window {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    top: 15px;
+}
+
+.roll {
+    height: 80px;
+    position: relative;
+    top: -40px;
+    text-align: center;
+}
+
+.roll-up {
+    height: 40px;
+    color: #73afcf;
+    line-height: 40px;
+}
+
+.roll-down {
+    height: 40px;
+    color: white;
+    line-height: 40px;
+}
+
+#logo {
+    height: 300px;
+    background-color: grey;
+}
+
+main {
+    width: 950px;
+    /*height: 1000px;*/
+    margin: 0 auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+
+#slider {
+    height: 400px;
+    border: 1px solid #a0a0a0;
+}
+
+#form {
+    display: inline-block;
+    height: 70px;
+    width: 300px;
+    position: relative;
+    bottom: 30px;
+    left: 153px;
+}
+
+#search-field {
+    position: relative;
+    left: 200px;
+    width: 200px;
+}
+
+#search {
+    width: 90px;
+}
+
+#slide-top {
+    border: 1px solid gray;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 80%;
+    right: -50px;
+    opacity: 0.8;
+    background-color:gray;
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+}
+#slide-top:hover {
+    opacity:1;
+}
+
+#slide-down
+{
+    background-color: #f95625;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 370px;
+}
+
+/*.dropdown {*/
+    /*background-color: #f95625;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    /*left: 0px;*/
+    /*top: 370px;*/
+/*}*/
+#categories
+{
+	width: 100%;
+	height: 200px;
+	background-color: yellow;
+	display: none;
+	z-index: 1;
+	position: absolute;
+}
+
+

@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> proba</title>
+        <style type="text/css">
+   		 #slide-top 
+		{
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+			position: fixed;
+			top: 80%;
+			right: -30px;
+			font-size: 20px;
+			font-weight: bold;
+   		 }
+
+
+	   	
+        </style>
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		<script>
+            var slide_right = 0;
+			$(document).on("scroll" ,function()
+			{
+				var $slide = $("#slide-top");
+                var $scroll = $(this).scrollTop();
+                if($scroll > 200 && slide_right == 0) {
+                    slide_right = 1;
+                    $slide.animate({right: "30px"});
+                }
+                else if($scroll < 200 && slide_right == 1){
+                    slide_right = 0;
+                    $slide.animate({right: "-30px"});
+                }
+				
+			});
+			
+			$(document).ready(function() {
+				$(".roll").hover(function(){ $(this).animate({top: "-50px"},100); },function(){$(this).animate({top: "0px"},100); });
+				$("#slide-top").css("cursor","pointer"); //DODAJ OVO U CSS
+                $("#slide-top").click(function() {
+                    $("html, body").animate({scrollTop: $("#top").position().top}, "easeInQuart");
+                });
+                
+                var indicate = 0;
+                $("#search").click(function() {
+					if(indicate == 0)
+					{
+						indicate = 1;
+						$("#text-search").animate({left: "0px" },150,function(){
+							$(this).focus();
+						});//..animate( properties [, duration ] [, easing ] [, complete ] )
+						//kad zavrsi sa animacijon on uradi tek funkciju koja fokusira text-search
+					}
+					else if(indicate == 1)
+					{
+						indicate = 0;
+						$("#text-search").animate({left: "235px" },150);
+					}
+					
+                });
+                $("#text-search").focusout(function(){
+					$("#text-search").animate({left: "235px" },150,function()
+					{
+						indicate = 0;
+						$(this).val("");
+					});
+                });
+            });
+			
+			
+		</script>
+	</head>
+	<body>
+	
+		<form>
+			<div style="overflow:hidden; width:235px; display:inline-block; position:relative; top:7px;">
+				<input id="text-search" type="text" placeholder="Search..." style="position:relative; left:235px;">
+			</div>
+			<div style="display:inline-block;">
+				<input id="search" type="button" value="Search" >
+			</div>
+		</form>
+	
+		<br id="top" />
+		<div style="width:100px; height:50px; overflow:hidden; border:1px solid black;">
+			<div class="roll" style="width:100px; height:100px; position:relative;">
+				<div style="width:100px; height:50px;color:green;">ROLL</div>
+				<div style="width:100px; height:50px; color:yellow;">ROLL</div>
+			</div>
+		</div>
+		
+		<div style="width:100px; height:50px; overflow:hidden; border:1px solid black;">
+			<div class="roll" style="width:100px; height:100px; position:relative;">
+				<div style="width:100px; height:50px;color:green;">SMOLL</div>
+				<div style="width:100px; height:50px; color:yellow;">SMOLL</div>
+			</div>
+		</div>
+		
+		
+		
+		<div style="width:100px; height:50px; overflow:hidden; border:1px solid black;">
+			<div class="roll" style="width:100px; height:100px; position:relative;">
+				<div style="width:100px; height:50px;color:green;">PETROLL</div>
+				<div style="width:100px; height:50px; color:yellow;">PETROLL</div>
+			</div>
+		</div>
+		
+		
+		<br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<div id="slide-top" href="#top">^</div>
+		<div>neki div</div>
+	</body>
+	
+		
+
+</html>
