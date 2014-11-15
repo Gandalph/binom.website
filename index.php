@@ -12,6 +12,7 @@
 <body>
 <!-- ovo je samo neki komentar koji sam dodao -->
 <div id="wrapper">
+    <!-- jos jedan komentar -->
     <div id="slide-top" href="#top">⇪</div>
     <header>
         <div id="logo"></div><!-- end logo -->
