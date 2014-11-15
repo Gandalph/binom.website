@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);
+.recent-article {
+    float: left;
+    width: 465px;
+    height: 350px;
+    box-sizing: border-box;
+    padding: 20px;
+    /*box-shadow: 0 0 5px #a0a0a0;*/
+}
+
+.recent-article:first-child {
+    border-right: 1px solid #a0a0a0;
+}
+
+.article-image {
+    height: 175px;
+    background-size: 70%;
+    background: url("../deloviSajta/newspaper.jpg") no-repeat center;
+}
+
+.caption {
+    font-family: 'BenchNine', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-info {
+    font-family: 'BenchNine', sans-serif;
+    font-size: 18px;
+}
+
+.piece-of-text {
+    font-family: 'BenchNine', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.regular-article {
+    position: relative;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 630px;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    /*box-shadow: 0 0 5px #a0a0a0;*/
+    box-sizing: border-box;
+    padding: 15px;
+    clear: both;
+}
+
+.r-article-image {
+    float: left;
+    height: 270px;
+    width: 300px;
+    background-size: 70%;
+    background: url("../deloviSajta/magazin.jpg") no-repeat center;
+}
+
+.right-side {
+    float: left;
+    height: 270px;
+    width: 300px;
+}
+
+#regular-article-wrapper {
+    width: 930px;
+    position: relative;
+    top: 30px;
+}
+
+#right-regular-article {
+    float: left;
+    width: 630px;
+}
+
+#left-regular-article {
+    float: left;
+    width: 278px;
+    margin-left: 20px;
+    height: 600px;
+    border: 1px solid #a0a0a0;
+}
+
+
