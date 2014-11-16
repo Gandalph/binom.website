@@ -5,6 +5,7 @@
     height: 350px;
     box-sizing: border-box;
     padding: 20px;
+    overflow: hidden;
     /*box-shadow: 0 0 5px #a0a0a0;*/
 }
 

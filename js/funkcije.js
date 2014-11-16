@@ -100,13 +100,6 @@ $(document).ready(function () {
         $("#content").animate({"top": "0px"}, 100);
     });
 
-    function f(p, text) {
-        console.log(text);
-        var $p = $(p);
-        var $div = $("<div></div>");
-        $div.append(text);
-        $p.text($div.text());
-    }
 });
 
 

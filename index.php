@@ -13,7 +13,7 @@
 <!-- ovo je samo neki komentar koji sam dodao -->
 <div id="wrapper">
     <!-- jos jedan komentar -->
-    <div id="slide-top" href="#top">⇪</div>
+    <div id="slide-top">⇪</div>
     <header>
         <div id="logo"></div><!-- end logo -->
         <div id="nav-wrapper">
@@ -81,7 +81,7 @@
                 </ul>
                 <form action="" method="get" id="form" onsubmit="return false">
                     <div style="display: inline-block; width: 200px; overflow: hidden; position: relative; top: 5px;">
-                        <input type="text" id="search-field"/>
+                        <label><input type="text" id="search-field"/></label>
                     </div>
                     <input type="submit" name="submit" id="search" value="Pretrazi"/>
                 </form>
@@ -92,12 +92,13 @@
         <div id="slider"></div><!-- end slider -->
         <?php
         include("./php/db.inc");
+        global $link;
 
         connect();
 
         $sql = "select post_title, post_content, date(post_date) as date, display_name "
             . "from wp_posts p join wp_users u on p.post_author = u.id "
-            . "where post_status = 'publish'";
+            . "where post_status = 'publish' and post_type = 'post'";
 
         $result = mysqli_query($link, $sql);
 
@@ -106,47 +107,54 @@
         ?>
         <div id="article-wrapper">
             <!-- TODO ovo se popunjava preko php -->
-            <?php while(($row = mysqli_fetch_assoc($result)) ): ?>
+            <?php while(($row = mysqli_fetch_assoc($result)) && $i < 2): ?>
             <article class="recent-article" >
                 <div class="article-image"></div>
-                <h1 class="caption"><?php echo $row['post_title']; ?></h1>
-                <p class="article-info"><?php echo $row['display_name'] . " / " . $row['date']; ?> / 0 komentara</p>
-                <?php $string = $row["post_content"]; ?>
-                <p class="piece-of-text" onload="f(this, <?php echo "\\\"" . $string . "\\\""; ?>)">
-                </p>
-            </article>
+                <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
+                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
+                <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
+                    <p class="piece-of-text">
+                        <script type="text/javascript">
+                            var $p = $('<p> <?= $row['post_content'] ?></p>');
+                            document.write($p.text());
+                        </script>
+                    </p>
+                </div>
+                <div class="read-more">
+                    <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
+                </div>
+            </article><!-- end recent-article -->
             <?php endwhile; ?>
-            <?php $i = 0; disconnect(); ?>
-<!--            <article class="recent-article" >-->
-<!--                <div class="article-image"></div>-->
-<!--                <h1 class="caption"></h1>-->
-<!--                <p class="article-info">Petar Petrovic / 7.11.2014 / 0 komentara</p>-->
-<!--                <p class="piece-of-text">Lorem ipsum dolor sitmet, consectetur adipiscing elit. Aenean lacinia bibeum nullased consectetur. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, ...</p>-->
-<!--            </article>-->
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">
+                    <?php mysqli_data_seek($result, 2); ?>
+                    <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                     <article class="regular-article">
                         <div class="r-article-image"></div>
                         <div class="right-side">
-                            <h1 class="caption"></h1>
-                            <p class="article-info">Petar Petrovic / 7.11.2014 / 0 komentara</p>
-                            <p class="piece-of-text">Lorem ipsum dolor sitmet, consectetur adipiscing elit. Aenean lacinia bibeum nullased consectetur. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, ...</p>
+                            <h1 class="caption"><?= $row['post_title'] ?></h1>
+                            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
+                            <div style="height: 205px; overflow: hidden;">
+                                <p class="piece-of-text">
+                                    <script type="text/javascript">
+                                        var $p = $('<p> <?= $row['post_content'] ?></p>');
+                                        document.write($p.text());
+                                    </script>
+                                </p>
+                            </div>
+                            <div ><!-- TODO i ovo popraviti lepo -->
+                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
+                            </div>
                         </div><!-- end right-side -->
                     </article>
-                    <article class="regular-article">
-                        <div class="r-article-image"></div>
-                        <div class="right-side">
-                            <h1 class="caption"></h1>
-                            <p class="article-info">Petar Petrovic / 7.11.2014 / 0 komentara</p>
-                            <p class="piece-of-text">Lorem ipsum dolor sitmet, consectetur adipiscing elit. Aenean lacinia bibeum nullased consectetur. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, ...</p>
-                        </div><!-- end right-side -->
-                    </article>
+                    <?php endwhile; ?>
+                    <?php disconnect(); ?>
                 </div><!-- end right-regular-article -->
                 <div id="left-regular-article">
 
                 </div>
             </div><!-- end regular-article-wrapper -->
-        </div><!-- end recent-article-wrapper -->
+        </div><!-- end article-wrapper -->
     </main>
 </div><!-- end wrapper -->
 </body>
