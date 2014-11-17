@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/funkcije.js" ></script>
 </head>
 <body>
+<!-- da vidimo da li radi-->
 <!-- ovo je samo neki komentar koji sam dodao -->
 <div id="wrapper">
     <!-- jos jedan komentar -->
