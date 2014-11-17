@@ -1,4 +1,4 @@
-<?php include("./php/db.inc"); ?>
+<?php include("./baza/db.inc"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +40,6 @@
 							<div id="categories">
 								<div id="categories-wrapper">
 									<?php
-										
 										connect();
 										$upit = 'SELECT distinct name FROM wp_terms';
 										$result = mysqli_query($link, $upit);
