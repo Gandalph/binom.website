@@ -12,10 +12,7 @@
 </head>
 <body>
 <div id="wrapper">
-<<<<<<< HEAD
 
-=======
->>>>>>> 7325ab2cbbdd643fbaa437ddc44fde9bdd9ce713
     <div id="slide-top">⇪</div>
 
     <header>
