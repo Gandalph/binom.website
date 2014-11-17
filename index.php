@@ -10,11 +10,10 @@
     <script type="text/javascript" src="js/funkcije.js" ></script>
 </head>
 <body>
-<!-- da vidimo da li radi-->
-<!-- ovo je samo neki komentar koji sam dodao -->
 <div id="wrapper">
-    <!-- jos jedan komentar -->
+
     <div id="slide-top">⇪</div>
+
     <header>
         <div id="logo"></div><!-- end logo -->
         <div id="nav-wrapper">
@@ -89,10 +88,11 @@
             </nav><!-- end nav -->
         </div><!-- end nav-wrapper -->
     </header>
+
     <main id="content">
         <div id="slider"></div><!-- end slider -->
         <?php
-        include("./php/db.inc");
+        include("./baza/db.inc");
         global $link;
 
         connect();
@@ -101,12 +101,13 @@
             . "from wp_posts p join wp_users u on p.post_author = u.id "
             . "where post_status = 'publish' and post_type = 'post'";
 
-        $result = mysqli_query($link, $sql);
+        $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
         $i = 0;
 
         ?>
         <div id="article-wrapper">
+
             <?php while(($row = mysqli_fetch_assoc($result)) && $i < 2): ?>
             <article class="recent-article" >
                 <div class="article-image"></div>
@@ -120,11 +121,12 @@
                         </script>
                     </p>
                 </div>
-                <div class="read-more">
+                <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['post_name'] ?>'">
                     <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
+
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">
                     <?php mysqli_data_seek($result, 2); ?>
@@ -148,7 +150,7 @@
                                     </script>
                                 </p>
                             </div>
-                            <div ><!-- TODO i ovo popraviti lepo -->
+                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['post_name'] ?>'"><!-- TODO i ovo popraviti lepo -->
                                 <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                             </div>
                         </div><!-- end right-side -->
@@ -160,6 +162,7 @@
 
                 </div>
             </div><!-- end regular-article-wrapper -->
+
         </div><!-- end article-wrapper -->
     </main>
 </div><!-- end wrapper -->
