@@ -96,7 +96,7 @@
 
         connect();
 
-        $sql = "select post_title, post_content, date(post_date) as date, display_name "
+        $sql = "select post_title, post_content, date(post_date) as date, display_name, post_name "
             . "from wp_posts p join wp_users u on p.post_author = u.id "
             . "where post_status = 'publish' and post_type = 'post'";
 
@@ -106,7 +106,6 @@
 
         ?>
         <div id="article-wrapper">
-            <!-- TODO ovo se popunjava preko php -->
             <?php while(($row = mysqli_fetch_assoc($result)) && $i < 2): ?>
             <article class="recent-article" >
                 <div class="article-image"></div>
@@ -130,7 +129,13 @@
                     <?php mysqli_data_seek($result, 2); ?>
                     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                     <article class="regular-article">
-                        <div class="r-article-image"></div>
+                        <div class="r-article-image">
+                            <?php
+                            $slika = "slike/" . $row['post_name'] . ".jpg";
+                            if(file_exists($slika)): ?>
+                                <img alt="post-image" class="post-image" src="<?= $slika ?>">
+                            <?php endif; ?>
+                        </div>
                         <div class="right-side">
                             <h1 class="caption"><?= $row['post_title'] ?></h1>
                             <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
