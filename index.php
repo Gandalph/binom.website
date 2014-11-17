@@ -113,7 +113,6 @@
         <div id="slider"></div><!-- end slider -->
         <?php
         
-        include("./baza/db.inc");
         global $link;
 
         connect();
