@@ -89,15 +89,19 @@ $(document).ready(function () {
 
     /* Animacija za padajuci meni navBara */
     $(".navBar-link").first().mouseenter(function () {
-        $("#slide-down").animate({"height": "200px"} ,{duration: 100, queue: false}).delay(200).queue(function (next) {
-            $("#categories").css("display", "block");
+        $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
+//             $("#categories").css("display", "block");
+            $("#categories").animate({"opacity": "1"});
+
             next();
         });
-        $("#content").animate({"top": "200px"}, 100);
+        $("#content").animate({"top": "200px"}, 300);
     }).mouseleave(function () {
-        $("#categories").css("display","none");
-        $("#slide-down").animate({"height": "0px"}, {duration: 100, queue: false});
-        $("#content").animate({"top": "0px"}, 100);
+//         $("#categories").css("display","none");
+        $("#categories").animate({"opacity": "0"});
+
+        $("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
+        $("#content").animate({"top": "0px"}, 300);
     });
 
 });

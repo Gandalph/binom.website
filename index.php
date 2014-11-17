@@ -1,3 +1,4 @@
+<?php include("./php/db.inc"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,10 @@
 </head>
 <body>
 <div id="wrapper">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7325ab2cbbdd643fbaa437ddc44fde9bdd9ce713
     <div id="slide-top">⇪</div>
 
     <header>
@@ -37,7 +41,27 @@
                         <div id="slide-down" class="dropdown">
 							<!--kategorije vesti-->
 							<div id="categories">
-							
+								<div id="categories-wrapper">
+									<?php
+										
+										connect();
+										$upit = 'SELECT distinct name FROM wp_terms';
+										$result = mysqli_query($link, $upit);
+										$count = mysqli_num_rows($result);
+										for($i = 0; $i < $count; $i++)
+										{
+											$row = mysqli_fetch_assoc($result);
+											echo "<div class='categories'>$row[name]</div>";
+// 											echo "<script> console.log('$row[name]'); </script>";
+										}
+										echo "<script> var margin = ($(document).width() - 300) / ($count + 15) ; </script>";
+										echo " <script> console.log(margin); </script>"; 
+										echo " <script> $('.categories').css('margin-left', margin); </script>"; 
+										
+										disconnect();
+									?>
+										
+								</div>
 							</div>
                         
                         </div>
@@ -92,7 +116,10 @@
     <main id="content">
         <div id="slider"></div><!-- end slider -->
         <?php
+<<<<<<< HEAD
         include("./baza/db.inc");
+=======
+>>>>>>> 7325ab2cbbdd643fbaa437ddc44fde9bdd9ce713
         global $link;
 
         connect();
