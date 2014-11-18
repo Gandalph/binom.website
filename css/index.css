@@ -95,10 +95,19 @@ main {
     position: relative;
     left: 200px;
     width: 200px;
+    height: 25px;
+    padding: 5px 2px;
+    font-size: 20px;
+    bottom: 10px;
 }
 
 #search {
-    width: 90px;
+    width: 35px;
+    height: 35px;
+    background-image: url("../ikonice/magnifier.png");
+    background-size: 100%;
+    border: none;
+    background-color: #f95625;
 }
 
 #slide-top {

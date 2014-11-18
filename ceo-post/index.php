@@ -83,7 +83,7 @@
                     <div style="display: inline-block; width: 200px; overflow: hidden; position: relative; top: 5px;">
                         <label><input type="text" id="search-field"/></label>
                     </div>
-                    <input type="submit" name="submit" id="search" value="Pretrazi"/>
+                    <input type="submit" name="submit" id="search" value=""/>
                 </form>
             </nav><!-- end nav -->
         </div><!-- end nav-wrapper -->
