@@ -149,7 +149,7 @@
                         </script>
                     </p>
                 </div>
-                <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['post_name'] ?>'">
+                <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'">
                     <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                 </div>
             </article><!-- end recent-article -->
@@ -180,7 +180,7 @@
                                     </script>
                                 </p>
                             </div>
-                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['post_name'] ?>'"><!-- TODO i ovo popraviti lepo -->
+                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'"><!-- TODO i ovo popraviti lepo -->
                                 <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                             </div>
                         </div><!-- end right-side -->

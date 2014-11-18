@@ -171,3 +171,25 @@ main {
     color: #73afcf;
 }
 
+#comments {
+    width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    margin-bottom: 50px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.comment {
+    margin-bottom: 25px;
+    border: 1px solid #73afcf;
+    font-family: 'BenchNine', sans-serif;
+    box-sizing: border-box;
+    padding: 25px;
+    font-size: 21px;
+
+}
+.comment-info {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}

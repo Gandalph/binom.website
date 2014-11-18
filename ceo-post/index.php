@@ -22,7 +22,7 @@
                 Treba da se doda slicica kao home dugme
                 -->
                 <ul class="navBar">
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = '../index.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
@@ -37,10 +37,34 @@
                         <div id="slide-down" class="dropdown">
                             <!--kategorije vesti-->
                             <div id="categories">
+                                <div id="categories-wrapper">
+                                    <?php
+                                    include("../baza/db.inc");
+                                    connect();
+                                    $upit = 'SELECT distinct name FROM wp_terms';
+                                    $result = mysqli_query($link, $upit);
+                                    $count = mysqli_num_rows($result);
+                                    for($i = 0; $i < $count; $i++)
+                                    {
+                                        $row = mysqli_fetch_assoc($result);
+                                        echo "<div class='categories'>$row[name]</div>";
+// 											echo "<script> console.log('$row[name]'); </script>";
+                                    }
+                                    echo "<script> var margin = ($(document).width() - 300 - ($count * 120)) / ($count + 1) ; </script>";
 
-                            </div>
+                                    echo " <script> console.log(margin); </script>";
 
-                        </div>
+                                    echo " <script> console.log(margin); </script>";
+
+                                    echo " <script> $('.categories').css('margin-left', margin); </script>";
+
+                                    disconnect();
+                                    ?>
+
+                                </div><!-- categories-wrapper -->
+                            </div><!-- end categories -->
+
+                        </div><!-- end slide-down -->
                     </li>
                     <li class="navBar-link">
                         <div class="navBar-window">
@@ -91,7 +115,6 @@
 
     <main id="content">
         <?php
-        include("../baza/db.inc");
         if(isset($_GET['post'])) {
             connect();
             global $link;
@@ -100,7 +123,7 @@
 
             $sql = "select post_title, post_content, date(post_date), display_name "
                 . "from wp_posts p join wp_users u on p.post_author = u.id "
-                . "where post_status = 'publish' and post_type = 'post' and post_name = '$post'";
+                . "where post_status = 'publish' and post_type = 'post' and p.id = $post";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
@@ -109,11 +132,36 @@
                 <h1 class="post-title"><?= $row['post_title'] ?></h1>
                 <p class="post"><?= $row['post_content'] ?></p>
 
-        <?php endif;
-        }
-        ?>
     </main>
+    <div id="comments">
+            <?php
 
+            $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
+                . "from wp_comments "
+                . "where comment_post_ID = $post";
+
+            $result = mysqli_query($link, $sql);
+
+            ?>
+        <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
+        <div class="comment">
+            <div class="comment-info">
+                <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> at <?= $row['time'] ?></p>
+            </div><!-- end comment-info -->
+            <div class="comment-content">
+                <p><?= $row['comment_content'] ?></p>
+            </div><!-- end comment- content -->
+        </div><!-- end comment -->
+        <?php endwhile; ?>
+        <?php endif; } ?>
+        <div id="comment-replay">
+            <p>Ostavi komentar</p>
+            <form action="" method="post">
+                
+            </form>
+        </div>
+        <?php disconnect(); ?>
+    </div><!-- end comments -->
 </div><!-- end wrapper -->
 </body>
 </html>

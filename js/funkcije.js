@@ -20,7 +20,7 @@ $(document).ready(function () {
     var $height;
     $height = $(this).height();
     console.log($height);
-    $("main").css({"height": $height - 400 + "px"});
+    $("main").css({"height": $height - 300 + "px"});
 
     /* Fixed navigacioni bar */
     var fixed_navi = 0;
@@ -30,14 +30,13 @@ $(document).ready(function () {
         if($scroll > 301 && fixed_navi == 0) {
             fixed_navi = 1;
             $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
-            $("#slide-down, #content").css("top", "70px");
+            $("#slide-down").css("top", "70px");
 
         }
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
             $("#nav-wrapper").css("position","static");
             $("#slide-down").css("top", "370px");
-            $("#content").css("top", "0");
         }
 
     });

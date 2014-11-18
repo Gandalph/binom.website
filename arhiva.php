@@ -23,7 +23,7 @@
                 Treba da se doda slicica kao home dugme
                 -->
                 <ul class="navBar">
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = 'index.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
@@ -113,7 +113,7 @@
         </div><!-- end nav-wrapper -->
     </header>
 
-    <main id="content">
+    <main id="content" style="text-align: center;">
         <a href="arhiva/BINOM_2014.pdf"><img style="width: 400px;" class="pdf" alt="naslovna strana" src="./arhiva/naslovna.jpg" ?></a>
     </main>
 </div><!-- end wrapper -->
