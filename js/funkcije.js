@@ -95,13 +95,13 @@ $(document).ready(function () {
 
             next();
         });
-        $("#content").animate({"top": "200px"}, 300);
+        $("#content").animate({"top": "200px"}, {duration: 300, queue: false});
     }).mouseleave(function () {
 //         $("#categories").css("display","none");
         $("#categories").animate({"opacity": "0"});
 
         $("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
-        $("#content").animate({"top": "0px"}, 300);
+        $("#content").animate({"top": "0px"}, {duration: 300, queue: false});
     });
 
 });
