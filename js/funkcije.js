@@ -5,15 +5,9 @@ $(document).ready(function () {
 
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
-<<<<<<< HEAD
         $(this).children().first().children().first().animate({top: "0px"}, {duration: 200, queue: false});
     }, function () {
         $(this).children().first().children().first().animate({top: "-40px"}, {duration: 200, queue: false});
-=======
-        $(this).children().first().children().first().animate({top: "0px"},{duration: 200, queue: false} );
-    }, function () {
-        $(this).children().first().children().first().animate({top: "-40px"},{duration: 200, queue: false});
->>>>>>> 722c2833f0099adde6784d6c751b492e4ed06e53
     });
 
     /* Border na navigaciji */
@@ -115,28 +109,9 @@ $(document).ready(function () {
 			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
         }
     });
-	
-	
-// 	//prethodna verzija fje za padajuci meni
-//     $(".navBar-link").first().mouseenter(function () {
-//         $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
-//             $("#categories").animate({"opacity": "1"});
-// 
-//             next();
-//         });
-//         $("#content").animate({"top": "200px"}, {duration: 300, queue: false});
-//     }).mouseleave(function () {
-//         $("#categories").css("opacity", "0");
-// 
-//         $("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
-//         $("#content").animate({"top": "0px"}, {duration: 300, queue: false});
-//     });
 
 });
 
-function f(p, text) {
-    console.log(text + "****");
-}
 
 
 			
