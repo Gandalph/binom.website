@@ -129,21 +129,13 @@ main {
     top: 370px;
 }
 
-/*.dropdown {*/
-    /*background-color: #f95625;*/
-    /*height: 200px;*/
-    /*width: 100%;*/
-    /*position: absolute;*/
-    /*z-index: 1;*/
-    /*left: 0px;*/
-    /*top: 370px;*/
-/*}*/
 
 #categories-wrapper
 {
 	margin-left: 150px;
 	margin-right: 150px;
 }
+
 #categories
 {
 	border-top: 2px solid white;

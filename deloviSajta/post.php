@@ -6,7 +6,7 @@
  * Time: 23:27
  */
 
-include("../php/db.inc");
+include("../baza/db.inc");
 
 connect();
 
