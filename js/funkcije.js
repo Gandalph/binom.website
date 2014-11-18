@@ -30,12 +30,14 @@ $(document).ready(function () {
         if($scroll > 301 && fixed_navi == 0) {
             fixed_navi = 1;
             $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
-            $("#slide-down").css("top", "70px");
+            $("#slide-down, #content").css("top", "70px");
+
         }
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
             $("#nav-wrapper").css("position","static");
             $("#slide-down").css("top", "370px");
+            $("#content").css("top", "0");
         }
 
     });
@@ -103,7 +105,7 @@ $(document).ready(function () {
         },
         mouseleave: function () { //[3]
             clearTimeout(testTimeout);
-			$("#categories").css("opacity", "0");
+			$("#categories").css("opacity", "0"); 
 
 			$("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
 			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
