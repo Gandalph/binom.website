@@ -5,9 +5,9 @@ $(document).ready(function () {
 
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
-        $(this).children().first().children().first().animate({top: "0px"}, 200);
+        $(this).children().first().children().first().animate({top: "0px"},{duration: 200, queue: false} );
     }, function () {
-        $(this).children().first().children().first().animate({top: "-40px"}, 200);
+        $(this).children().first().children().first().animate({top: "-40px"},{duration: 200, queue: false});
     });
 
     /* Border na navigaciji */
@@ -88,21 +88,43 @@ $(document).ready(function () {
 
 
     /* Animacija za padajuci meni navBara */
-    $(".navBar-link").first().mouseenter(function () {
-        $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
-//             $("#categories").css("display", "block");
+	var testTimeout = 0;
+	$(".navBar-link").first().on({
+        mouseenter: function (){
+            clearTimeout(testTimeout);       // [1]
+            testTimeout = setTimeout(function(){  // [2]
+            $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
             $("#categories").animate({"opacity": "1"});
 
             next();
-        });
-        $("#content").animate({"top": "200px"}, {duration: 300, queue: false});
-    }).mouseleave(function () {
-//         $("#categories").css("display","none");
-        $("#categories").animate({"opacity": "0"});
+			});
+			$("#content").animate({"top": "200px"}, {duration: 300, queue: false});
+            }, 50);
+        },
+        mouseleave: function () { //[3]
+            clearTimeout(testTimeout);
+			$("#categories").css("opacity", "0");
 
-        $("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
-        $("#content").animate({"top": "0px"}, {duration: 300, queue: false});
+			$("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
+			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
+        }
     });
+	
+	
+// 	//prethodna verzija fje za padajuci meni
+//     $(".navBar-link").first().mouseenter(function () {
+//         $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
+//             $("#categories").animate({"opacity": "1"});
+// 
+//             next();
+//         });
+//         $("#content").animate({"top": "200px"}, {duration: 300, queue: false});
+//     }).mouseleave(function () {
+//         $("#categories").css("opacity", "0");
+// 
+//         $("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
+//         $("#content").animate({"top": "0px"}, {duration: 300, queue: false});
+//     });
 
 });
 

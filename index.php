@@ -50,7 +50,7 @@
 											echo "<div class='categories'>$row[name]</div>";
 // 											echo "<script> console.log('$row[name]'); </script>";
 										}
-										echo "<script> var margin = ($(document).width() - 300) / ($count + 15) ; </script>";
+										echo "<script> var margin = ($(document).width() - 300 - ($count * 120)) / ($count + 1) ; </script>";
 										echo " <script> console.log(margin); </script>"; 
 										echo " <script> $('.categories').css('margin-left', margin); </script>"; 
 										
