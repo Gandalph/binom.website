@@ -5,9 +5,9 @@ $(document).ready(function () {
 
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
-        $(this).children().first().children().first().animate({top: "0px"}, 200);
+        $(this).children().first().children().first().animate({top: "0px"}, {duration: 200, queue: false});
     }, function () {
-        $(this).children().first().children().first().animate({top: "-40px"}, 200);
+        $(this).children().first().children().first().animate({top: "-40px"}, {duration: 200, queue: false});
     });
 
     /* Border na navigaciji */
