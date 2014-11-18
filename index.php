@@ -112,12 +112,12 @@
     <main id="content">
         <div id="slider"></div><!-- end slider -->
         <?php
-        
+
         global $link;
 
         connect();
 
-        $sql = "select post_title, post_content, date(post_date) as date, display_name, post_name "
+        $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name "
             . "from wp_posts p join wp_users u on p.post_author = u.id "
             . "where post_status = 'publish' and post_type = 'post'";
 
@@ -134,10 +134,14 @@
                 <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
                 <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
                 <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
-                    <p class="piece-of-text">
+                    <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
+                        <?php $string = $row['post_content']; ?>
                         <script type="text/javascript">
-                            var $p = $('<p> <?= $row['post_content'] ?></p>');
-                            document.write($p.text());
+                            $(function() {
+                                var $div = $('<div><?= $string ?></div>');
+                                var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
+                                $p.text($div.text());
+                            })
                         </script>
                     </p>
                 </div>
@@ -162,11 +166,13 @@
                         <div class="right-side">
                             <h1 class="caption"><?= $row['post_title'] ?></h1>
                             <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
-                            <div style="height: 205px; overflow: hidden;">
-                                <p class="piece-of-text">
+                            <div style="height: 205px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
+                                <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
+                                    <?php $string = $row['post_content']; ?>
                                     <script type="text/javascript">
-                                        var $p = $('<p> <?= $row['post_content'] ?></p>');
-                                        document.write($p.text());
+                                        var $div = $('<div><?= $string ?></div>');
+                                        var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
+                                        $p.text($div.text());
                                     </script>
                                 </p>
                             </div>

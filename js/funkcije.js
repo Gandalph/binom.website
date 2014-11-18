@@ -106,7 +106,9 @@ $(document).ready(function () {
 
 });
 
-
+function f(p, text) {
+    console.log(text + "****");
+}
 
 
 			
