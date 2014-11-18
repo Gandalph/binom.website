@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = '../arhiva.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
@@ -103,6 +103,7 @@
                 . "where post_status = 'publish' and post_type = 'post' and post_name = '$post'";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
+
 
             if(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <h1 class="post-title"><?= $row['post_title'] ?></h1>
