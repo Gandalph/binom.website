@@ -113,6 +113,36 @@ $(document).ready(function () {
 
 });
 
+function margin(count) {
+    var margin = ($(document).width() - 300 - (count * 120)) / (count + 1);
+    $(".categories").css("margin-left", margin);
+}
+
+function setComment(commentForm, postId) {
+    var $cf = $(commentForm);
+    var ime = $cf.find("#ime").val();
+    var email = $cf.find("#email").val();
+    var commentContent = $cf.find("#comment-content").val();
+
+    Date.prototype.today = function () {
+        return (this.getFullYear() + "-" + (((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-" + ((this.getDate() < 10)?"0":"") + this.getDate());
+    };
+    Date.prototype.timeNow = function () {
+        return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+    };
+
+    var currentDate = new Date();
+    currentDate = currentDate.today() + " " + currentDate.timeNow();
+
+    $.post(
+        "../ceo-post/comment_post.php",
+        {author: ime, email: email, commentContent: commentContent, postId: postId, date: currentDate},
+        function(data) {
+            location.reload();
+        }
+
+    );
+}
 
 
 			
