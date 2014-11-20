@@ -41,6 +41,7 @@
 								<div id="categories-wrapper">
 									<?php
 										connect();
+                                        
 										$upit = 'SELECT distinct name FROM wp_terms';
 										$result = mysqli_query($link, $upit);
 										$count = mysqli_num_rows($result);
@@ -50,13 +51,7 @@
 											echo "<div class='categories'>$row[name]</div>";
 // 											echo "<script> console.log('$row[name]'); </script>";
 										}
-										echo "<script> var margin = ($(document).width() - 300 - ($count * 120)) / ($count + 1) ; </script>";
-
-										echo " <script> console.log(margin); </script>";
-
-										echo " <script> console.log(margin); </script>"; 
-
-										echo " <script> $('.categories').css('margin-left', margin); </script>"; 
+										echo "<script>margin($count)</script>";
 										
 										disconnect();
 									?>

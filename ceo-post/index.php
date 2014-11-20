@@ -1,3 +1,4 @@
+<?php include("../baza/db.inc"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,25 +40,19 @@
                             <div id="categories">
                                 <div id="categories-wrapper">
                                     <?php
-                                    include("../baza/db.inc");
+                                    global $link;
                                     connect();
-                                    $upit = 'SELECT distinct name FROM wp_terms';
+                                    
+                                    $upit = "select distinct name "
+                                          . "from wp_terms";
                                     $result = mysqli_query($link, $upit);
                                     $count = mysqli_num_rows($result);
                                     for($i = 0; $i < $count; $i++)
                                     {
                                         $row = mysqli_fetch_assoc($result);
                                         echo "<div class='categories'>$row[name]</div>";
-// 											echo "<script> console.log('$row[name]'); </script>";
                                     }
-                                    echo "<script> var margin = ($(document).width() - 300 - ($count * 120)) / ($count + 1) ; </script>";
-
-                                    echo " <script> console.log(margin); </script>";
-
-                                    echo " <script> console.log(margin); </script>";
-
-                                    echo " <script> $('.categories').css('margin-left', margin); </script>";
-
+                                    echo "<script>margin($count)</script>";
                                     disconnect();
                                     ?>
 
@@ -122,8 +117,8 @@
             $post = $_GET['post'];
 
             $sql = "select post_title, post_content, date(post_date), display_name "
-                . "from wp_posts p join wp_users u on p.post_author = u.id "
-                . "where post_status = 'publish' and post_type = 'post' and p.id = $post";
+                 . "from wp_posts p join wp_users u on p.post_author = u.id "
+                 . "where post_status = 'publish' and post_type = 'post' and p.id = $post";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
@@ -131,6 +126,7 @@
             if(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <h1 class="post-title"><?= $row['post_title'] ?></h1>
                 <p class="post"><?= $row['post_content'] ?></p>
+            <?php endif; ?>
 
     </main>
     <div id="comments">
@@ -153,13 +149,16 @@
             </div><!-- end comment- content -->
         </div><!-- end comment -->
         <?php endwhile; ?>
-        <?php endif; } ?>
+        <?php } ?>
         <div id="comment-replay">
             <p>Ostavi komentar</p>
-            <form action="" method="post">
-                
-            </form>
+            <div id="set-comment">
+                <input type="text" name="name" placeholder="Ime" id="ime"/><br />
+                <input type="email" name="email" placeholder="Email" id="email"/><br />
+                <textarea id="comment-content"></textarea><br />
+                <button onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
         </div>
+        </div><!-- end comment-replay -->
         <?php disconnect(); ?>
     </div><!-- end comments -->
 </div><!-- end wrapper -->
