@@ -49,7 +49,6 @@
 										{
 											$row = mysqli_fetch_assoc($result);
 											echo "<div class='categories'>$row[name]</div>";
-// 											echo "<script> console.log('$row[name]'); </script>";
 										}
 										echo "<script>margin($count)</script>";
 										
@@ -175,8 +174,8 @@
                                     </script>
                                 </p>
                             </div>
-                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'"><!-- TODO i ovo popraviti lepo -->
-                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
+                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'">
+                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p><!-- TODO i ovo popraviti lepo -->
                             </div>
                         </div><!-- end right-side -->
                     </article>
@@ -190,6 +189,7 @@
 
         </div><!-- end article-wrapper -->
     </main>
+    <footer></footer>
 </div><!-- end wrapper -->
 </body>
 </html>

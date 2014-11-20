@@ -92,8 +92,9 @@ $(document).ready(function () {
 	var testTimeout = 0;
 	$(".navBar-link").first().on({
         mouseenter: function (){
-            clearTimeout(testTimeout);       // [1]
-            testTimeout = setTimeout(function(){  // [2]
+            clearTimeout(testTimeout);
+            testTimeout = setTimeout(function(){
+            $("#categories").css("display", "block");
             $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
             $("#categories").animate({"opacity": "1"});
 
@@ -106,8 +107,14 @@ $(document).ready(function () {
             clearTimeout(testTimeout);
 			$("#categories").css("opacity", "0"); 
 
-			$("#slide-down").animate({"height": "0px"}, {duration: 300, queue: false});
+			$("#slide-down").animate(
+                {"height": "0px"}, 
+                {duration: 300, queue: false},
+                function() {
+                     $("#categories").css("display", "none");
+                });
 			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
+            
         }
     });
 
