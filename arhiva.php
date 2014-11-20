@@ -23,8 +23,8 @@
                 Treba da se doda slicica kao home dugme
                 -->
                 <ul class="navBar">
-                    <li class="navBar-link" onclick="window.location = 'index.php'">
-                        <div class="navBar-window">
+                    <li class="navBar-link" >
+                        <div class="navBar-window" onclick="window.location = 'index.php'">
                             <div class="roll">
                                 <div class="roll-up">
                                     <span>Vesti</span>
