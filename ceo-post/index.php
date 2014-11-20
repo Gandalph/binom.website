@@ -59,7 +59,7 @@
                                 </div><!-- categories-wrapper -->
                             </div><!-- end categories -->
 
-                        </div><!-- end slide-dowm -->
+                        </div><!-- end slide-dovm -->
                     </li>
                     <li class="navBar-link">
                         <div class="navBar-window">
