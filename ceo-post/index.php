@@ -1,3 +1,4 @@
+<?php include("../baza/db.inc"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,7 @@
                             <div id="categories">
                                 <div id="categories-wrapper">
                                     <?php
-                                    include("../baza/db.inc");
+                                    
                                     global $link;
                                     connect();
                                     $upit = "select distinct name "
