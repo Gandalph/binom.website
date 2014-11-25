@@ -134,7 +134,7 @@
             <article class="recent-article" >
                 <div class="article-image"></div>
                 <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
-                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentara</p>
+                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
                 <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php $string = $row['post_content']; ?>
