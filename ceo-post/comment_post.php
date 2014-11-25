@@ -16,8 +16,14 @@ global $link;
 $sql = "insert into wp_comments(comment_author, comment_author_email, comment_content, comment_agent, comment_author_IP, comment_post_ID, comment_date)
 values (\"$author\", \"$email\", \"$comment_content\", \"$user_agent\", \"$ip_address\", $postId, timestamp(\"$date\"))";
 
-echo $sql;
+// echo $sql;
 mysqli_query($link, $sql) or die(mysqli_error($link));
+
+//inkrementiramo broj komentara
+$sql = "update wp_posts set comment_count = comment_count + 1 where id=$postId";
+
+mysqli_query($link, $sql) or die(mysqli_error($link));
+
 
 disconnect();
 
