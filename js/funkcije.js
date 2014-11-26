@@ -21,6 +21,7 @@ $(document).ready(function () {
     $height = $(this).height();
     console.log($height);
     $("main").css({"height": $height - 300 + "px"});
+    
 
     /* Fixed navigacioni bar */
     var fixed_navi = 0;
