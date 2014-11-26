@@ -17,7 +17,9 @@
     <div id="slide-top">⇪</div>
 
     <header>
-        <div id="logo"></div><!-- end logo -->
+        <div id="logo">
+			 <img src="slike/zaglavlje.jpg" alt="Binom" height="300" width=100%> 
+        </div><!-- end logo -->
         <div id="nav-wrapper">
             <nav id="nav">
                 <!--
@@ -99,8 +101,9 @@
                         </div>
                     </li>
                 </ul>
+                <!--Search-->
                 <form action="" method="get" id="form" onsubmit="return false">
-                    <div style="display: inline-block; width: 200px; overflow: hidden; position: relative; top: 5px;">
+                    <div style="display: inline-block; width: 200px; height: 50px; overflow: hidden; position: relative; top: 20px;">
                         <label><input type="text" id="search-field"/></label>
                     </div>
                     <input type="submit" name="submit" id="search" value=""/>
@@ -117,7 +120,7 @@
 
         connect();
 
-        $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name "
+        $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count "
             . "from wp_posts p join wp_users u on p.post_author = u.id "
             . "where post_status = 'publish' and post_type = 'post'";
 
@@ -132,7 +135,7 @@
             <article class="recent-article" >
                 <div class="article-image"></div>
                 <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
-                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
+                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
                 <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php $string = $row['post_content']; ?>
@@ -146,7 +149,7 @@
                     </p>
                 </div>
                 <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'">
-                    <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
+                    <p style="float: right; background: #f95625; cursor:pointer; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
