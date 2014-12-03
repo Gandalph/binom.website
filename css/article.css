@@ -96,3 +96,7 @@
 .aligncenter {
     display: block;
 }
+
+.read-more {
+    cursor: pointer;
+}
