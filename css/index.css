@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);
+/* @import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext); */
 
 /*
 *   index.php, arhiva.php, ceo-post/index.php LINE 3
@@ -95,8 +95,18 @@ html {
 *   index.php, arhiva.php, ceo-post/index.php LINE 19
 */
 #logo {
-	background: #ffffff url("a.jpg") no-repeat right top;
+	width: 930px;
+	margin: auto;
+	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
+	background-size: 100% 300px;
     height: 300px;
+}
+header
+{
+	background: -webkit-linear-gradient(left, 	#333333 ,#B2B2B2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #333333 ,#B2B2B2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #333333 ,#B2B2B2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right,  #333333 ,#B2B2B2); /* Standard syntax */
 }
 
 /*
@@ -158,8 +168,8 @@ main {
 #search {
     width: 35px;
     height: 35px;
-    background-image: url("../ikonice/magnifier.png");
-    background-size: 100%;
+    background-image: url("../ikonice/lupa.jpg");
+    background-size: 35px 35px;
     border: none;
     background-color: #f95625;
 }
