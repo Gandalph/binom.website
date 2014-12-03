@@ -38,7 +38,7 @@
                     </p>
                 </div>
                 <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-                    <p style="float: right; background: #f95625; cursor:pointer; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
+                    <p style="float: right; background: #f95625; cursor:pointer; color: #ffffff; padding: 2px 5px;">прочитај више</p>
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="right-side">
                             <h1 class="caption"><?= $row['post_title'] ?></h1>
-                            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / 0 komentara</p>
+                            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'а'; ?></p>
                             <div style="height: 205px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                                     <?php $string = $row['post_content']; ?>
@@ -69,7 +69,7 @@
                                 </p>
                             </div>
                             <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p><!-- TODO i ovo popraviti lepo -->
+                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">прочитај више</p><!-- TODO i ovo popraviti lepo -->
                             </div>
                         </div><!-- end right-side -->
                     </article>
