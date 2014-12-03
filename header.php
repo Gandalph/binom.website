@@ -101,9 +101,9 @@
                     </li>
                 </ul>
                 <!--Search-->
-                <form action="" method="get" id="form" onsubmit="return false">
+                <form action="search.php" method="get" id="form" onsubmit="return checkSearch()">
                     <div style="display: inline-block; width: 200px; height: 50px; overflow: hidden; position: relative; top: 20px;">
-                        <label><input type="text" id="search-field"/></label>
+                        <label><input type="text" name="term" id="search-field"/></label>
                     </div>
                     <input type="submit" name="submit" id="search" value=""/>
                 </form>

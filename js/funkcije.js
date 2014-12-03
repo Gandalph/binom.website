@@ -152,5 +152,13 @@ function setComment(commentForm, postId) {
     );
 }
 
+function checkSearch() {
+    if($("#search-field").val() != "") {
+        return true;
+    }
+else
+    return false;
+}
+
 
 			

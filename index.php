@@ -82,8 +82,4 @@
             </div><!-- end regular-article-wrapper -->
 
         </div><!-- end article-wrapper -->
-    </main>
-    <footer></footer>
-</div><!-- end wrapper -->
-</body>
-</html>
+<?php include("footer.php"); ?>

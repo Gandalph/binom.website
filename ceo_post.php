@@ -21,39 +21,38 @@
                 <p class="post"><?= $row['post_content'] ?></p>
             <?php endif; ?>
 
-    </main>
-    <div id="comments">
-            <?php
 
-            $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
-                . "from wp_comments "
-                . "where comment_post_ID = $post";
+        <div id="comments">
+                <?php
 
-            $result = mysqli_query($link, $sql);
+                $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
+                    . "from wp_comments "
+                    . "where comment_post_ID = $post";
 
-            ?>
-        <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-        <div class="comment">
-            <div class="comment-info">
-                <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> at <?= $row['time'] ?></p>
-            </div><!-- end comment-info -->
-            <div class="comment-content">
-                <p><?= $row['comment_content'] ?></p>
-            </div><!-- end comment- content -->
-        </div><!-- end comment -->
-        <?php endwhile; ?>
-        <?php } ?>
-        <div id="comment-replay">
-            <p>Ostavi komentar</p>
-            <div id="set-comment">
-                <input type="text" name="name" placeholder="Ime" id="ime"/><br />
-                <input type="email" name="email" placeholder="Email" id="email"/><br />
-                <textarea id="comment-content"></textarea><br />
-                <button onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
-        </div>
-        </div><!-- end comment-replay -->
-        <?php disconnect(); ?>
-    </div><!-- end comments -->
-</div><!-- end wrapper -->
-</body>
-</html>
+                $result = mysqli_query($link, $sql);
+
+                ?>
+            <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
+            <div class="comment">
+                <div class="comment-info">
+                    <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> at <?= $row['time'] ?></p>
+                </div><!-- end comment-info -->
+                <div class="comment-content">
+                    <p><?= $row['comment_content'] ?></p>
+                </div><!-- end comment- content -->
+            </div><!-- end comment -->
+            <?php endwhile; ?>
+            <?php } ?>
+            <div id="comment-replay">
+                <p>Ostavi komentar</p>
+                <div id="set-comment">
+                    <input type="text" name="name" placeholder="Ime" id="ime"/><br />
+                    <input type="email" name="email" placeholder="Email" id="email"/><br />
+                    <textarea id="comment-content"></textarea><br />
+                    <button onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
+            </div>
+            </div><!-- end comment-replay -->
+            <?php disconnect(); ?>
+        </div><!-- end comments -->
+
+<?php include("footer.php"); ?>
