@@ -3,6 +3,16 @@
  */
 $(document).ready(function () {
 
+	
+	/*Uvecanje slike clanaka */
+	$(".recent-article").hover(function () {
+        $(this).children().first().css("background-size","110%");
+    }, function () {
+        $(this).children().first().css("background-size","100%");
+    });
+	
+// 	$(".recent-article").css("background-color","green");
+	
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
         $(this).children().first().children().first().animate({top: "0px"}, {duration: 200, queue: false});
