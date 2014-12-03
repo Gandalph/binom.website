@@ -44,13 +44,12 @@ html {
 */
 .navBar-link {
     display: inline-block;
-    /*margin-left: 50px;*/
-    /*position: relative;*/
     font-family: 'BenchNine', sans-serif;
     font-size: 24px;
     width: 120px;
     height: 70px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /*
@@ -156,8 +155,8 @@ main {
 *   ceo-post/index.php LINE 104
 */
 #search {
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     background-image: url("../ikonice/magnifier.png");
     background-size: 100%;
     border: none;
@@ -168,17 +167,17 @@ main {
 *   index.php, arhiva.php, ceo-post/index.php LINE 16
 */
 #slide-top {
-    border: 1px solid gray;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: fixed;
     top: 80%;
-    right: -50px;
+    right: -60px;
     opacity: 0.8;
-    background-color:gray;
     font-size: 40px;
     cursor: pointer;
     text-align: center;
+    background-image: url("../ikonice/strelica.png");
+    background-size: 100%;
 }
 #slide-top:hover {
     opacity:1;
