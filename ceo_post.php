@@ -2,6 +2,7 @@
 <?php include("./header.php"); ?>
 
     <main id="content">
+        <div id="post">
         <?php
         if(isset($_GET['post'])) {
             connect();
@@ -18,10 +19,9 @@
 
             if(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <h1 class="post-title"><?= $row['post_title'] ?></h1>
-                <p class="post"><?= $row['post_content'] ?></p>
+                <p class="post"><?= str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']) ?></p>
             <?php endif; ?>
-
-
+        </div><!-- end post -->
         <div id="comments">
                 <?php
 
