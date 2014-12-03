@@ -15,12 +15,16 @@
 
 .article-image {
     height: 175px;
-    background-size: 70%;
     background: url("../deloviSajta/newspaper.jpg") no-repeat center;
+    background-size: 100%;
 }
+/*.article-image:hover
+{
+	    background-size: 110%;
+}*/
 
 .caption {
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'Arial';
     font-size: 24px;
     font-weight: bold;
 }
