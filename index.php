@@ -27,7 +27,7 @@
                 <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
                 <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-                        <?php $string = $row['post_content']; ?>
+                        <?php $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']); ?>
                         <script type="text/javascript">
                             $(function() {
                                 var $div = $('<div><?= $string ?></div>');
