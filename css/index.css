@@ -241,12 +241,13 @@ main {
 }
 
 #comments {
-    width: 950px;
+    width: 930px;
     margin: 0 auto;
     background: #ffffff;
     margin-bottom: 50px;
     padding: 25px;
     box-sizing: border-box;
+    float: left;
 }
 
 .comment {
