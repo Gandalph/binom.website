@@ -37,7 +37,7 @@
                         </script>
                     </p>
                 </div>
-                <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'">
+                <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
                     <p style="float: right; background: #f95625; cursor:pointer; color: #ffffff; padding: 2px 5px;">procitaj vise</p>
                 </div>
             </article><!-- end recent-article -->
@@ -68,7 +68,7 @@
                                     </script>
                                 </p>
                             </div>
-                            <div class="read-more" onclick="window.location = 'ceo-post/index.php?post=<?= $row['id'] ?>'">
+                            <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
                                 <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">procitaj vise</p><!-- TODO i ovo popraviti lepo -->
                             </div>
                         </div><!-- end right-side -->
