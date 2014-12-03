@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>- Časopis Binom -</title>
-    <meta charset=utf-8 />
+    <title>- Часопис Бином -</title>
+    <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -29,10 +29,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Vesti</span>
+                                    <span>Вести</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Vesti</span>
+                                    <span>Вести</span>
                                 </div>
                             </div>
                         </div>
@@ -67,10 +67,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Galerija</span>
+                                    <span>Галерија</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Galerija</span>
+                                    <span>Галерија</span>
                                 </div>
                             </div>
                         </div>
@@ -79,10 +79,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Arhiva</span>
+                                    <span>Арихива</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Arhiva</span>
+                                    <span>Арихива</span>
                                 </div>
                             </div>
                         </div>
@@ -91,10 +91,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>O nama</span>
+                                    <span>О наме</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>O nama</span>
+                                    <span>О нама</span>
                                 </div>
                             </div>
                         </div>
