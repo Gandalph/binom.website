@@ -48,10 +48,10 @@
         var jssor_slider1 = new $JssorSlider$('slider', options);
 		});
 		</script>
-		<div id="slider" style="position: relative; top: 0px; left: 0px; width: 950px; height: 450px;">
+		<div id="slider" style="position: relative; top: 0px; left: 0px; width: 930px; height: 450px;">
 
 			<!-- Slides Container -->
-			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 950px; height: 450px;">
+			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 930px; height: 450px;">
 				<div><img u="image" src="slike/gun_n_roses.jpg" /></div>
 				<div><img u="image" src="slike/iron_maiden.jpeg" /></div>
 			</div>
@@ -173,7 +173,7 @@
                 <div class="article-image"></div>
                 <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
                 <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
-                <div style="height: 82px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
+                <div style="height: 75px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']); ?>
                         <script type="text/javascript">
@@ -186,7 +186,7 @@
                     </p>
                 </div>
                 <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-                    <p style="float: right; background: #f95625; cursor:pointer; color: #ffffff; padding: 2px 5px;">прочитај више</p>
+                    <p>прочитај више</p>
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
@@ -206,9 +206,9 @@
                         <div class="right-side">
                             <h1 class="caption"><?= $row['post_title'] ?></h1>
                             <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'а'; ?></p>
-                            <div style="height: 205px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
+                            <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-                                    <?php $string = $row['post_content']; ?>
+                                    <?php $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']); ?>
                                     <script type="text/javascript">
                                         var $div = $('<div><?= $string ?></div>');
                                         var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
@@ -217,7 +217,7 @@
                                 </p>
                             </div>
                             <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-                                <p style="float: right; background: #f95625; color: #ffffff; padding: 2px 5px;">прочитај више</p><!-- TODO i ovo popraviti lepo -->
+                                <p>прочитај више</p><!-- TODO i ovo popraviti lepo -->
                             </div>
                         </div><!-- end right-side -->
                     </article>

@@ -1,4 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);
+/*@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);*/
+@font-face {
+    font-family: myFont;
+    src: url("../font/whipsmart_regular/Whipsmart.ttf");
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url("../font/lt_oksana_regular/LT%20Oksana.ttf");
+}
 
 html {
     background-color: #f0f0f0;
@@ -28,7 +37,7 @@ html {
 
 .navBar-link {
     display: inline-block;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont', sans-serif;
     font-size: 24px;
     width: 120px;
     height: 70px;
@@ -198,11 +207,12 @@ main {
 
 .comment {
     margin-bottom: 25px;
-    border: 1px solid #73afcf;
+    border: 1px solid #f95625;
     font-family: 'BenchNine', sans-serif;
     box-sizing: border-box;
     padding: 25px;
     font-size: 21px;
+    width: 600px;
 
 }
 .comment-info {
@@ -210,9 +220,19 @@ main {
     border-bottom: 1px solid black;
 }
 
+#comment-replay {
+    margin-top: 40px;
+}
+
+#comment-replay p {
+    margin-bottom: 20px;
+    font-size: 27px;
+    font-family: myFont1;
+}
+
 #set-comment {
     height: 250px;
-    width: 450px;
+    width: 600px;
     position: relative;
     float: left;
     font-family: 'BenchNine', sans-serif;

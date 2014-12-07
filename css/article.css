@@ -1,16 +1,23 @@
 /* @import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext); */
+@font-face {
+    font-family: myFont1;
+    src: url("../font/amaz_nica_normal/Amazonica_Juan_Casco.ttf");
+}
+
 .recent-article {
-    float: left;
     width: 465px;
-    height: 350px;
     box-sizing: border-box;
     padding: 20px;
     overflow: hidden;
-    /*box-shadow: 0 0 5px #a0a0a0;*/
+    float: left;
 }
 
 .recent-article:first-child {
     border-right: 1px solid #a0a0a0;
+}
+
+.recent-article:nth-child(2) {
+    border-left: 1px solid #a0a0a0;
 }
 
 .article-image {
@@ -18,26 +25,25 @@
     background: url("../deloviSajta/newspaper.jpg") no-repeat center;
     background-size: 100%;
 }
-/*.article-image:hover
-{
-	    background-size: 110%;
-}*/
 
 .caption {
-    font-family: 'Arial';
+    font-family: 'myFont1';
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .article-info {
     font-family: 'BenchNine', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .piece-of-text {
-    font-family: 'BenchNine', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
+    font-family: myFont1;
 }
 
 .regular-article {
@@ -103,9 +109,50 @@
 
 .read-more {
     cursor: pointer;
+    background-color: #f95625;
+    height: 25px;
+    width: 120px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2px;
+    line-height: 21px;
+    color: #ffffff;
+    position: relative;
+    top: 10px;
+    float: right;
 }
 
 #post {
-    float: left;
+    /*float: left;*/
+    width: 600px;
+    margin-left: 25px;
+}
 
+#post img.alignleft {
+    margin-right: 20px;
+}
+
+#post img.alignright {
+    margin-left: 20px;
+}
+
+.post-title {
+    font-family: myFont1;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.post {
+    font-family: myFont1;
+    font-size: 18px;
+    text-align: justify;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }
