@@ -49,7 +49,7 @@
                     <input type="text" name="name" placeholder="Ime" id="ime"/><br />
                     <input type="email" name="email" placeholder="Email" id="email"/><br />
                     <textarea id="comment-content"></textarea><br />
-                    <button onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
+                    <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
             </div>
             </div><!-- end comment-replay -->
             <?php disconnect(); ?>
