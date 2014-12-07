@@ -153,7 +153,7 @@ function setComment(commentForm, postId) {
     currentDate = currentDate.today() + " " + currentDate.timeNow();
 
     $.post(
-        "../ceo-post/comment_post.php",
+        "comment_post.php",
         {author: ime, email: email, commentContent: commentContent, postId: postId, date: currentDate},
         function(data) {
             location.reload();

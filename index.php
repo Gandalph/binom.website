@@ -2,7 +2,155 @@
 <?php include("header.php") ?>
 
     <main id="content">
-        <div id="slider"></div><!-- end slider -->
+		<!--SLAJDER -->
+		<script src="js/jssor.slider.mini.js"></script>
+		<script>
+		jQuery(document).ready(function ($) {
+			var _SlideshowTransitions = [
+					{$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$JssorEasing$.$EaseOutJump,$Round:{$Top:1.5}},
+					{$Duration:1000,x:0.2,$Delay:40,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo,$Opacity:$JssorEasing$.$EaseInOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+					{$Duration:400,$Delay:100,$Cols:10,$Clip:2,$Formation:$JssorSlideshowFormations$.$FormationStraight}
+					];
+					var options = {
+					
+						$ArrowNavigatorOptions: {    //[Optional] Options to specify and enable arrow navigator or not   
+							$Class: $JssorArrowNavigator$, //[Requried] Class to create arrow navigator instance
+							$ChanceToShow: 1,  //[Required] 0 Never, 1 Mouse Over, 2 Always
+							$AutoCenter: 2  //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+
+						},
+						
+						$AutoPlay: true,
+						$SlideshowOptions: {
+								$Class: $JssorSlideshowRunner$,
+								$Transitions: _SlideshowTransitions,
+								$TransitionsOrder: 1,
+								$ShowLink: true
+								},
+								
+								
+						 $ThumbnailNavigatorOptions: {
+								$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+								$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+								$ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+								$AutoCenter: 0,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+								$Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+								$SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+								$SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+								$DisplayPieces: 9,                              //[Optional] Number of pieces to display, default value is 1
+								$ParkingPosition: 260,                          //[Optional] The offset position to park thumbnail
+								$Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+								$DisableDrag: false                            //[Optional] Disable drag or not, default value is false
+							}
+								           
+					};			
+        var jssor_slider1 = new $JssorSlider$('slider', options);
+		});
+		</script>
+		<div id="slider" style="position: relative; top: 0px; left: 0px; width: 950px; height: 450px;">
+
+			<!-- Slides Container -->
+			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 950px; height: 450px;">
+				<div><img u="image" src="slike/gun_n_roses.jpg" /></div>
+				<div><img u="image" src="slike/iron_maiden.jpeg" /></div>
+			</div>
+			
+			<!-- Arrow Navigator Skin Begin -->
+			<style>
+
+				.jssora03l, .jssora03r, .jssora03ldn, .jssora03rdn
+				{
+					position: absolute;
+					cursor: pointer;
+					display: block;
+					background: url(ikonice/a13.png) no-repeat;
+					overflow:hidden;
+				}
+				.jssora03l { background-position: -3px -33px; }
+				.jssora03r { background-position: -63px -33px; }
+				.jssora03l:hover { background-position: -123px -33px; }
+				.jssora03r:hover { background-position: -183px -33px; }
+				.jssora03ldn { background-position: -243px -33px; }
+				.jssora03rdn { background-position: -303px -33px; }
+			</style>
+			<!-- Arrow Left -->
+			<span u="arrowleft" class="jssora03l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+			</span>
+			<!-- Arrow Right -->
+			<span u="arrowright" class="jssora03r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+			</span>
+		
+		
+		                <!-- ThumbnailNavigator Skin Begin -->
+                <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
+                    height: 60px; right: 0px; bottom: 0px;">
+                    <!-- Thumbnail Item Skin Begin -->
+                    <style>
+                        /* jssor slider thumbnail navigator skin 04 css */
+                        /*
+                        .jssort04 .p            (normal)
+                        .jssort04 .p:hover      (normal mouseover)
+                        .jssort04 .pav          (active)
+                        .jssort04 .pav:hover    (active mouseover)
+                        .jssort04 .pdn          (mousedown)
+                        */
+                        .jssort04 .w, .jssort04 .pav:hover .w {
+                            position: absolute;
+                            width: 60px;
+                            height: 30px;
+                            border: #0099FF 1px solid;
+                        }
+
+                        * html .jssort04 .w {
+                            width: /**/ 62px;
+                            height: /**/ 32px;
+                        }
+
+                        .jssort04 .pdn .w, .jssort04 .pav .w {
+                            border-style: solid;
+                        }
+
+                        .jssort04 .c {
+                            width: 62px;
+                            height: 32px;
+                            filter: alpha(opacity=45);
+                            opacity: .45;
+                            transition: opacity .6s;
+                            -moz-transition: opacity .6s;
+                            -webkit-transition: opacity .6s;
+                            -o-transition: opacity .6s;
+                        }
+
+                        .jssort04 .p:hover .c, .jssort04 .pav .c {
+                            filter: alpha(opacity=0);
+                            opacity: 0;
+                        }
+
+                        .jssort04 .p:hover .c {
+                            transition: none;
+                            -moz-transition: none;
+                            -webkit-transition: none;
+                            -o-transition: none;
+                        }
+                    </style>
+                    <div u="slides" style="bottom: 25px; right: 30px;">
+                        <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
+                            <div class="w">
+                                <div u="thumbnailtemplate" style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></div>
+                            </div>
+                            <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thumbnail Item Skin End -->
+                </div>
+		
+		
+		
+		
+
+		</div><!-- end slider -->
         <?php
 
         global $link;
@@ -80,6 +228,5 @@
 
                 </div>
             </div><!-- end regular-article-wrapper -->
-
         </div><!-- end article-wrapper -->
-<?php include("footer.php"); ?>
+ <?php include("footer.php"); ?>

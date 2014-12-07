@@ -19,7 +19,23 @@
 
             if(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <h1 class="post-title"><?= $row['post_title'] ?></h1>
-                <p class="post"><?= str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']) ?></p>
+                <?php 
+					preg_match_all("/\bhttps:\/\/www.youtube.com\/watch\?v=(\w+)\b/", $row['post_content'], $out);
+					$br_regexa = count($out[0]);
+// 					print_r($out);
+// 					print($br_regexa);
+					$newphrase = str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']);
+					for($i = 0 ; $i < $br_regexa; $i++)
+					{
+						$tmp = "<iframe width='400px' height='300px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>"; 
+						$newphrase = str_replace($out[0][$i], $tmp, $newphrase);
+// 						print($out[1][$i]);
+					}
+                
+                ?>
+                
+                
+                <p class="post"><?= $newphrase ?></p>
             <?php endif; ?>
         </div><!-- end post -->
         <div id="comments">
