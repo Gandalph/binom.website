@@ -17,7 +17,6 @@
 
     <header>
         <div id="logo">
-            <img src="slike/zaglavlje.jpg" alt="Binom" height="300" width=100%>
         </div><!-- end logo -->
         <div id="nav-wrapper">
             <nav id="nav">
@@ -44,7 +43,9 @@
                                     <?php
                                     connect();
 
-                                    $upit = 'SELECT distinct name FROM wp_terms';
+                                    $upit = 'select distinct name '
+                                          . 'from wp_terms wt join wp_term_taxonomy wtt on wt.term_id = wtt.term_id '
+                                          . 'where wtt.taxonomy = "category"';
                                     $result = mysqli_query($link, $upit);
                                     $count = mysqli_num_rows($result);
                                     for($i = 0; $i < $count; $i++)

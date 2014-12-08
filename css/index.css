@@ -1,15 +1,18 @@
-/* @import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);*/
+/*@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);*/
+@font-face {
+    font-family: myFont;
+    src: url("../font/whipsmart_regular/Whipsmart.ttf");
+}
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 3
-*/
+@font-face {
+    font-family: myFont1;
+    src: url("../font/lt_oksana_regular/LT%20Oksana.ttf");
+}
+
 html {
     background-color: #f0f0f0;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 20
-*/
 #nav-wrapper {
     height: 70px;
     width: 100%;
@@ -18,10 +21,6 @@ html {
     z-index: 1
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 21
-*/
-
 #nav {
     height: 70px;
     width: 950px;
@@ -29,9 +28,6 @@ html {
     z-index: 2
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 25
-*/
 .navBar {
     width: 500px;
     overflow: hidden;
@@ -39,12 +35,9 @@ html {
     z-index: 3
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 26
-*/
 .navBar-link {
     display: inline-block;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont', sans-serif;
     font-size: 24px;
     width: 120px;
     height: 70px;
@@ -52,9 +45,6 @@ html {
     cursor: pointer;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 27
-*/
 .navBar-window {
     height: 40px;
     overflow: hidden;
@@ -62,9 +52,6 @@ html {
     top: 15px;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 28
-*/
 .roll {
     height: 80px;
     position: relative;
@@ -72,27 +59,19 @@ html {
     text-align: center;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 29
-*/
 .roll-up {
     height: 40px;
     color: #73afcf;
     line-height: 40px;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 32
-*/
 .roll-down {
     height: 40px;
     color: white;
     line-height: 40px;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 19
-*/
+
 #logo {
 	width: 930px;
 	margin: auto;
@@ -108,10 +87,6 @@ header
 	background: linear-gradient(to right,  #333333 ,#B2B2B2); /* Standard syntax */
 }
 
-/*
-*   index.php, arhiva.php LINE 116
-*   ceo-post/index.php LINE 110
-*/
 main {
     width: 950px;
     /*height: 1000px;*/
@@ -122,18 +97,11 @@ main {
     position: relative;
 }
 
-/*
-*   index.php LINE 117
-*/
 #slider {
     height: 400px;
     border: 1px solid #a0a0a0;
 }
 
-/*
-*   index.php, arhiva.php LINE 106
-*   ceo-post/index.php LINE 100
-*/
 #form {
     display: inline-block;
     height: 70px;
@@ -143,10 +111,6 @@ main {
     left: 193px;
 }
 
-/*
-*   index.php, arhiva.php LINE 108
-*   ceo-post/index.php LINE 102
-*/
 #search-field {
     position: relative;
     left: 200px;
@@ -160,23 +124,17 @@ main {
 	background-color: #f95625;
 }
 
-/*
-*   index.php, arhiva.php LINE 110
-*   ceo-post/index.php LINE 104
-*/
 #search {
 
     width: 65px;
     height: 65px;
     background-image: url("../ikonice/magnifier.png");
-    background-size: 100%;
+    background-size: 60%;
     border: none;
     background-color: #f95625;
+    background-repeat: no-repeat;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 16
-*/
 #slide-top {
     width: 60px;
     height: 60px;
@@ -194,9 +152,6 @@ main {
     opacity:1;
 }
 
-/*
-*   index.php, arhiva.php, ceo-post/index.php LINE 38
-*/
 #slide-down
 {
     background-color: #f95625;
@@ -252,14 +207,81 @@ main {
 
 .comment {
     margin-bottom: 25px;
-    border: 1px solid #73afcf;
+    border: 1px solid #f95625;
     font-family: 'BenchNine', sans-serif;
     box-sizing: border-box;
     padding: 25px;
     font-size: 21px;
+    width: 600px;
 
 }
 .comment-info {
     margin-bottom: 10px;
     border-bottom: 1px solid black;
+}
+
+#comment-replay {
+    margin-top: 40px;
+}
+
+#comment-replay p {
+    margin-bottom: 20px;
+    font-size: 27px;
+    font-family: myFont1;
+}
+
+#set-comment {
+    height: 250px;
+    width: 600px;
+    position: relative;
+    float: left;
+    font-family: 'BenchNine', sans-serif;
+}
+
+#comment-content {
+    height: 150px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'BenchNine', sans-serif;
+}
+input[type=text], input[type=email] {
+    height: 34px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -moz-box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    font-family: 'BenchNine', sans-serif;
+}
+
+#send {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #f95625;
+    border: 0px;
+    width: 100%;
+}
+
+#send:hover {
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #f95635;
 }

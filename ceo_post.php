@@ -22,14 +22,11 @@
                 <?php 
 					preg_match_all("/\bhttps:\/\/www.youtube.com\/watch\?v=(\w+)\b/", $row['post_content'], $out);
 					$br_regexa = count($out[0]);
-// 					print_r($out);
-// 					print($br_regexa);
 					$newphrase = str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']);
 					for($i = 0 ; $i < $br_regexa; $i++)
 					{
 						$tmp = "<iframe width='400px' height='300px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>"; 
 						$newphrase = str_replace($out[0][$i], $tmp, $newphrase);
-// 						print($out[1][$i]);
 					}
                 
                 ?>
@@ -60,12 +57,12 @@
             <?php endwhile; ?>
             <?php } ?>
             <div id="comment-replay">
-                <p>Ostavi komentar</p>
+                <p>Остави коментар</p>
                 <div id="set-comment">
                     <input type="text" name="name" placeholder="Ime" id="ime"/><br />
                     <input type="email" name="email" placeholder="Email" id="email"/><br />
                     <textarea id="comment-content"></textarea><br />
-                    <button onclick="setComment(this.parentNode, <?= $post ?>)">Postavi</button>
+                    <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Постави коментар</button>
             </div>
             </div><!-- end comment-replay -->
             <?php disconnect(); ?>
