@@ -196,22 +196,22 @@ main {
 }
 
 #comments {
-    width: 930px;
+    width: 600px;
     margin: 0 auto;
     background: #ffffff;
     margin-bottom: 50px;
     padding: 25px;
     box-sizing: border-box;
     float: left;
+    font-family: 'myFont1'
 }
 
 .comment {
     margin-bottom: 25px;
     border: 1px solid #f95625;
-    font-family: 'BenchNine', sans-serif;
     box-sizing: border-box;
     padding: 25px;
-    font-size: 21px;
+    font-size: 18px;
     width: 600px;
 
 }
@@ -250,7 +250,8 @@ main {
     padding: 0 8px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-family: 'BenchNine', sans-serif;
+    font-size: 18px;
+    font-family: 'myFont1'
 }
 input[type=text], input[type=email] {
     height: 34px;
@@ -264,7 +265,7 @@ input[type=text], input[type=email] {
     border-top: 1px solid #c0c0c0;
     padding: 0 8px;
     box-sizing: border-box;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont1'
 }
 
 #send {

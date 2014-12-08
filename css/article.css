@@ -27,7 +27,7 @@
 }
 
 .caption {
-    font-family: 'myFont1';
+    font-family: 'myFont1' Arial;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -86,13 +86,12 @@
 #right-regular-article {
     float: left;
     width: 630px;
+    margin-top: 10px;
 }
 
 #left-regular-article {
     float: left;
     width: 278px;
-    margin-left: 20px;
-    border: 1px solid #a0a0a0;
 }
 
 .alignleft {
@@ -123,9 +122,11 @@
 }
 
 #post {
-    /*float: left;*/
     width: 600px;
     margin-left: 25px;
+    text-align: justify;
+    font-family: 'myFont1', Arial;
+    font-size: 18px;
 }
 
 #post img.alignleft {
@@ -137,16 +138,10 @@
 }
 
 .post-title {
-    font-family: myFont1;
+    font-family: 'myFont1', Arial;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.post {
-    font-family: myFont1;
-    font-size: 18px;
-    text-align: justify;
 }
 
 strong {

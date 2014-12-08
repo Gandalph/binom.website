@@ -36,15 +36,16 @@
             <?php endif; ?>
         </div><!-- end post -->
         <div id="comments">
-                <?php
+            <br /><br /><p style="font-size: 24px">Коментари:</p><br />
+            <?php
 
-                $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
-                    . "from wp_comments "
-                    . "where comment_post_ID = $post";
+            $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
+                . "from wp_comments "
+                . "where comment_post_ID = $post";
 
-                $result = mysqli_query($link, $sql);
+            $result = mysqli_query($link, $sql);
 
-                ?>
+            ?>
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
             <div class="comment">
                 <div class="comment-info">
@@ -59,8 +60,8 @@
             <div id="comment-replay">
                 <p>Остави коментар</p>
                 <div id="set-comment">
-                    <input type="text" name="name" placeholder="Ime" id="ime"/><br />
-                    <input type="email" name="email" placeholder="Email" id="email"/><br />
+                    <input type="text" name="name" placeholder="Име*" id="ime"/><br />
+                    <input type="email" name="email" placeholder="Емаил*" id="email"/><br />
                     <textarea id="comment-content"></textarea><br />
                     <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Постави коментар</button>
             </div>
