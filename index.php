@@ -48,14 +48,14 @@
         var jssor_slider1 = new $JssorSlider$('slider', options);
 		});
 		</script>
-		<div id="slider" style="position: relative; top: 0px; left: 0px; width: 930px; height: 450px;"><!-- TODO ubaciti u css -->
+		<div id="slider" style="position: relative; top: -10px; left: -10px; width: 950px; height: 450px;"><!-- TODO ubaciti u css -->
 
 			<!-- Slides Container -->
-			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 930px; height: 450px;"><!-- TODO ubaciti u css -->
-				<div><img u="image" src="slike/gun_n_roses.jpg" />
+			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 950px; height: 450px;"><!-- TODO ubaciti u css -->
+				<div><img u="image" src="slike/Skyrim-Dragon-Flyby.jpg" />
                     <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 200px; height: 30px; background-color: #008000; position: relative; top: 200px; left: 100px">GOOGLE</div>
                 </div>
-				<div><img u="image" src="slike/iron_maiden.jpeg" /></div>
+				<div><img u="image" src="slike/the-joker-head-hd-fondos-276740.jpg" /></div>
 			</div>
 			
 			<!-- Arrow Navigator Skin Begin -->

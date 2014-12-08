@@ -52,7 +52,7 @@
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
             <div class="comment">
                 <div class="comment-info">
-                    <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> at <?= $row['time'] ?></p>
+                    <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> у <?= $row['time'] ?></p>
                 </div><!-- end comment-info -->
                 <div class="comment-content">
                     <p><?= $row['comment_content'] ?></p>
