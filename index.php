@@ -59,7 +59,7 @@
 			</div>
 			
 			<!-- Arrow Navigator Skin Begin -->
-			<style>
+			<style type="text/css">
 
 				.jssora03l, .jssora03r, .jssora03ldn, .jssora03rdn
 				{
@@ -88,7 +88,7 @@
                 <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
                     height: 60px; right: 0px; bottom: 0px;">
                     <!-- Thumbnail Item Skin Begin -->
-                    <style>
+                    <style type="text/css">
                         /* jssor slider thumbnail navigator skin 04 css */
                         /*
                         .jssort04 .p            (normal)
@@ -175,14 +175,18 @@
                 <div class="article-image"></div>
                 <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
                 <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
-                <div style="height: 75px; overflow: hidden;"><!-- TODO popraviti ovo lepo -->
+                <div style="height: 75px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO popraviti ovo lepo -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-                        <?php $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']); ?>
+                        <?php
+                            $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
+                            $flag = preg_match('/http[^"]+/', $row['post_content'], $match);
+                        ?>
                         <script type="text/javascript">
                             $(function() {
                                 var $div = $('<div><?= $string ?></div>');
                                 var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
                                 $p.text($div.text());
+                                $("div[data-post-id=" + <?= $row['id'] ?> + "]").prev().prev().prev().css("background-image", "url(<?php if($flag) echo $match[0]; else echo $flag ?>)");
                             })
                         </script>
                     </p>
@@ -198,23 +202,21 @@
                     <?php mysqli_data_seek($result, 2); ?>
                     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                     <article class="regular-article">
-                        <div class="r-article-image">
-                            <?php
-                            $slika = "slike/" . $row['post_name'] . ".jpg";
-                            if(file_exists($slika)): ?>
-                                <img alt="post-image" class="post-image" src="<?= $slika ?>">
-                            <?php endif; ?>
-                        </div>
+                        <div class="r-article-image"></div>
                         <div class="right-side">
                             <h1 class="caption"><?= $row['post_title'] ?></h1>
                             <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'а'; ?></p>
                             <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-                                    <?php $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']); ?>
+                                    <?php
+                                        $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
+                                        $flag = preg_match('/http[^"]+/', $row['post_content'], $match);
+                                    ?>
                                     <script type="text/javascript">
                                         var $div = $('<div><?= $string ?></div>');
                                         var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
                                         $p.text($div.text());
+                                        $("div[data-post-id=" + <?= $row['id'] ?> + "]").parent().prev().css("background-image", "url(<?php if($flag) echo $match[0] ?>)");
                                     </script>
                                 </p>
                             </div>
