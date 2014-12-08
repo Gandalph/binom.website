@@ -25,7 +25,7 @@
 					$newphrase = str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']);
 					for($i = 0 ; $i < $br_regexa; $i++)
 					{
-						$tmp = "<iframe width='400px' height='300px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>"; 
+						$tmp = "<iframe width='600px' height='400px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>";
 						$newphrase = str_replace($out[0][$i], $tmp, $newphrase);
 					}
                 

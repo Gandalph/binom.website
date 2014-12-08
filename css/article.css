@@ -32,6 +32,8 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
+    height: 49px;
+    overflow: hidden;
 }
 
 .article-info {
@@ -47,16 +49,15 @@
 }
 
 .regular-article {
-    position: relative;
     margin-bottom: 50px;
-    height: 300px;
+    /*height: 300px;*/
     width: 630px;
     border-top: 1px solid #a0a0a0;
     border-bottom: 1px solid #a0a0a0;
     /*box-shadow: 0 0 5px #a0a0a0;*/
     box-sizing: border-box;
     padding: 15px;
-    clear: both;
+    float: left;
 }
 
 .r-article-image {
