@@ -35,6 +35,9 @@
                 <p class="post"><?= $newphrase ?></p>
             <?php endif; ?>
         </div><!-- end post -->
+        <div id="right-ceo-post">
+
+        </div>
         <div id="comments">
             <br /><br /><p style="font-size: 24px">Коментари:</p><br />
             <?php

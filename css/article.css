@@ -92,6 +92,7 @@
 #left-regular-article {
     float: left;
     width: 278px;
+
 }
 
 .alignleft {
@@ -127,6 +128,7 @@
     text-align: justify;
     font-family: 'myFont1', Arial;
     font-size: 18px;
+    float: left;
 }
 
 #post img.alignleft {
@@ -139,9 +141,11 @@
 
 .post-title {
     font-family: 'myFont1', Arial;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 strong {
@@ -151,4 +155,11 @@ strong {
 
 em {
     font-style: italic;
+}
+
+#right-ceo-post {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #808080;
 }

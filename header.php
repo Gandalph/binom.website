@@ -24,6 +24,7 @@
     <div id="slide-top" title="Vrh"></div>
 
     <header>
+
         <div id="logo">
         </div><!-- end logo -->
         <div id="nav-wrapper">

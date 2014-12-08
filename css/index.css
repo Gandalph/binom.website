@@ -203,7 +203,8 @@ main {
     padding: 25px;
     box-sizing: border-box;
     float: left;
-    font-family: 'myFont1'
+    font-family: 'myFont1';
+    float: left;
 }
 
 .comment {
