@@ -173,9 +173,9 @@
             <?php while(($row = mysqli_fetch_assoc($result)) && $i < 2): ?>
             <article class="recent-article" >
                 <div class="article-image"></div>
-                <h1 class="caption"><?php echo $row['post_title']; $i++; ?></h1>
-                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> komentar<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
-                <div style="height: 75px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO popraviti ovo lepo -->
+                <h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
+                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
+                <div style="height: 75px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO style ubaciti u css -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php
                             $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
@@ -204,9 +204,9 @@
                     <article class="regular-article">
                         <div class="r-article-image"></div>
                         <div class="right-side">
-                            <h1 class="caption"><?= $row['post_title'] ?></h1>
+                            <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>
                             <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'а'; ?></p>
-                            <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>">
+                            <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO style prebaciti u css -->
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                                     <?php
                                         $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);

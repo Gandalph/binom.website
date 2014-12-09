@@ -4,6 +4,21 @@
     src: url("../font/amaz_nica_normal/Amazonica_Juan_Casco.ttf");
 }
 
+@font-face {
+    font-family: myFontSerbian;
+    src: url("../font/monofur_regular/monof55.ttf");
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url("../font/idealist_sans_regular/Idealist%20Sans.otf");
+}
+
+@font-face {
+    font-family: mySymbols;
+    src: url("../font/Entypo%20@font-face/entypo.ttf");
+}
+
 .recent-article {
     width: 465px;
     box-sizing: border-box;
@@ -28,25 +43,29 @@
 }
 
 .caption {
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFontSerbian', sans-serif;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
     height: 49px;
     overflow: hidden;
+    margin-top: 5px;
 }
 
 .article-info {
-    font-family: 'BenchNine', sans-serif;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-family: 'myFont2', sans-serif;
+    font-size: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    border-top: 1px solid #808080;
+    padding: 5px 0;
 }
 
 .piece-of-text {
     font-size: 18px;
     text-align: justify;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFontSerbian', sans-serif;
 }
 
 .regular-article {
@@ -123,6 +142,7 @@
     position: relative;
     top: 10px;
     float: right;
+    font-family: 'Arial', sans-serif;
 }
 
 #post {
