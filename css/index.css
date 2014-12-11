@@ -9,6 +9,11 @@
     src: url("../font/lt_oksana_regular/LT%20Oksana.ttf");
 }
 
+@font-face {
+    font-family: myFontFirstLetter;
+    src: url("../font/moulin_rouge_regular/Moulin%20Rouge.ttf");
+}
+
 html {
     background-color: #f0f0f0;
 }
@@ -79,11 +84,7 @@ html {
 	background-size: 100% 300px;
     height: 300px;
 }
-header
-{
-	background: -webkit-linear-gradient(left, 	#333333 ,#B2B2B2); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(right, #333333 ,#B2B2B2); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(right, #333333 ,#B2B2B2); /* For Firefox 3.6 to 15 */
+header {
 	background: linear-gradient(to right,  #333333 ,#B2B2B2); /* Standard syntax */
 }
 
@@ -99,7 +100,6 @@ main {
 
 #slider {
     height: 400px;
-    border: 1px solid #a0a0a0;
 }
 
 #form {
@@ -118,21 +118,18 @@ main {
     height: 35px;
     font-size: 20px;
     padding: 5px 2px;
-	top: 0px;
+	top: 13px;
 	border: none;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #ffffff;
 	background-color: #f95625;
 }
 
 #search {
-
     width: 65px;
     height: 65px;
-    background-image: url("../ikonice/magnifier.png");
-    background-size: 60%;
     border: none;
-    background-color: #f95625;
-    background-repeat: no-repeat;
+    background: #f95625 url("../ikonice/magnifier.png") no-repeat;
+    background-size: 60%;
 }
 
 #slide-top {
@@ -155,11 +152,11 @@ main {
 #slide-down
 {
     background-color: #f95625;
-    height: 0px;
+    height: 0;
     width: 100%;
     position: absolute;
     z-index: 1;
-    left: 0px;
+    left: 0;
     top: 370px;
 }
 
@@ -196,28 +193,27 @@ main {
 }
 
 #comments {
-    width: 930px;
-    margin: 0 auto;
+    width: 600px;
     background: #ffffff;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     padding: 25px;
     box-sizing: border-box;
     float: left;
+    font-family: 'myFont1', sans-serif;
 }
 
 .comment {
-    margin-bottom: 25px;
-    border: 1px solid #f95625;
-    font-family: 'BenchNine', sans-serif;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f95625;
     box-sizing: border-box;
-    padding: 25px;
-    font-size: 21px;
+    padding-bottom: 20px;
+    font-size: 16px;
     width: 600px;
 
 }
 .comment-info {
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 #comment-replay {
@@ -227,7 +223,7 @@ main {
 #comment-replay p {
     margin-bottom: 20px;
     font-size: 27px;
-    font-family: myFont1;
+    font-family: myFont1, sans-serif;
 }
 
 #set-comment {
@@ -240,31 +236,25 @@ main {
 
 #comment-content {
     height: 150px;
-    font-size: 20px;
     width: 100%;
     margin-bottom: 10px;
-    -webkit-appearance: none;
     background: #fff;
     border: 1px solid #d9d9d9;
-    border-top: 1px solid #c0c0c0;
     padding: 0 8px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-family: 'BenchNine', sans-serif;
+    font-size: 18px;
+    font-family: 'myFont1', sans-serif;
 }
 input[type=text], input[type=email] {
     height: 34px;
     font-size: 20px;
     width: 100%;
     margin-bottom: 10px;
-    -webkit-appearance: none;
     background: #fff;
     border: 1px solid #d9d9d9;
-    -moz-box-sizing: border-box;
-    border-top: 1px solid #c0c0c0;
     padding: 0 8px;
     box-sizing: border-box;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont1', sans-serif;
 }
 
 #send {
@@ -276,12 +266,18 @@ input[type=text], input[type=email] {
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
     background-color: #f95625;
-    border: 0px;
+    border: 0;
     width: 100%;
 }
 
 #send:hover {
-    border: 0px;
+    border: 0;
     text-shadow: 0 1px rgba(0,0,0,0.3);
     background-color: #f95635;
+}
+
+.prvo-slovo {
+    font-family: myFontFirstLetter, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
 }

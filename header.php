@@ -11,11 +11,20 @@
     <script type="text/javascript" src="js/funkcije.js" ></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper">
 
     <div id="slide-top" title="Vrh"></div>
 
     <header>
+
         <div id="logo">
         </div><!-- end logo -->
         <div id="nav-wrapper">
@@ -28,10 +37,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Вести</span>
+                                    <span><span class="prvo-slovo">В</span>ести</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Вести</span>
+                                    <span><span class="prvo-slovo">В</span>ести</span>
                                 </div>
                             </div>
                         </div>
@@ -68,10 +77,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Галерија</span>
+                                    <span><span class="prvo-slovo">Г</span>алерија</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Галерија</span>
+                                    <span><span class="prvo-slovo">Г</span>алерија</span>
                                 </div>
                             </div>
                         </div>
@@ -80,10 +89,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>Арихива</span>
+                                    <span><span class="prvo-slovo">А</span>рхива</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>Арихива</span>
+                                    <span><span class="prvo-slovo">А</span>рхива</span>
                                 </div>
                             </div>
                         </div>
@@ -92,10 +101,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span>О наме</span>
+                                    <span><span class="prvo-slovo">О</span> нама</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span>О нама</span>
+                                    <span><span class="prvo-slovo">О</span> нама</span>
                                 </div>
                             </div>
                         </div>

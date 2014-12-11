@@ -25,7 +25,7 @@
 					$newphrase = str_replace(array("\n\r", "\n", "\r"), "<br />", $row['post_content']);
 					for($i = 0 ; $i < $br_regexa; $i++)
 					{
-						$tmp = "<iframe width='400px' height='300px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>"; 
+						$tmp = "<iframe width='600px' height='400px' src='https://www.youtube.com/embed/" . $out[1][$i] . "'> </iframe>";
 						$newphrase = str_replace($out[0][$i], $tmp, $newphrase);
 					}
                 
@@ -35,20 +35,24 @@
                 <p class="post"><?= $newphrase ?></p>
             <?php endif; ?>
         </div><!-- end post -->
+        <div id="right-ceo-post">
+
+        </div>
         <div id="comments">
-                <?php
+            <br /><br /><p style="font-size: 24px">Коментари:</p><br />
+            <?php
 
-                $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
-                    . "from wp_comments "
-                    . "where comment_post_ID = $post";
+            $sql = "select comment_author, date(comment_date) as date, time(comment_date) as time, comment_content "
+                . "from wp_comments "
+                . "where comment_post_ID = $post";
 
-                $result = mysqli_query($link, $sql);
+            $result = mysqli_query($link, $sql);
 
-                ?>
+            ?>
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
             <div class="comment">
                 <div class="comment-info">
-                    <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> at <?= $row['time'] ?></p>
+                    <p><?= $row['comment_author'] ?> / <?= $row['date'] ?> у <?= $row['time'] ?></p>
                 </div><!-- end comment-info -->
                 <div class="comment-content">
                     <p><?= $row['comment_content'] ?></p>
@@ -59,8 +63,8 @@
             <div id="comment-replay">
                 <p>Остави коментар</p>
                 <div id="set-comment">
-                    <input type="text" name="name" placeholder="Ime" id="ime"/><br />
-                    <input type="email" name="email" placeholder="Email" id="email"/><br />
+                    <input type="text" name="name" placeholder="Име*" id="ime"/><br />
+                    <input type="email" name="email" placeholder="Емаил*" id="email"/><br />
                     <textarea id="comment-content"></textarea><br />
                     <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Постави коментар</button>
             </div>

@@ -10,6 +10,11 @@ $(document).ready(function () {
     }, function () {
         $(this).children().first().css("background-size","100%");
     });
+    $(".regular-article").hover(function () {
+        $(this).children().first().css("background-size","110%");
+    }, function () {
+        $(this).children().first().css("background-size","");
+    });
 
 
 

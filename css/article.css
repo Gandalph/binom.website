@@ -4,6 +4,21 @@
     src: url("../font/amaz_nica_normal/Amazonica_Juan_Casco.ttf");
 }
 
+@font-face {
+    font-family: myFontSerbian;
+    src: url("../font/monofur_regular/monof55.ttf");
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url("../font/idealist_sans_regular/Idealist%20Sans.otf");
+}
+
+@font-face {
+    font-family: mySymbols;
+    src: url("../font/Entypo%20@font-face/entypo.ttf");
+}
+
 .recent-article {
     width: 465px;
     box-sizing: border-box;
@@ -22,41 +37,47 @@
 
 .article-image {
     height: 175px;
-    background: url("../deloviSajta/newspaper.jpg") no-repeat center;
+    background: no-repeat center;
     background-size: 100%;
+
 }
 
 .caption {
-    font-family: 'myFont1';
+    font-family: 'myFontSerbian', sans-serif;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
+    height: 49px;
+    overflow: hidden;
+    margin-top: 5px;
 }
 
 .article-info {
-    font-family: 'BenchNine', sans-serif;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-family: 'myFont2', sans-serif;
+    font-size: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    border-top: 1px solid #808080;
+    padding: 5px 0;
 }
 
 .piece-of-text {
     font-size: 18px;
     text-align: justify;
-    font-family: myFont1;
+    font-family: 'myFontSerbian', sans-serif;
 }
 
 .regular-article {
-    position: relative;
     margin-bottom: 50px;
-    height: 300px;
+    /*height: 300px;*/
     width: 630px;
     border-top: 1px solid #a0a0a0;
     border-bottom: 1px solid #a0a0a0;
     /*box-shadow: 0 0 5px #a0a0a0;*/
     box-sizing: border-box;
     padding: 15px;
-    clear: both;
+    float: left;
 }
 
 .r-article-image {
@@ -64,7 +85,8 @@
     height: 270px;
     width: 270px;
     margin-right: 30px;
-    background: url("../slike/drugi-post.jpg");
+    background: no-repeat center;
+    background-size: 100%;
 }
 
 .post-image {
@@ -86,13 +108,13 @@
 #right-regular-article {
     float: left;
     width: 630px;
+    margin-top: 10px;
 }
 
 #left-regular-article {
     float: left;
     width: 278px;
-    margin-left: 20px;
-    border: 1px solid #a0a0a0;
+
 }
 
 .alignleft {
@@ -120,12 +142,16 @@
     position: relative;
     top: 10px;
     float: right;
+    font-family: 'Arial', sans-serif;
 }
 
 #post {
-    /*float: left;*/
     width: 600px;
     margin-left: 25px;
+    text-align: justify;
+    font-family: 'myFont1', sans-serif;
+    font-size: 18px;
+    float: left;
 }
 
 #post img.alignleft {
@@ -137,22 +163,26 @@
 }
 
 .post-title {
-    font-family: myFont1;
-    font-size: 30px;
+    font-family: 'myFont1', sans-serif;
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.post {
-    font-family: myFont1;
-    font-size: 18px;
-    text-align: justify;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 strong {
     font-weight: bold;
+
 }
 
 em {
     font-style: italic;
+}
+
+#right-ceo-post {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #808080;
 }
