@@ -147,10 +147,6 @@
                     </div>
                     <!-- Thumbnail Item Skin End -->
                 </div>
-		
-		
-		
-		
 
 		</div><!-- end slider -->
         <?php
@@ -169,8 +165,8 @@
 
         ?>
         <div id="article-wrapper">
-
-            <?php while(($row = mysqli_fetch_assoc($result)) && $i < 2): ?>
+<div style=" height:465px;">
+            <?php while(($row = mysqli_fetch_assoc($result)) && $i < 6): ?>
             <article class="recent-article" >
                 <div class="article-image"></div>
                 <h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
@@ -196,6 +192,7 @@
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
+</div>
 
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">

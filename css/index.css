@@ -15,15 +15,21 @@
 }
 
 html {
+/* 	background-color: #b6afa5; */
+
+/* 	prethodna boja */
     background-color: #f0f0f0;
 }
 
 #nav-wrapper {
     height: 70px;
     width: 100%;
-    background-color: #f95625;
+/* 	ona narandzasta */
+/*     background-color: #f95625; */
+	background-color: #b6afa5;
     color: white;
-    z-index: 1
+    z-index: 1;
+	border-bottom: 3px solid white;
 }
 
 #nav {
@@ -72,13 +78,13 @@ html {
 
 .roll-down {
     height: 40px;
-    color: white;
+    color: #4d473f;
     line-height: 40px;
 }
 
 
 #logo {
-	width: 930px;
+	width: 950px;
 	margin: auto;
 	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
 	background-size: 100% 300px;
@@ -92,6 +98,9 @@ main {
     width: 950px;
     /*height: 1000px;*/
     margin: 0 auto;
+/* 	background-color: #b6afa5; */
+
+/* 	prethodna boja */
     background-color: #fff;
     box-sizing: border-box;
     padding: 10px;
@@ -121,14 +130,14 @@ main {
 	top: 13px;
 	border: none;
 	border-bottom: 2px solid #ffffff;
-	background-color: #f95625;
+	background-color: #b6afa5;
 }
 
 #search {
     width: 65px;
     height: 65px;
     border: none;
-    background: #f95625 url("../ikonice/magnifier.png") no-repeat;
+    background: #b6afa5 url("../ikonice/magnifier.png") no-repeat;
     background-size: 60%;
 }
 
@@ -151,7 +160,7 @@ main {
 
 #slide-down
 {
-    background-color: #f95625;
+    background-color: #dedadc;
     height: 0;
     width: 100%;
     position: absolute;
@@ -176,6 +185,7 @@ main {
  	display: none;
 	z-index: 1;
 	position: absolute;
+	color: #a4a09a;
 }
 .categories
 {
@@ -280,4 +290,9 @@ input[type=text], input[type=email] {
     font-family: myFontFirstLetter, sans-serif;
     font-size: 30px;
     font-weight: 100;
+}
+
+.recent-article
+{
+/* 	display:none; */
 }

@@ -133,8 +133,33 @@ $(document).ready(function () {
             
         }
     });
+	
+	var i;
+	for(i = 2; i < 6; i++)
+		$("article:eq(" + i + ")").css("display","none");
+	
+	//menjanje recent-postova
+	window.setInterval("promeni()",3000);
+
+	
+	
+	
 
 });
+	var i = 0;
+
+	function promeni()
+	{
+		console.log("poziva");
+		$("article:eq(" + i + ")").fadeOut();//.css("display","none");
+		$("article:eq(" + (i + 1) + ")").fadeOut();//.css("display","none");
+		i = (i + 2) % 6;
+		$("article:eq(" + i + ")").fadeIn();//.css("display","");
+		$("article:eq(" + (i + 1) + ")").fadeIn();//.css("display","");
+	};
+	
+
+
 
 function margin(count) {
     var margin = ($(document).width() - 300 - (count * 120)) / (count + 1);
@@ -165,6 +190,7 @@ function setComment(commentForm, postId) {
         }
 
     );
+	
 }
 
 function checkSearch() {
