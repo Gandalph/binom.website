@@ -30,6 +30,8 @@ $(document).ready(function () {
     $nav_window.first().css({"border-left": "1px solid white"});
     $nav_window.css({"border-right": "1px solid white"});
 
+    /* Margina last footer-div */
+    $(".footer-div").last().css("margin", "0");
 
     /* Velicina main diva */
     var $height;

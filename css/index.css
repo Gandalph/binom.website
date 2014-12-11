@@ -281,3 +281,40 @@ input[type=text], input[type=email] {
     font-size: 30px;
     font-weight: 100;
 }
+
+footer {
+    width: 950px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #4d473f;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+}
+
+.footer-div {
+    width: 298px;
+    height: 300px;
+    /*border: 1px solid white;*/
+    float: left;
+    margin-right: 15px;
+}
+
+.copy {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: bold;
+    height: 20px;
+    width: 130px;
+    clear: both;
+    padding-top: 12px;
+}
+
+footer div {
+    margin: 0 auto;
+    width: 930px;
+}

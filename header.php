@@ -52,6 +52,8 @@
                                     <?php
                                     connect();
 
+                                    global $link;
+
                                     $upit = 'select distinct name '
                                           . 'from wp_terms wt join wp_term_taxonomy wtt on wt.term_id = wtt.term_id '
                                           . 'where wtt.taxonomy = "category"';
