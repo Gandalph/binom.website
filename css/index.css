@@ -317,11 +317,11 @@ footer {
     margin: 0 auto;
     margin-top: 20px;
     font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    color: #ffffff;
+    font-size: 10px;
+    color: #a0a0a0;
     font-weight: bold;
     height: 20px;
-    width: 130px;
+    width: 230px;
     clear: both;
     padding-top: 12px;
 }
