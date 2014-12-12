@@ -166,7 +166,7 @@
         ?>
         <div id="article-wrapper">
 <div style="height: 413px; overflow: hidden">
-            <?php while(($row = mysqli_fetch_assoc($result)) && $i < 6): ?>
+            <?php while(($row = mysqli_fetch_assoc($result)) && $i < 4): ?>
             <article class="recent-article" >
                 <div class="article-image" data-post-id="<?= $row['id'] ?>"></div>
                 <h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
@@ -196,7 +196,7 @@
 
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">
-                    <?php mysqli_data_seek($result, 6); ?>
+                    <?php mysqli_data_seek($result, 4); ?>
                     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                     <article class="regular-article">
                         <div class="r-article-image"></div>

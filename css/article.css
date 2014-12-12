@@ -20,20 +20,22 @@
 }
 
 .recent-article {
-    width: 465px;
+    width: 460px;
     box-sizing: border-box;
     padding: 20px;
     overflow: hidden;
     float: left;
+    background-color: #f5f5f5;
+    margin-right: 5px;
 }
 
-.recent-article:first-child {
-    border-right: 1px solid #a0a0a0;
-}
+/*.recent-article:first-child {*/
+    /*border-right: 1px solid #a0a0a0;*/
+/*}*/
 
-.recent-article:nth-child(2) {
-    border-left: 1px solid #a0a0a0;
-}
+/*.recent-article:nth-child(2) {*/
+    /*border-left: 1px solid #a0a0a0;*/
+/*}*/
 
 .article-image {
     height: 175px;
@@ -63,9 +65,10 @@
 }
 
 .piece-of-text {
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
-    font-family: 'myFontSerbian', sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 19px;
 }
 
 .regular-article {
@@ -87,6 +90,7 @@
     margin-right: 30px;
     background: no-repeat center;
     background-size: 100%;
+    background-color: #f5f5f5;
 }
 
 .post-image {
