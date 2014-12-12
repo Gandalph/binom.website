@@ -65,7 +65,7 @@
                                         $row = mysqli_fetch_assoc($result);
                                         echo "<div class='categories'>$row[name]</div>";
                                     }
-                                    echo "<script>margin($count)</script>";
+                                    //echo "<script>margin($count)</script>";
 
 
                                     disconnect();
