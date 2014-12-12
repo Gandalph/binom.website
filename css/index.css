@@ -72,7 +72,7 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #73afcf;
+    color: #fff;
     line-height: 40px;
 }
 
@@ -89,9 +89,13 @@ html {
 	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
 	background-size: 100% 300px;
     height: 300px;
+	float:left;
+	
 }
+
+
 header {
-	background: linear-gradient(to right,  #333333 ,#B2B2B2); /* Standard syntax */
+/* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
 }
 
 main {
@@ -329,5 +333,10 @@ footer {
 footer div {
     margin: 0 auto;
     width: 930px;
+}
+
+img{
+	border: 0;
+	
 }
 
