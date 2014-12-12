@@ -136,28 +136,48 @@ $(document).ready(function () {
         }
     });
 	
+	
+	
+	/*      menjanje recent-postova      */
+	
 	var i;
 	for(i = 2; i < 6; i++)
-		$("article:eq(" + i + ")").css("display","none");
+	{
+		$(".recent-article:eq(" + i + ")").fadeOut();
+	}
+	window.setInterval("promeni()",10000);
 	
-	//menjanje recent-postova
-	window.setInterval("promeni()",3000);
-
+	/*          pozicioniranje logoa             */
+	
+	if($(window).width() % 2 == 1 )
+		$("img:eq(1)").width( ($(window).width()- 950)/2 -0.5 + "px" );
+	else
+		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
+	
+	$(window).resize(function(){
+		
+		$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
+		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+		
+		
+		if($("header").height() > 500)
+		{
+			$("img:eq(1)").width( ($(window).width()- 950)/2 -0.5 + "px" );
+		}
+	});
 	
 	
 	
-
 });
 	var i = 0;
-
 	function promeni()
 	{
-		console.log("poziva");
-		$("article:eq(" + i + ")").fadeOut();//.css("display","none");
-		$("article:eq(" + (i + 1) + ")").fadeOut();//.css("display","none");
+		$(".recent-article:eq(" + i + ")").fadeOut(1000);//.css("display","none");
+		$(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);//.css("display","none");
 		i = (i + 2) % 6;
-		$("article:eq(" + i + ")").fadeIn();//.css("display","");
-		$("article:eq(" + (i + 1) + ")").fadeIn();//.css("display","");
+		$(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);//.css("display","");
+		$(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);//.css("display","");
 	};
 	
 

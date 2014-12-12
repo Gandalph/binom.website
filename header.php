@@ -24,9 +24,10 @@
     <div id="slide-top" title="Vrh"></div>
 
     <header>
-
+		<img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300" style="float:left;" > 
         <div id="logo">
         </div><!-- end logo -->
+        <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300" > 
         <div id="nav-wrapper">
             <nav id="nav">
                 <!--
