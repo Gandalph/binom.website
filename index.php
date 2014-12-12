@@ -196,7 +196,7 @@
 
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">
-                    <?php mysqli_data_seek($result, 2); ?>
+                    <?php mysqli_data_seek($result, 6); ?>
                     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                     <article class="regular-article">
                         <div class="r-article-image"></div>
