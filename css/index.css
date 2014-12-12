@@ -15,18 +15,18 @@
 }
 
 html {
-/* 	background-color: #b6afa5; */
+	background-color: #DADBD5;
 
 /* 	prethodna boja */
-    background-color: #f0f0f0;
+/*     background-color: #f0f0f0; */
 }
 
 #nav-wrapper {
     height: 70px;
     width: 100%;
 /* 	ona narandzasta */
-/*     background-color: #f95625; */
-	background-color: #f95625;
+/*     background-color: #F95625; */
+	background-color: #F95625;
     color: white;
     z-index: 1;
     margin-top: -3px;
@@ -134,14 +134,14 @@ main {
 	top: 13px;
 	border: none;
 	border-bottom: 2px solid #ffffff;
-	background-color: #f95625;
+	background-color: #F95625;
 }
 
 #search {
     width: 65px;
     height: 65px;
     border: none;
-    background: #f95625 url("../ikonice/magnifier.png") no-repeat center;
+    background: #F95625 url("../ikonice/magnifier.png") no-repeat center;
     background-size: 70%;
     cursor: pointer;;
 }
@@ -165,7 +165,7 @@ main {
 
 #slide-down
 {
-    background-color: #f95625;
+    background-color: #F95625;
     height: 0;
     width: 100%;
     position: absolute;
@@ -219,7 +219,7 @@ main {
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #f95625;
+    border-bottom: 1px solid #F95625;
     box-sizing: border-box;
     padding-bottom: 20px;
     font-size: 16px;
@@ -280,7 +280,7 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #f95625;
+    background-color: #F95625;
     border: 0;
     width: 100%;
 }
