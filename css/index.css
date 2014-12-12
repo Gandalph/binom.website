@@ -189,7 +189,7 @@ main {
  	display: none;
 	z-index: 1;
 	position: absolute;
-	color: #a4a09a;
+	color: #4d473f;
 }
 .categories
 {
@@ -203,7 +203,7 @@ main {
 .categories:hover
 {
 	cursor:pointer;
-    color: #73afcf;
+    color: #a4a09a;
 }
 
 #comments {
