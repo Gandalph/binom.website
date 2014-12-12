@@ -113,12 +113,12 @@ $(document).ready(function () {
             clearTimeout(testTimeout);
             testTimeout = setTimeout(function(){
             $("#categories").css("display", "block");
-            $("#slide-down").animate({"height": "200px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
+            $("#slide-down").animate({"height": "70px"} ,{duration: 300, queue: false}).delay(300).queue(function (next) {
             $("#categories").animate({"opacity": "1"});
 
             next();
 			});
-			$("#content").animate({"top": "200px"}, {duration: 300, queue: false});
+			$("#content").animate({"top": "70px"}, {duration: 300, queue: false});
             }, 50);
         },
         mouseleave: function () { //[3]
