@@ -26,10 +26,11 @@ html {
     width: 100%;
 /* 	ona narandzasta */
 /*     background-color: #f95625; */
-	background-color: #b6afa5;
+	background-color: #f95625;
     color: white;
     z-index: 1;
 	border-bottom: 3px solid white;
+    margin-top: -3px;
 }
 
 #nav {
@@ -72,20 +73,20 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #fff;
+    color: #4d473f;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #4d473f;
+    color: #ffffff;
     line-height: 40px;
 }
 
 
 #logo {
 	width: 950px;
-	margin: auto;
+	margin: 0 auto;
 	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
 	background-size: 100% 300px;
     height: 300px;
@@ -134,15 +135,16 @@ main {
 	top: 13px;
 	border: none;
 	border-bottom: 2px solid #ffffff;
-	background-color: #b6afa5;
+	background-color: #f95625;
 }
 
 #search {
     width: 65px;
     height: 65px;
     border: none;
-    background: #b6afa5 url("../ikonice/magnifier.png") no-repeat;
-    background-size: 60%;
+    background: #f95625 url("../ikonice/magnifier.png") no-repeat center;
+    background-size: 70%;
+    cursor: pointer;;
 }
 
 #slide-top {
@@ -164,7 +166,7 @@ main {
 
 #slide-down
 {
-    background-color: #dedadc;
+    background-color: #f95625;
     height: 0;
     width: 100%;
     position: absolute;
@@ -189,7 +191,7 @@ main {
  	display: none;
 	z-index: 1;
 	position: absolute;
-	color: #a4a09a;
+	color: #ffffff;
 }
 .categories
 {
@@ -203,7 +205,7 @@ main {
 .categories:hover
 {
 	cursor:pointer;
-    color: #73afcf;
+    color: #303030;
 }
 
 #comments {
@@ -337,6 +339,6 @@ footer div {
 
 img{
 	border: 0;
-	
+    margin: 0;
 }
 
