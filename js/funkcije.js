@@ -141,7 +141,7 @@ $(document).ready(function () {
 	/*      menjanje recent-postova      */
 	
 	var i;
-	for(i = 2; i < 6; i++)
+	for(i = 2; i < 4; i++)
 	{
 		$(".recent-article:eq(" + i + ")").fadeOut();
 	}
@@ -170,15 +170,15 @@ $(document).ready(function () {
 	
 	
 });
-	var i = 0;
-	function promeni()
-	{
-		$(".recent-article:eq(" + i + ")").fadeOut(1000);//.css("display","none");
-		$(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);//.css("display","none");
-		i = (i + 2) % 6;
-		$(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);//.css("display","");
-		$(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);//.css("display","");
-	};
+var i = 0;
+function promeni()
+{
+    $(".recent-article:eq(" + i + ")").fadeOut(1000);//.css("display","none");
+    $(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);//.css("display","none");
+    i = (i + 2) % 4;
+    $(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);//.css("display","");
+    $(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);//.css("display","");
+};
 	
 
 
