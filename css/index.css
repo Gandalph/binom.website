@@ -72,13 +72,13 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #4d473f;
+    color: #fff;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #ffffff;
+    color: #4d473f;
     line-height: 40px;
 }
 
