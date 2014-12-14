@@ -190,9 +190,9 @@ function margin(count) {
 
 function setComment(commentForm, postId) {
     var $cf = $(commentForm);
-    var ime = $cf.find("#ime").val();
-    var email = $cf.find("#email").val();
-    var commentContent = $cf.find("#comment-content").val();
+    var ime = $cf.find("#ime");
+    var email = $cf.find("#email");
+    var commentContent = $cf.find("#comment-content");
 
     Date.prototype.today = function () {
         return (this.getFullYear() + "-" + (((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-" + ((this.getDate() < 10)?"0":"") + this.getDate());
@@ -206,11 +206,13 @@ function setComment(commentForm, postId) {
 
     $.post(
         "comment_post.php",
-        {author: ime, email: email, commentContent: commentContent, postId: postId, date: currentDate},
+        {author: ime.val(), email: email.val(), commentContent: commentContent.val(), postId: postId, date: currentDate},
         function(data) {
+            ime.val("");
+            email.val("");
+            commentContent.val("");
             location.reload();
         }
-
     );
 	
 }

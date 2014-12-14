@@ -53,9 +53,13 @@
 			<!-- Slides Container -->
 			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 950px; height: 450px;"><!-- TODO ubaciti u css -->
 				<div><img u="image" src="slike/Skyrim-Dragon-Flyby.jpg" />
-                    <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 200px; height: 30px; background-color: #008000; position: relative; top: 200px; left: 100px">GOOGLE</div>
+                    <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 500px; height: 50px; background-color: #00A8EF; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
+                    font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">D R A G O N</div><!-- TODO lepo srediti u css -->
                 </div>
-				<div><img u="image" src="slike/the-joker-head-hd-fondos-276740.jpg" /></div>
+				<div><img u="image" src="slike/the-joker-head-hd-fondos-276740.jpg" />
+                    <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 300px; height: 50px; background-color: #A70201; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
+                    font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">J O C K E R</div><!-- TODO lepo srediti u css -->
+                </div>
 			</div>
 			
 			<!-- Arrow Navigator Skin Begin -->
@@ -165,7 +169,7 @@
 
         ?>
         <div id="article-wrapper">
-<div style="height: 413px; overflow: hidden">
+        <div style="height: 413px; overflow: hidden; margin: 0 auto;"><!-- TODO ubaciti u css -->
             <?php while(($row = mysqli_fetch_assoc($result)) && $i < 4): ?>
             <article class="recent-article" >
                 <div class="article-image" data-post-id="<?= $row['id'] ?>"></div>
@@ -175,14 +179,14 @@
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php
                             $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
-                            $flag = preg_match('/http[^"]+/', $row['post_content'], $match);
+                            $flag = preg_match('/<img.*?src[=]"([^"]+).*?\/>/', $row['post_content'], $match);
                         ?>
                         <script type="text/javascript">
                             $(function() {
                                 var $div = $('<div><?= $string ?></div>');
                                 var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
                                 $p.text($div.text());
-                                $(".article-image[data-post-id=" + <?= $row['id'] ?> + "]").css("background-image", "url(<?php if($flag) echo $match[0]; else echo $flag ?>)");
+                                $(".article-image[data-post-id=" + <?= $row['id'] ?> + "]").css("background-image", "url(<?php if($flag) echo $match[1]; else echo $flag ?>)");
                             })
                         </script>
                     </p>
@@ -192,7 +196,7 @@
                 </div>
             </article><!-- end recent-article -->
             <?php endwhile; ?>
-</div>
+        </div>
 
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">
@@ -207,13 +211,13 @@
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                                     <?php
                                         $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
-                                        $flag = preg_match('/http[^"]+/', $row['post_content'], $match);
+                                        $flag = preg_match('/<img.*?src[=]"([^"]+).*?\/>/', $row['post_content'], $match);
                                     ?>
                                     <script type="text/javascript">
                                         var $div = $('<div><?= $string ?></div>');
                                         var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
                                         $p.text($div.text());
-                                        $("div[data-post-id=" + <?= $row['id'] ?> + "]").parent().prev().css("background-image", "url(<?php if($flag) echo $match[0] ?>)");
+                                        $("div[data-post-id=" + <?= $row['id'] ?> + "]").parent().prev().css("background-image", "url(<?php if($flag) echo $match[1] ?>)");
                                     </script>
                                 </p>
                             </div>
@@ -226,7 +230,7 @@
                     <?php disconnect(); ?>
                 </div><!-- end right-regular-article -->
                 <div id="left-regular-article">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/mortalkombatbend" data-width="278" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="278" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                 </div>
             </div><!-- end regular-article-wrapper -->
         </div><!-- end article-wrapper -->
