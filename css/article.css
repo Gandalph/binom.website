@@ -19,6 +19,11 @@
     src: url("../font/Entypo%20@font-face/entypo.ttf");
 }
 
+@font-face {
+    font-family: myFont3;
+    src: url("../font/segoeui.ttf");
+}
+
 .recent-article {
     width: 430px;
     box-sizing: border-box;
@@ -61,7 +66,7 @@
 .piece-of-text {
     font-size: 13px;
     text-align: justify;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     line-height: 19px;
     height: 150px;
     overflow: hidden;
@@ -70,12 +75,12 @@
 .regular-article {
     margin-bottom: 50px;
     height: 320px;
-    width: 600px;
+    width: 640px;
     border-top: 1px solid #a0a0a0;
     border-bottom: 1px solid #a0a0a0;
     /*box-shadow: 0 0 5px #a0a0a0;*/
     box-sizing: border-box;
-    padding: 15px 0;
+    padding: 20px;
     float: left;
 }
 
@@ -113,7 +118,8 @@
 
 #left-regular-article {
     float: left;
-    width: 278px;
+    width: 268px;
+    margin-left: 20px;
 
 }
 
@@ -133,7 +139,7 @@
 
 .read-more {
     cursor: pointer;
-    background-color: #f95625;
+    background-color: #FF3333;
     height: 25px;
     width: 120px;
     text-align: center;
@@ -144,7 +150,7 @@
     position: relative;
     top: 10px;
     float: right;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 13px;
 
 }
@@ -152,7 +158,7 @@
 #post {
     width: 600px;
     margin-left: 25px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 15px;
     float: left;
 }
@@ -205,7 +211,7 @@ em {
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-bottom: 40px; 
-	font-family: Helvetica;
+	font-family: 'myFont3', sans-serif;
 	color: #666666;
 	display: inline-block;
 }

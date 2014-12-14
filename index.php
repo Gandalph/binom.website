@@ -234,7 +234,7 @@
                     <?php disconnect(); ?>
                 </div><!-- end right-regular-article -->
                 <div id="left-regular-article">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="278" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                 </div>
             </div><!-- end regular-article-wrapper -->
         </div><!-- end article-wrapper -->

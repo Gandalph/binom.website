@@ -14,6 +14,11 @@
     src: url("../font/moulin_rouge_regular/Moulin%20Rouge.ttf");
 }
 
+@font-face {
+    font-family: myFont3;
+    src: url("../font/segoeui.ttf");
+}
+
 html {
 	background-color: #DADBD5;
 
@@ -25,12 +30,12 @@ html {
     height: 70px;
     width: 100%;
 /* 	ona narandzasta */
-/*     background-color: #F95625; */
-	background-color: #F95625;
+/*     background-color: #571f06; */
+	background-color: #FF3333;
     color: white;
     z-index: 1;
 /* 	margin-top: -3px; */
-	box-shadow: 0px 4px 2px #C7451E;
+	box-shadow: 0px 4px 2px #FA3333;
 	position: relative; 
 }
 
@@ -74,13 +79,13 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #4d473f;
+    color: 	#f2f2f2;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #ffffff;
+    color: #003333;
     line-height: 40px;
 }
 
@@ -98,7 +103,7 @@ html {
 
 header {
 /* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
-	background-color: #F95625;
+	background-color: #FF3333;
 }
 
 main {
@@ -139,14 +144,15 @@ main {
 	top: 13px;
 	border: none;
 	border-bottom: 2px solid #ffffff;
-	background-color: #F95625;
+	background-color: #FF3333;
+    color: #ab3c0b;
 }
 
 #search {
     width: 65px;
     height: 65px;
     border: none;
-    background: #F95625 url("../ikonice/magnifier.png") no-repeat center;
+    background: #FF3333 url("../ikonice/magnifier.png") no-repeat center;
     background-size: 70%;
     cursor: pointer;;
 }
@@ -170,7 +176,7 @@ main {
 
 #slide-down
 {
-    background-color: #F95625;
+    background-color:  #FF3333;
     height: 0;
     width: 100%;
     position: absolute;
@@ -224,7 +230,7 @@ main {
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #F95625;
+    border-bottom: 1px solid #571f06;
     box-sizing: border-box;
     padding-bottom: 20px;
     font-size: 16px;
@@ -285,7 +291,7 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #F95625;
+    background-color: #571f06;
     border: 0;
     width: 100%;
 }
@@ -328,7 +334,7 @@ footer {
 }
 
 #recent-comment-title {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
@@ -337,7 +343,7 @@ footer {
 }
 
 .recent-comment {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 14px;
     color: #ffffff;
     width: 270px;
@@ -356,7 +362,7 @@ footer {
 
 .copy {
     margin: 20px auto 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 10px;
     color: #a0a0a0;
     font-weight: bold;
