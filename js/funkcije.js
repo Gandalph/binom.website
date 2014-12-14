@@ -53,7 +53,7 @@ $(document).ready(function () {
         }
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
-            $("#nav-wrapper").css("position","static");
+            $("#nav-wrapper").css("position","relative");
             $("#slide-down").css("top", "370px");
         }
 
@@ -147,13 +147,16 @@ $(document).ready(function () {
 	}
 	window.setInterval("promeni()",10000);
 	
+	
+	
+	
 	/*          pozicioniranje logoa             */
 	
+	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
 	if($(window).width() % 2 == 1 )
-		$("img:eq(1)").width( ($(window).width()- 950)/2 -0.5 + "px" );
+		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
 	else
 		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
-	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
 	
 	$(window).resize(function(){
 		

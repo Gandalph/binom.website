@@ -29,7 +29,7 @@ html {
 	background-color: #F95625;
     color: white;
     z-index: 1;
-	margin-top: -3px;
+/* 	margin-top: -3px; */
 	box-shadow: 0px 4px 2px #C7451E;
 	position: relative; 
 }
@@ -87,17 +87,18 @@ html {
 
 #logo {
 	width: 950px;
-	margin: 0 auto;
 	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
 	background-size: 100% 300px;
     height: 300px;
 	float:left;
+	display: inline-block;
 	
 }
 
 
 header {
 /* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
+	background-color: #F95625;
 }
 
 main {
@@ -111,7 +112,7 @@ main {
     box-sizing: border-box;
     padding: 10px;
     position: relative;
-	margin-top: 4px;
+/* 	margin-top: 4px; */
 
 }
 
@@ -374,4 +375,3 @@ img{
 	border: 0;
     margin: 0;
 }
-
