@@ -74,13 +74,13 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #fff;
+    color: #4d473f;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #4d473f;
+    color: #ffffff;
     line-height: 40px;
 }
 
@@ -306,26 +306,56 @@ input[type=text], input[type=email] {
 footer {
     width: 950px;
     height: 350px;
-    margin: 0 auto;
-    background-color: #4d473f;
+    background-color: #3F3E3C;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 
 }
 
 .footer-div {
     width: 298px;
     height: 300px;
-    /*border: 1px solid white;*/
     float: left;
     margin-right: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.footer-div:nth-child(1), .footer-div:nth-child(2) {
+    border-right: 2px solid #a0a0a0;
+}
+
+#recent-comment-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.recent-comment {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    width: 270px;
+    display: block;
+    margin-bottom: 30px;
+    line-height: 15px;
+}
+
+.comment-author {
+    color: #f95635;
+}
+
+.comment-content {
+
 }
 
 .copy {
-    margin: 0 auto;
-    margin-top: 20px;
-    font-family: 'Arial', sans-serif;
+    margin: 20px auto 0;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 10px;
     color: #a0a0a0;
     font-weight: bold;

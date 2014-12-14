@@ -20,7 +20,7 @@
 }
 
 .recent-article {
-    width: 460px;
+    width: 400px;
     box-sizing: border-box;
     padding: 20px;
     overflow: hidden;
@@ -28,14 +28,6 @@
     background-color: #f5f5f5;
     margin-right: 5px;
 }
-
-/*.recent-article:first-child {*/
-    /*border-right: 1px solid #a0a0a0;*/
-/*}*/
-
-/*.recent-article:nth-child(2) {*/
-    /*border-left: 1px solid #a0a0a0;*/
-/*}*/
 
 .article-image {
     height: 175px;
@@ -57,7 +49,7 @@
 
 .article-info {
     font-family: 'myFont2', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 15px;
     border-bottom: 1px solid #808080;
     border-top: 1px solid #808080;
@@ -65,21 +57,23 @@
 }
 
 .piece-of-text {
-    font-size: 16px;
+    font-size: 13px;
     text-align: justify;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     line-height: 19px;
+    height: 150px;
+    overflow: hidden;
 }
 
 .regular-article {
     margin-bottom: 50px;
-    /*height: 300px;*/
-    width: 630px;
+    height: 320px;
+    width: 600px;
     border-top: 1px solid #a0a0a0;
     border-bottom: 1px solid #a0a0a0;
     /*box-shadow: 0 0 5px #a0a0a0;*/
     box-sizing: border-box;
-    padding: 15px;
+    padding: 15px 0;
     float: left;
 }
 
@@ -90,7 +84,7 @@
     margin-right: 30px;
     background: no-repeat center;
     background-size: 100%;
-    background-color: #f5f5f5;
+    /*background-color: #f5f5f5;*/
 }
 
 .post-image {
@@ -131,6 +125,8 @@
 
 .aligncenter {
     display: block;
+    width: 600px;
+    height: auto;
 }
 
 .read-more {
@@ -146,14 +142,16 @@
     position: relative;
     top: 10px;
     float: right;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+
 }
 
 #post {
     width: 600px;
     margin-left: 25px;
-    font-family: 'myFont1', sans-serif;
-    font-size: 18px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 15px;
     float: left;
 }
 
