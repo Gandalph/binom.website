@@ -25,7 +25,7 @@
     <div class="footer-div"></div>
     <div class="footer-div"></div>
     <div class="copy">
-        <p>БИНОМ &copy; 2014 ALL RIGHTS RESERVED</p>
+        <p>БИНОМ &copy; 2014 СВА ПРАВА ЗАДРЖАНА</p>
     </div>
 </footer>
 </div><!-- end wrapper -->

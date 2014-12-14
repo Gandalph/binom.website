@@ -54,7 +54,7 @@ $(document).ready(function () {
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
             $("#nav-wrapper").css("position","relative");
-            $("#slide-down").css("top", "370px");
+            $("#slide-down").css("top", "70px");
         }
 
     });
