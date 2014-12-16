@@ -56,8 +56,8 @@ html {
 .navBar-link {
     display: inline-block;
     font-family: 'myFont', sans-serif;
-    font-size: 24px;
-    width: 120px;
+    font-size: 18px;
+    width: 100px;
     height: 70px;
     font-weight: bold;
     cursor: pointer;

@@ -178,7 +178,7 @@
 				<article class="recent-article" >
 					<div class="article-image" data-post-id="<?= $row['id'] ?>"></div>
 					<h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
-					<p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
+					<p class="article-info"><span style="font-family: mySymbols; font-size: 20px;">Y</span><?= $row['display_name'] ?> / <span style="font-family: mySymbols; font-size: 18px;">a</span><?= $row['date'] ?> /  <span style="font-family: mySymbols; font-size: 18px;">X</span><?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
 					<div style="height: 75px; overflow: hidden;"><!-- TODO style ubaciti u css -->
 						<p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
 							<?php
@@ -210,7 +210,7 @@
                         <div class="r-article-image"></div>
                         <div class="right-side">
                             <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>
-                            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> / <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'а'; ?></p>
+                            <p class="article-info"><span style="font-family: mySymbols; font-size: 20px;">Y</span><?= $row['display_name'] ?> / <span style="font-family: mySymbols; font-size: 18px;">a</span><?= $row['date'] ?> /  <span style="font-family: mySymbols; font-size: 18px;">X</span><?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
                             <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO style prebaciti u css -->
                                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                                     <?php

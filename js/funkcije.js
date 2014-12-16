@@ -27,8 +27,8 @@ $(document).ready(function () {
 
     /* Border na navigaciji */
     var $nav_window = $(".navBar-window");
-    $nav_window.first().css({"border-left": "1px solid white"});
-    $nav_window.css({"border-right": "1px solid white"});
+    $nav_window.first().css({"border-left": "1px solid #003333"});
+    $nav_window.css({"border-right": "1px solid #003333"});
 
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");
@@ -37,7 +37,7 @@ $(document).ready(function () {
     var $height;
     $height = $(this).height();
     console.log($height);
-    $("main").css({"height": $height - 300 + "px"});
+    $("main").css({"height": $height - 600 + "px"});
     
 
     /* Fixed navigacioni bar */
