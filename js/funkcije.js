@@ -123,14 +123,12 @@ $(document).ready(function () {
         },
         mouseleave: function () { //[3]
             clearTimeout(testTimeout);
-			$("#categories").css("opacity", "0"); 
+			$("#categories").css("opacity", "0").css("display", "none");
 
 			$("#slide-down").animate(
                 {"height": "0px"}, 
-                {duration: 300, queue: false},
-                function() {
-                     $("#categories").css("display", "none");
-                });
+                {duration: 300, queue: false}
+            );
 			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
             
         }
