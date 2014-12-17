@@ -158,7 +158,10 @@
     float: right;
     font-family: 'myFont3', sans-serif;
     font-size: 13px;
+}
 
+.read-more:hover {
+    background-color: #DD3333;
 }
 
 #post {

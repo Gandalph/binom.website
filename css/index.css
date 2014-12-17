@@ -20,7 +20,7 @@
 }
 
 html {
-	background-color: #DADBD5;
+	background-color: #eaeaea;
 
 /* 	prethodna boja */
 /*     background-color: #f0f0f0; */
@@ -55,7 +55,7 @@ html {
 
 .navBar-link {
     display: inline-block;
-    font-family: 'myFont', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 16px;
     /*width: 100px;*/
     height: 70px;
@@ -133,7 +133,7 @@ main {
     width: 300px;
     position: relative;
     bottom: 30px;
-    left: 185px;
+    left: 200px;
 }
 
 #search-field {
@@ -143,16 +143,16 @@ main {
     height: 35px;
     font-size: 20px;
     padding: 5px 2px;
-	top: 13px;
+	top: 8px;
 	border: none;
 	border-bottom: 2px solid #003333;
 	background-color: #FF3333;
-    color: #ab3c0b;
+    color: #003333;
 }
 
 #search {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
     border: none;
     background: #FF3333 url("../ikonice/magnifier.png") no-repeat center;
     background-size: 70%;
@@ -227,15 +227,15 @@ main {
     padding: 25px;
     box-sizing: border-box;
     float: left;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #571f06;
+    border-bottom: 1px solid #ff3333;
     box-sizing: border-box;
     padding-bottom: 20px;
-    font-size: 16px;
+    font-size: 13px;
     width: 600px;
 
 }
@@ -251,7 +251,7 @@ main {
 #comment-replay p {
     margin-bottom: 20px;
     font-size: 27px;
-    font-family: myFont1, sans-serif;
+    font-family: myFont3, sans-serif;
 }
 
 #set-comment {
@@ -259,7 +259,7 @@ main {
     width: 600px;
     position: relative;
     float: left;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 #comment-content {
@@ -271,7 +271,7 @@ main {
     padding: 0 8px;
     box-sizing: border-box;
     font-size: 18px;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 input[type=text], input[type=email] {
     height: 34px;
@@ -282,7 +282,7 @@ input[type=text], input[type=email] {
     border: 1px solid #d9d9d9;
     padding: 0 8px;
     box-sizing: border-box;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 #send {
@@ -293,7 +293,7 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #571f06;
+    background-color: #ff3333;
     border: 0;
     width: 100%;
 }
