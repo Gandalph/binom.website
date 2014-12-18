@@ -200,7 +200,9 @@
 					</div>
 				</article><!-- end recent-article -->
 				<?php endwhile; ?>
-        </div>
+            </div>
+
+            <div id="horizontal-line"></div>
 
             <div id="regular-article-wrapper">
                 <div id="right-regular-article">

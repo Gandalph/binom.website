@@ -383,3 +383,10 @@ img{
 	border: 0;
     margin: 0;
 }
+
+#horizontal-line {
+    width: 930px;
+    border-top: 2px solid #a0a0a0;
+    position: relative;
+    top: 5px;
+}
