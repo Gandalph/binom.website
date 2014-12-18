@@ -3,7 +3,7 @@
 <footer>
     <div class="footer-div">
         <div id="recent-comment-title">
-            <p>Најновији коментари:</p>
+            <p>Најновији коментари</p>
         </div>
         <div>
             <?php

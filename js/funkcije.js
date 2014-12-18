@@ -27,8 +27,8 @@ $(document).ready(function () {
 
     /* Border na navigaciji */
     var $nav_window = $(".navBar-window");
-    $nav_window.first().css({"border-left": "1px solid white"});
-    $nav_window.css({"border-right": "1px solid white"});
+    $nav_window.first().css({"border-left": "1px solid #003333"});
+    $nav_window.css({"border-right": "1px solid #003333"});
 
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");
@@ -37,11 +37,24 @@ $(document).ready(function () {
     var $height;
     $height = $(this).height();
     console.log($height);
-    $("main").css({"height": $height - 300 + "px"});
+    $("main").css({"height": $height - 700 + "px"});
     
 
     /* Fixed navigacioni bar */
     var fixed_navi = 0;
+    var $scroll = $(this).scrollTop();
+    if($scroll > 301 && fixed_navi == 0) {
+        fixed_navi = 1;
+        $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
+        $("#slide-down").css("top", "70px");
+
+    }
+    else if($scroll < 301 && fixed_navi == 1){
+        fixed_navi = 0;
+        $("#nav-wrapper").css("position","relative");
+        $("#slide-down").css("top", "70px");
+    }
+
     $(document).on("scroll" ,function()
     {
         var $scroll = $(this).scrollTop();
@@ -108,7 +121,7 @@ $(document).ready(function () {
 
     /* Animacija za padajuci meni navBara */
 	var testTimeout = 0;
-	$(".navBar-link").first().on({
+	$(".navBar-link").first().next().on({
         mouseenter: function (){
             clearTimeout(testTimeout);
             testTimeout = setTimeout(function(){
@@ -123,14 +136,12 @@ $(document).ready(function () {
         },
         mouseleave: function () { //[3]
             clearTimeout(testTimeout);
-			$("#categories").css("opacity", "0"); 
+			$("#categories").css("opacity", "0").css("display", "none");
 
 			$("#slide-down").animate(
                 {"height": "0px"}, 
-                {duration: 300, queue: false},
-                function() {
-                     $("#categories").css("display", "none");
-                });
+                {duration: 300, queue: false}
+            );
 			$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
             
         }

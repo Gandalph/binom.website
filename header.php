@@ -38,6 +38,18 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
+                                    <span><span class="prvo-slovo">П</span>очетна</span>
+                                </div>
+                                <div class="roll-down">
+                                    <span><span class="prvo-slovo">П</span>очетна</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navBar-link" >
+                        <div class="navBar-window">
+                            <div class="roll">
+                                <div class="roll-up">
                                     <span><span class="prvo-slovo">В</span>ести</span>
                                 </div>
                                 <div class="roll-down">

@@ -16,7 +16,12 @@
 
 @font-face {
     font-family: mySymbols;
-    src: url("../font/Entypo%20@font-face/entypo.ttf");
+    src: url("../font/PeaxDrawnIcons.ttf");
+}
+
+@font-face {
+    font-family: myFont3;
+    src: url("../font/segoeui.ttf");
 }
 
 .recent-article {
@@ -28,6 +33,7 @@
     background-color: #f5f5f5;
     margin-right: 15px;
 	margin-left: 20px;
+    height: 420px;
 }
 
 .article-image {
@@ -47,6 +53,11 @@
     overflow: hidden;
     margin-top: 5px;
 	text-transform: uppercase;
+    cursor: pointer;
+}
+
+.caption:hover {
+    color: #FF3333;
 }
 
 .article-info {
@@ -61,7 +72,7 @@
 .piece-of-text {
     font-size: 13px;
     text-align: justify;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     line-height: 19px;
     height: 150px;
     overflow: hidden;
@@ -69,13 +80,13 @@
 
 .regular-article {
     margin-bottom: 50px;
-    height: 320px;
-    width: 600px;
+    height: 340px;
+    width: 640px;
     border-top: 1px solid #a0a0a0;
     border-bottom: 1px solid #a0a0a0;
     /*box-shadow: 0 0 5px #a0a0a0;*/
     box-sizing: border-box;
-    padding: 15px 0;
+    padding: 20px;
     float: left;
 }
 
@@ -113,7 +124,8 @@
 
 #left-regular-article {
     float: left;
-    width: 278px;
+    width: 268px;
+    margin-left: 20px;
 
 }
 
@@ -133,7 +145,7 @@
 
 .read-more {
     cursor: pointer;
-    background-color: #f95625;
+    background-color: #FF3333;
     height: 25px;
     width: 120px;
     text-align: center;
@@ -144,15 +156,18 @@
     position: relative;
     top: 10px;
     float: right;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 13px;
+}
 
+.read-more:hover {
+    background-color: #DD3333;
 }
 
 #post {
     width: 600px;
     margin-left: 25px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 15px;
     float: left;
 }
@@ -192,7 +207,7 @@ em {
 
 #recent-article-wrapper
 {
-	height: 413px;
+	height: 420px;
 	overflow: hidden;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -205,7 +220,7 @@ em {
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-bottom: 40px; 
-	font-family: Helvetica;
+	font-family: 'myFont3', sans-serif;
 	color: #666666;
 	display: inline-block;
 }

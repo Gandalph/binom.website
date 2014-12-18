@@ -14,8 +14,13 @@
     src: url("../font/moulin_rouge_regular/Moulin%20Rouge.ttf");
 }
 
+@font-face {
+    font-family: myFont3;
+    src: url("../font/segoeui.ttf");
+}
+
 html {
-	background-color: #DADBD5;
+	background-color: #eaeaea;
 
 /* 	prethodna boja */
 /*     background-color: #f0f0f0; */
@@ -25,12 +30,12 @@ html {
     height: 70px;
     width: 100%;
 /* 	ona narandzasta */
-/*     background-color: #F95625; */
-	background-color: #F95625;
+/*     background-color: #571f06; */
+	background-color: #FF3333;
     color: white;
     z-index: 1;
 /* 	margin-top: -3px; */
-	box-shadow: 0px 4px 2px #C7451E;
+	box-shadow: 0px 4px 2px #FA3333;
 	position: relative; 
 }
 
@@ -50,9 +55,9 @@ html {
 
 .navBar-link {
     display: inline-block;
-    font-family: 'myFont', sans-serif;
-    font-size: 24px;
-    width: 120px;
+    font-family: 'myFont3', sans-serif;
+    font-size: 16px;
+    /*width: 100px;*/
     height: 70px;
     font-weight: bold;
     cursor: pointer;
@@ -63,6 +68,8 @@ html {
     overflow: hidden;
     position: relative;
     top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .roll {
@@ -74,13 +81,13 @@ html {
 
 .roll-up {
     height: 40px;
-    color: #4d473f;
+    color: 	#f2f2f2;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #ffffff;
+    color: #003333;
     line-height: 40px;
 }
 
@@ -98,7 +105,7 @@ html {
 
 header {
 /* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
-	background-color: #F95625;
+	background-color: #FF3333;
 }
 
 main {
@@ -126,7 +133,7 @@ main {
     width: 300px;
     position: relative;
     bottom: 30px;
-    left: 193px;
+    left: 200px;
 }
 
 #search-field {
@@ -136,17 +143,18 @@ main {
     height: 35px;
     font-size: 20px;
     padding: 5px 2px;
-	top: 13px;
+	top: 8px;
 	border: none;
-	border-bottom: 2px solid #ffffff;
-	background-color: #F95625;
+	border-bottom: 2px solid #003333;
+	background-color: #FF3333;
+    color: #003333;
 }
 
 #search {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
     border: none;
-    background: #F95625 url("../ikonice/magnifier.png") no-repeat center;
+    background: #FF3333 url("../ikonice/magnifier.png") no-repeat center;
     background-size: 70%;
     cursor: pointer;;
 }
@@ -170,7 +178,7 @@ main {
 
 #slide-down
 {
-    background-color: #F95625;
+    background-color:  #FF3333;
     height: 0;
     width: 100%;
     position: absolute;
@@ -219,15 +227,15 @@ main {
     padding: 25px;
     box-sizing: border-box;
     float: left;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #F95625;
+    border-bottom: 1px solid #ff3333;
     box-sizing: border-box;
     padding-bottom: 20px;
-    font-size: 16px;
+    font-size: 13px;
     width: 600px;
 
 }
@@ -243,7 +251,7 @@ main {
 #comment-replay p {
     margin-bottom: 20px;
     font-size: 27px;
-    font-family: myFont1, sans-serif;
+    font-family: myFont3, sans-serif;
 }
 
 #set-comment {
@@ -251,7 +259,7 @@ main {
     width: 600px;
     position: relative;
     float: left;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 #comment-content {
@@ -263,7 +271,7 @@ main {
     padding: 0 8px;
     box-sizing: border-box;
     font-size: 18px;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 input[type=text], input[type=email] {
     height: 34px;
@@ -274,7 +282,7 @@ input[type=text], input[type=email] {
     border: 1px solid #d9d9d9;
     padding: 0 8px;
     box-sizing: border-box;
-    font-family: 'myFont1', sans-serif;
+    font-family: 'myFont3', sans-serif;
 }
 
 #send {
@@ -285,7 +293,7 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #F95625;
+    background-color: #ff3333;
     border: 0;
     width: 100%;
 }
@@ -298,7 +306,7 @@ input[type=text], input[type=email] {
 
 .prvo-slovo {
     font-family: myFontFirstLetter, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
 }
 
@@ -328,7 +336,7 @@ footer {
 }
 
 #recent-comment-title {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
@@ -337,7 +345,7 @@ footer {
 }
 
 .recent-comment {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 14px;
     color: #ffffff;
     width: 270px;
@@ -356,7 +364,7 @@ footer {
 
 .copy {
     margin: 20px auto 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 10px;
     color: #a0a0a0;
     font-weight: bold;
