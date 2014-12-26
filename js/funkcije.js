@@ -189,7 +189,7 @@ function promeni()
 {
     $(".recent-article:eq(" + i + ")").fadeOut(1000);//.css("display","none");
     $(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);//.css("display","none");
-    //i = (i + 2) % 4;
+    i = (i + 2) % 4;
     $(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);//.css("display","");
     $(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);//.css("display","");
 };
@@ -231,6 +231,8 @@ function setComment(commentForm, postId) {
 	
 }
 
+
+/* Proverava da li je search prazan */
 function checkSearch() {
     if($("#search-field").val() != "") {
         return true;

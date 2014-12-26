@@ -173,70 +173,12 @@
         </div>
 		<div style="width:585px; height:5px; border-bottom: 2px solid #666; display: inline-block; "></div> <!--TODO PREBACI U CSS -->
         <div id="article-wrapper">
-			<div id="recent-article-wrapper"><!-- TODO ubaciti u css -->
-				<?php while(($row = mysqli_fetch_assoc($result)) && $i < 4): ?>
-				<article class="recent-article" >
-					<div class="article-image" data-post-id="<?= $row['id'] ?>"></div>
-					<h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
-					<p class="article-info"><span style="font-family: mySymbols; font-size: 20px;">Y</span><?= $row['display_name'] ?> / <span style="font-family: mySymbols; font-size: 18px;">a</span><?= $row['date'] ?> /  <span style="font-family: mySymbols; font-size: 18px;">X</span><?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
-					<div style="height: 75px; overflow: hidden;"><!-- TODO style ubaciti u css -->
-						<p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-							<?php
-								$string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
-								$flag = preg_match('/<img.*?src[=]"([^"]+).*?\/>/', $row['post_content'], $match);
-							?>
-							<script type="text/javascript">
-								$(function() {
-									var $div = $('<div><?= $string ?></div>');
-									var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
-									$p.text($div.text());
-									$(".article-image[data-post-id=" + <?= $row['id'] ?> + "]").css("background-image", "url(<?php if($flag) echo $match[1]; else echo $flag ?>)");
-								})
-							</script>
-						</p>
-					</div>
-					<div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-						<p>прочитај више</p>
-					</div>
-				</article><!-- end recent-article -->
-				<?php endwhile; ?>
-            </div>
-
-            <div id="horizontal-line"></div>
-
+            <?php include("recent_article.php"); ?>
             <div id="regular-article-wrapper">
-                <div id="right-regular-article">
-                    <?php mysqli_data_seek($result, 4); ?>
-                    <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-                    <article class="regular-article">
-                        <div class="r-article-image"></div>
-                        <div class="right-side">
-                            <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>
-                            <p class="article-info"><span style="font-family: mySymbols; font-size: 20px;">Y</span><?= $row['display_name'] ?> / <span style="font-family: mySymbols; font-size: 18px;">a</span><?= $row['date'] ?> /  <span style="font-family: mySymbols; font-size: 18px;">X</span><?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
-                            <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO style prebaciti u css -->
-                                <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
-                                    <?php
-                                        $string = str_replace(array("\r\n", "\n", "\r"), "<br />", $row['post_content']);
-                                        $flag = preg_match('/<img.*?src[=]"([^"]+).*?\/>/', $row['post_content'], $match);
-                                    ?>
-                                    <script type="text/javascript">
-                                        var $div = $('<div><?= $string ?></div>');
-                                        var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
-                                        $p.text($div.text());
-                                        $("div[data-post-id=" + <?= $row['id'] ?> + "]").parent().prev().css("background-image", "url(<?php if($flag) echo $match[1] ?>)");
-                                    </script>
-                                </p>
-                            </div>
-                            <div class="read-more" onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'">
-                                <p>прочитај више</p><!-- TODO i ovo popraviti lepo -->
-                            </div>
-                        </div><!-- end right-side -->
-                    </article>
-                    <?php endwhile; ?>
-                    <?php disconnect(); ?>
-                </div><!-- end right-regular-article -->
+                <?php mysqli_data_seek($result, 4); ?>
+                <?php include("right_regular_article.php"); ?>
                 <div id="left-regular-article">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                 </div>
             </div><!-- end regular-article-wrapper -->
         </div><!-- end article-wrapper -->

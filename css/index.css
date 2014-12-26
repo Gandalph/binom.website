@@ -157,6 +157,8 @@ main {
     background: #FF3333 url("../ikonice/magnifier.png") no-repeat center;
     background-size: 70%;
     cursor: pointer;;
+    position: relative;
+    top: 10px;
 }
 
 #slide-top {
@@ -329,6 +331,7 @@ footer {
     margin-right: 15px;
     box-sizing: border-box;
     padding: 10px;
+    overflow: hidden;
 }
 
 .footer-div:nth-child(1), .footer-div:nth-child(2) {
@@ -389,4 +392,23 @@ img{
     border-top: 2px solid #a0a0a0;
     position: relative;
     top: 5px;
+}
+
+.tag {
+    float: left;
+    height: 20px;
+    background-color: #4F4E4C;
+    width: auto;
+    font-family: 'myFont3', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    padding: 4px;
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #5F5E5C;
 }
