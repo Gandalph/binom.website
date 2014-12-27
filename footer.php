@@ -1,4 +1,3 @@
-<?php //include("baza/db.inc"); ?>
 </main>
 <footer>
     <div class="footer-div">
@@ -32,7 +31,7 @@
         $result = mysqli_query($link, $sql) or die(mysqli_error($link));
         ?>
         <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-            <div class="tag"><?= $row['name'] ?></div>
+            <div class="tag" onclick="searchTag(this)"><?= $row['name'] ?></div>
         <?php endwhile; disconnect(); ?>
     </div>
     <div class="footer-div"></div>

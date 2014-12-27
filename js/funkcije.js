@@ -37,7 +37,10 @@ $(document).ready(function () {
     var $height;
     $height = $(this).height();
     console.log($height);
-    $("main").css({"height": $height - 700 + "px"});
+    if($height - 700 < 450)
+        $("main").css({"height": 450 + "px"});
+    else
+        $("main").css({"height": $height - 700 + "px"});
     
 
     /* Fixed navigacioni bar */
@@ -241,5 +244,11 @@ else
     return false;
 }
 
+/* Uzima naziv taga iz objekta i poziva search.php stranicu */
+function searchTag(tagDiv) {
+    $tagDiv = $(tagDiv);
+
+    window.location = './search.php?tag=' + $tagDiv.text();
+}
 
 			
