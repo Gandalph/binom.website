@@ -47,7 +47,6 @@ html {
 }
 
 .navBar {
-    width: 500px;
     overflow: hidden;
     display: inline-block;
     z-index: 3
