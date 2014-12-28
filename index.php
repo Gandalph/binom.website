@@ -58,7 +58,7 @@
                 </div>
 				<div><img u="image" src="slike/the-joker-head-hd-fondos-276740.jpg" />
                     <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 300px; height: 50px; background-color: #A70201; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
-                    font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">J O C K E R</div><!-- TODO lepo srediti u css -->
+                    font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">J O K E R</div><!-- TODO lepo srediti u css -->
                 </div>
 			</div>
 			
@@ -179,6 +179,20 @@
                 <?php include("right_regular_article.php"); ?>
                 <div id="left-regular-article">
                     <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+                    <div class="weather">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                                codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+                                width="268" height="400">
+                            <param name="movie"
+                                   value="http://www.weather2umbrella.com/clients/old_versions/weather_box2.swf">
+                            <param name="quality" value="high">
+                            <param name="menu" value="true">
+                            <embed src="http://www.weather2umbrella.com/clients/old_versions/weather_box2.swf"
+                                   quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                   type="application/x-shockwave-flash" width="268"
+                                   height="250"></embed>
+                        </object>
+                    </div>
                 </div>
             </div><!-- end regular-article-wrapper -->
         </div><!-- end article-wrapper -->

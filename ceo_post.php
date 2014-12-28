@@ -4,7 +4,7 @@
     <main id="content">
         <div id="post">
         <?php
-        if(isset($_GET['post'])) {
+        if(isset($_GET['post'])): {
             connect();
             global $link;
 
@@ -31,13 +31,34 @@
                 
                 ?>
                 
-                
+
                 <p class="post"><?= $newphrase ?></p>
             <?php endif; ?>
+            <br /><br />
         </div><!-- end post -->
         <div id="right-ceo-post">
 
         </div>
+
+
+        <div class="tags">
+
+            <span>Тагови: </span>
+                <span>
+                    <?php
+                    $sql = "select name "
+                        . "from wp_posts p join wp_term_relationships wtr on p.id = wtr.object_id "
+                        . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
+                        . "join wp_terms wt on wt.term_id = wtt.term_id "
+                        . "where post_status = 'publish' and post_type = 'post' and p.id = $post and wtt.taxonomy = 'post_tag'";
+                    $result = mysqli_query($link, $sql) or die(mysqli_error($link));
+
+                    while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
+                        <span class="tags-name" onclick="window.location = 'search.php?tag=<?= $row['name'] ?>'"><?= $row['name'] . " | " ?></span>
+                    <?php endwhile; ?>
+                </span>
+        </div>
+
         <div id="comments">
             <br /><br /><p style="font-size: 24px">Коментари:</p><br />
             <?php
@@ -69,7 +90,9 @@
                     <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Постави коментар</button>
             </div>
             </div><!-- end comment-replay -->
-            <?php disconnect(); ?>
+
         </div><!-- end comments -->
+
+        <?php endif; disconnect(); ?>
 
 <?php include("footer.php"); ?>
