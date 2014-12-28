@@ -234,6 +234,8 @@ function setComment(commentForm, postId) {
 	
 }
 
+
+/* Proverava da li je search prazan */
 function checkSearch() {
     if($("#search-field").val() != "") {
         return true;
