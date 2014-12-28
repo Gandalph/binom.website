@@ -51,13 +51,13 @@ $(document).ready(function () {
         $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
         $("#slide-down").css("top", "70px");
 		$("main").css("top", "70px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
-
+		$("footer").css("top", "140px");
     }
     else if($scroll < 301 && fixed_navi == 1){
         fixed_navi = 0;
         $("#nav-wrapper").css("position","relative");
         $("#slide-down").css("top", "70px");
-		$("main").css("top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
+		$("main").css("margin-top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
     }
 
     $(document).on("scroll" ,function()
@@ -67,13 +67,13 @@ $(document).ready(function () {
             fixed_navi = 1;
             $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
             $("#slide-down").css("top", "70px");
-			$("main").css("top", "70px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
+			$("main").css("margin-top", "70px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
         }
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
             $("#nav-wrapper").css("position","relative");
             $("#slide-down").css("top", "70px");
-			$("main").css("top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
+			$("main").css("margin-top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
         }
 
     });
