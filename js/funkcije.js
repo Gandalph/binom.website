@@ -40,7 +40,7 @@ $(document).ready(function () {
     if($height - 700 < 450)
         $("main").css({"height": 450 + "px"});
     else
-        $("main").css({"height": $height - 700 + "px"});
+        $("main").css({"height": $height - 650 + "px"});
     
 
     /* Fixed navigacioni bar */

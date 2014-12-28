@@ -22,6 +22,9 @@
         </div>
     </div>
     <div class="footer-div">
+        <div id="recent-comment-title">
+            <p>ТАГОВИ</p>
+        </div>
         <?php
         $sql = "select name "
             .  "from wp_terms wt join wp_term_taxonomy wtt "

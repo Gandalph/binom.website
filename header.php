@@ -38,10 +38,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">П</span>очетна</span>
+                                    <span><span class="prvo-slovo">Н</span>асловна</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">П</span>очетна</span>
+                                    <span><span class="prvo-slovo">Н</span>асловна</span>
                                 </div>
                             </div>
                         </div>
