@@ -1,7 +1,7 @@
 </main>
 <footer>
     <div class="footer-div">
-        <div id="recent-comment-title">
+        <div class="footer-title">
             <p>Најновији коментари</p>
         </div>
         <div>
@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="footer-div">
-        <div id="recent-comment-title">
+        <div class="footer-title">
             <p>ТАГОВИ</p>
         </div>
         <?php

@@ -110,16 +110,12 @@ header {
 
 main {
     width: 950px;
-    /*height: 1000px;*/
     margin: 0 auto;
-/* 	background-color: #b6afa5; */
-
-/* 	prethodna boja */
-    background-color: #fff;
+    background-color: #ffffff;
     box-sizing: border-box;
     padding: 10px;
     position: relative;
-/* 	margin-top: 4px; */
+
 
 }
 
@@ -322,7 +318,7 @@ footer {
     background-color: #3F3E3C;
     padding: 10px;
     box-sizing: border-box;
-    margin: 0 auto 20px;
+    margin: 0 auto;
 
 }
 
@@ -340,7 +336,7 @@ footer {
     border-right: 2px solid #a0a0a0;
 }
 
-#recent-comment-title {
+.footer-title {
     font-family: 'myFont3', sans-serif;
     font-size: 18px;
     font-weight: bold;
