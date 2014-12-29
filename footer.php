@@ -1,4 +1,5 @@
-</main>
+    </main>
+</div><!-- end content-wrapper -->
 <footer>
     <div class="footer-div">
         <div class="footer-title">
@@ -37,7 +38,11 @@
             <div class="tag" onclick="searchTag(this)"><?= $row['name'] ?></div>
         <?php endwhile; disconnect(); ?>
     </div>
-    <div class="footer-div"></div>
+    <div class="footer-div">
+        <div class="footer-title">
+            <p>о нама</p>
+        </div>
+    </div>
     <div class="copy">
         <p>БИНОМ &copy; 2014 СВА ПРАВА ЗАДРЖАНА</p>
     </div>

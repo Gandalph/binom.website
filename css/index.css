@@ -107,15 +107,17 @@ header {
 	background-color: #FF3333;
 }
 
+#content-wrapper {
+    margin: 0 auto;
+    width: 950px;
+}
+
 main {
     width: 950px;
-    margin: 0 auto;
     background-color: #ffffff;
     box-sizing: border-box;
     padding: 10px;
-    position: relative;
-
-
+    float: left;
 }
 
 #slider {
@@ -318,6 +320,7 @@ footer {
     padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
+    clear: left;
 
 }
 
@@ -412,7 +415,7 @@ img{
 
 .weather {
     position: relative;
-    z-index: 0;
+    top: 10px;
 }
 
 .tags {
@@ -430,4 +433,14 @@ img{
 .tags-name {
     color: #FA3333;
     cursor: pointer;
+    margin-right: 5px;
+}
+
+#date {
+    float: right;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #5F5E5C;
+    color: #ffffff;
+    font-family: 'myFont3', sans-serif;
 }

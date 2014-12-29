@@ -34,13 +34,13 @@ $(document).ready(function () {
     $(".footer-div").last().css("margin", "0");
 
     /* Velicina main diva */
-    var $height;
-    $height = $(this).height();
-    console.log($height);
-    if($height - 700 < 450)
-        $("main").css({"height": 450 + "px"});
-    else
-        $("main").css({"height": $height - 650 + "px"});
+    //var $height;
+    //$height = $(this).height();
+    //console.log($height);
+    //if($height - 700 < 450)
+    //    $("main").css({"height": 450 + "px"});
+    //else
+    //    $("main").css({"height": $height - 650 + "px"});
     
 
     /* Fixed navigacioni bar */
@@ -184,6 +184,10 @@ $(document).ready(function () {
 			$("img:eq(1)").width( ($(window).width()- 950)/2 -0.5 + "px" );
 		}
 	});
+
+    /* margina za post-sa-strane */
+    var height = $(".post-title").height() + 15;
+    $("#postovi-sa-strane").css("margin-top", height + "px");
 	
 	
 	

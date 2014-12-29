@@ -203,8 +203,8 @@ em {
 #right-ceo-post {
     float: left;
     width: 300px;
-    height: 300px;
-    /*border: 1px solid #808080;*/
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #recent-article-wrapper
@@ -225,4 +225,37 @@ em {
 	font-family: 'myFont3', sans-serif;
 	color: #666666;
 	display: inline-block;
+}
+
+#postovi-sa-strane {
+    font-size: 15px;
+    font-family: 'myFont3', sans-serif;
+    border-bottom: 1px solid black;
+}
+
+.post-sa-strane-title {
+    cursor: pointer;
+}
+
+.post-sa-strane-title:hover {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.post-sa-strane-author {
+    font-weight: bold;
+}
+
+.postovi-sa-strane-section {
+    font-size: 20px;
+    font-family: 'myFont3', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+.post-sa-strane {
+    margin-bottom: 20px;
 }
