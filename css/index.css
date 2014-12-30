@@ -347,14 +347,16 @@ footer {
     text-transform: uppercase;
 }
 
+.footer-content {
+    width: 270px;
+}
+
 .recent-comment {
     font-family: 'myFont3', sans-serif;
     font-size: 14px;
     color: #ffffff;
     width: 270px;
-    display: block;
     margin-bottom: 30px;
-    line-height: 15px;
 }
 
 .comment-author {
@@ -362,7 +364,11 @@ footer {
 }
 
 .comment-content {
+    cursor: pointer;
+}
 
+.comment-content:hover {
+    text-decoration: underline;
 }
 
 .copy {
