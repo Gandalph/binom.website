@@ -1,15 +1,16 @@
-</main>
+    </main>
+</div><!-- end content-wrapper -->
 <footer>
     <div class="footer-div">
         <div class="footer-title">
             <p>Најновији коментари</p>
         </div>
-        <div>
+        <div class="footer-content">
             <?php
             global $link;
             connect();
 
-            $sql = "select comment_author, comment_content "
+            $sql = "select comment_author, comment_content, comment_post_id "
                 . "from wp_comments  "
                 . "order by comment_date "
                 . "limit 4";
@@ -17,7 +18,10 @@
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
             ?>
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-                <p class="recent-comment"><span class="comment-author"><?= $row['comment_author'] ?></span> <span class="comment-content"><?= $row['comment_content'] ?></span></p>
+                <div class="recent-comment">
+                    <span class="comment-author"><?= $row['comment_author'] ?></span>
+                    <span class="comment-content" onclick="window.location = 'ceo_post.php?post=<?= $row['comment_post_id'] ?>'"><?= $row['comment_content'] ?></span>
+                </div>
             <?php endwhile; ?>
         </div>
     </div>
@@ -37,7 +41,11 @@
             <div class="tag" onclick="searchTag(this)"><?= $row['name'] ?></div>
         <?php endwhile; disconnect(); ?>
     </div>
-    <div class="footer-div"></div>
+    <div class="footer-div">
+        <div class="footer-title">
+            <p>о нама</p>
+        </div>
+    </div>
     <div class="copy">
         <p>БИНОМ &copy; 2014 СВА ПРАВА ЗАДРЖАНА</p>
     </div>
