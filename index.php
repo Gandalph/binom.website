@@ -162,7 +162,8 @@
 
             $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count "
                 . "from wp_posts p join wp_users u on p.post_author = u.id "
-                . "where post_status = 'publish' and post_type = 'post'";
+                . "where post_status = 'publish' and post_type = 'post' "
+                . "order by post_date desc";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
@@ -186,4 +187,5 @@
                     </div>
                 </div><!-- end regular-article-wrapper -->
             </div><!-- end article-wrapper -->
+            <div id="zgrade"></div>
  <?php include("footer.php"); ?>

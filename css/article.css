@@ -231,6 +231,7 @@ em {
     font-size: 15px;
     font-family: 'myFont3', sans-serif;
     border-bottom: 1px solid black;
+    background-size: 100%;
 }
 
 .post-sa-strane-title {

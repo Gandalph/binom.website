@@ -32,15 +32,6 @@ $(document).ready(function () {
 
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");
-
-    /* Velicina main diva */
-    //var $height;
-    //$height = $(this).height();
-    //console.log($height);
-    //if($height - 700 < 450)
-    //    $("main").css({"height": 450 + "px"});
-    //else
-    //    $("main").css({"height": $height - 650 + "px"});
     
 
     /* Fixed navigacioni bar */
@@ -188,10 +179,12 @@ $(document).ready(function () {
     /* margina za post-sa-strane */
     var height = $(".post-title").height() + 15;
     $("#postovi-sa-strane").css("margin-top", height + "px");
+
+
 	
-	
-	
-});
+}); /***** end document.ready ******/
+
+
 var i = 0;
 function promeni()
 {

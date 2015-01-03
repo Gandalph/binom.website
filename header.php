@@ -24,18 +24,19 @@
     <div id="slide-top" title="Vrh"></div>
 
     <header>
-		<img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300px" style="float:left;" > 
-        <div id="logo">
-            <div id="date">
-                <script>
-                    var date = new Date();
-                    var monthNames = ["Јануар", "фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"];
+        <div id="date">
+            <script>
+                var date = new Date();
+                var monthNames = ["Јануар", "фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"];
 
-                    $("#date").text(date.getDate() + ". " + monthNames[date.getMonth()] + " " + date.getFullYear());
-                </script>
-            </div>
+                $("#date").text(date.getDate() + ". " + monthNames[date.getMonth()] + " " + date.getFullYear());
+            </script>
+        </div>
+		<img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300px" style="float:left;" >
+        <div id="logo">
+
         </div><!-- end logo -->
-        <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300px" > 
+        <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300px" >
         <div id="nav-wrapper">
             <nav id="nav">
                 <!--

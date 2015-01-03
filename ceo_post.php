@@ -43,7 +43,7 @@
                     <?php
                     $sql = "select post_title, display_name "
                         .  "from wp_posts wp join wp_users wu on wp.post_author = wu.id "
-                        .  "where wp.post_status = 'publish' "
+                        .  "where wp.post_status = 'publish' and post_type = 'post'"
                         .  "limit 5";
 
                     $result = mysqli_query($link, $sql);
