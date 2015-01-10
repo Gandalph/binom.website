@@ -29,14 +29,12 @@ html {
 #nav-wrapper {
     height: 70px;
     width: 100%;
-/* 	ona narandzasta */
-/*     background-color: #571f06; */
 	background-color: #FF3333;
     color: white;
     z-index: 1;
-/* 	margin-top: -3px; */
 	box-shadow: 0px 4px 2px #FA3333;
-	position: relative; 
+	position: relative;
+    background-size: 50%;
 }
 
 #nav {
@@ -89,7 +87,6 @@ html {
     color: #003333;
     line-height: 40px;
 }
-
 
 #logo {
 	width: 950px;
@@ -321,7 +318,7 @@ footer {
     box-sizing: border-box;
     margin: 0 auto;
     clear: left;
-
+    background-image: url("../slike/glass-black.png");
 }
 
 .footer-div {
@@ -403,7 +400,7 @@ img{
 .tag {
     float: left;
     height: 20px;
-    background-color: #4F4E4C;
+    background-color: #191919;
     width: auto;
     font-family: 'myFont3', sans-serif;
     font-size: 14px;
@@ -442,11 +439,27 @@ img{
     margin-right: 5px;
 }
 
+.tags-name:hover {
+    text-decoration: underline;
+}
+
 #date {
-    float: right;
-    font-size: 15px;
+    position: absolute;
+    width: 99%;
+    font-size: 13px;
     padding: 7px;
-    background-color: #5F5E5C;
+    background-color: #3A3635;
     color: #ffffff;
     font-family: 'myFont3', sans-serif;
+    text-align: right;
+}
+
+#zgrade {
+    clear: both;
+    height: 50px;
+    width: 100%;
+    background-image: url("../slike/footer_3.png");
+    background-size: 50%;
+    position: relative;
+    top: 10px;
 }

@@ -10,10 +10,9 @@
             global $link;
             connect();
 
-            $sql = "select comment_author, comment_content, comment_post_id "
-                . "from wp_comments  "
-                . "order by comment_date "
-                . "limit 4";
+            $sql = "select t.comment_author, t.comment_content, t.comment_post_id "
+                . "from (select * from wp_comments limit 4) t "
+                . "order by t.comment_date desc";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
             ?>
