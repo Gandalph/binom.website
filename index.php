@@ -187,5 +187,4 @@
                     </div>
                 </div><!-- end regular-article-wrapper -->
             </div><!-- end article-wrapper -->
-            <div id="zgrade"></div>
  <?php include("footer.php"); ?>

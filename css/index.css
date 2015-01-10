@@ -457,9 +457,10 @@ img{
 #zgrade {
     clear: both;
     height: 50px;
-    width: 100%;
+    width: 950px;
     background-image: url("../slike/footer_3.png");
     background-size: 50%;
     position: relative;
-    top: 10px;
+    margin: 0 auto;
+    background-color: #ffffff;
 }
