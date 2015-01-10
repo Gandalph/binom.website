@@ -448,8 +448,8 @@ img{
     width: 99%;
     font-size: 13px;
     padding: 7px;
-    background-color: #3A3635;
-    color: #ffffff;
+/*     background-color: #3A3635; */
+    color: #6B6662;
     font-family: 'myFont3', sans-serif;
     text-align: right;
 }
