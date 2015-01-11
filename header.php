@@ -97,7 +97,7 @@
 
                         </div>
                     </li>
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = 'galerija.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
