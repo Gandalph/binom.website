@@ -1,18 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Gaf
- * Date: 11-Nov-14
- * Time: 23:27
- */
-
-include("../baza/db.inc");
-
-connect();
-
-$sql = "select post_content from wp_posts where id = 20";
-$result = mysqli_query($link, $sql);
-echo mysqli_fetch_row($result)[0];
-
-disconnect();
-?>
+<iframe src="http://widget.websta.me/in/trznjak/?s=250&w=2&h=3&b=1&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:630px; height: 945px" ></iframe> <!-- websta - web.stagram.com -->

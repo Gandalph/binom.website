@@ -448,10 +448,10 @@ img{
     width: 99%;
     font-size: 13px;
     padding: 7px;
-/*     background-color: #3A3635; */
     color: #F8F7F5;
     font-family: 'myFont3', sans-serif;
     text-align: right;
+    box-sizing: border-box;
 }
 
 #zgrade {
