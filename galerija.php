@@ -1,5 +1,13 @@
+
 <?php include("./baza/db.inc"); ?>
-<?php include("header.php") ?>
+<?php include("header.php"); ?>
+
+	<style>
+		.thumbnail{
+				margin:17px;
+				float:left;
+			}
+	</style>
 
     <div id="content-wrapper">
         <main id="content">
@@ -50,8 +58,9 @@ $i = 0;
 foreach ($result->data as $post) {
 	$i++;
 	$string = $post->images->thumbnail->url;
-	echo "<img src=\"" . $string . "\" />";
+	echo "<img class=\"thumbnail\" src=\"" . $string . "\" />";
 }
 
 ?>
+
 <?php include("footer.php"); ?>
