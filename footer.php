@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="copy">
-        <p>БИНОМ &copy; 2014 СВА ПРАВА ЗАДРЖАНА</p>
+        <p>БИНОМ &copy; 2015 СВА ПРАВА ЗАДРЖАНА</p>
     </div>
 </footer>
 </div><!-- end wrapper -->

@@ -8,9 +8,9 @@
             <script>
             jQuery(document).ready(function ($) {
                 var _SlideshowTransitions = [
-                        {$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$JssorEasing$.$EaseOutJump,$Round:{$Top:1.5}},
+//                        {$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$JssorEasing$.$EaseOutJump,$Round:{$Top:1.5}},
                         {$Duration:1000,x:0.2,$Delay:40,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo,$Opacity:$JssorEasing$.$EaseInOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
-                        {$Duration:400,$Delay:100,$Cols:10,$Clip:2,$Formation:$JssorSlideshowFormations$.$FormationStraight}
+//                        {$Duration:400,$Delay:100,$Cols:10,$Clip:2,$Formation:$JssorSlideshowFormations$.$FormationStraight}
                         ];
                         var options = {
 
@@ -171,7 +171,7 @@
 
             ?>
             <div id="recent-article-title">
-                <span> НАЈНОВИЈЕ ВЕСТИ </span>
+                <span> НАЈНОВИЈИ ЧЛАНЦИ </span>
             </div>
             <div style="width:585px; height:5px; border-bottom: 2px solid #666; display: inline-block; "></div> <!--TODO PREBACI U CSS -->
             <div id="article-wrapper">

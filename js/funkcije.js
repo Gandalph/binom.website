@@ -115,6 +115,7 @@ $(document).ready(function () {
     });
 
 
+
     /* Animacija za padajuci meni navBara */
 	var testTimeout = 0;
 	$(".navBar-link").first().next().on({
@@ -138,8 +139,6 @@ $(document).ready(function () {
                 {"height": "0px"}, 
                 {duration: 300, queue: false}
             );
-			//$("#content").animate({"top": "0px"}, {duration: 300, queue: false});
-            
         }
     });
 	
@@ -157,7 +156,9 @@ $(document).ready(function () {
 	
 	
 	
-	/*          pozicioniranje sredisnjeg dela slike headera            */
+	/*
+	*       pozicioniranje sredisnjeg dela slike headera
+	*/
 	
 	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
 	if($(window).width() % 2 == 1 )
@@ -177,9 +178,20 @@ $(document).ready(function () {
 		}
 	});
 
-    /* margina za post-sa-strane */
+
+
+    /* margin za post sa strane */
     var height = $(".post-title").height() + 15;
     $("#postovi-sa-strane").css("margin-top", height + "px");
+
+
+
+    /* pomeranje logo slike sa scroll-om */
+    $(document).on("scroll", function() {
+        var move = $(this).scrollTop() / 2;
+        console.log(move);
+        $("#logo-wrapper").css("top", move);
+    });
 
 
 	
@@ -230,6 +242,9 @@ function setComment(commentForm, postId) {
             location.reload();
         }
     );
+
+
+
 	
 }
 

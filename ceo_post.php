@@ -39,7 +39,7 @@
             </div><!-- end post -->
             <div id="right-ceo-post">
                 <div id="postovi-sa-strane">
-                    <p class="postovi-sa-strane-section">Вести</p>
+                    <p class="postovi-sa-strane-section">Чланци</p>
                     <?php
                     $sql = "select post_title, display_name "
                         .  "from wp_posts wp join wp_users wu on wp.post_author = wu.id "
@@ -73,7 +73,7 @@
                         $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
                         while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-                            <span class="tags-name" onclick="window.location = 'search.php?tag=<?= $row['name'] ?>'"><?= $row['name'] . " | " ?></span>
+                            <span class="tags-name" onclick="window.location = 'search.php?tag=<?= $row['name'] ?>'"><?= $row['name'] . " " ?></span>
                         <?php endwhile; ?>
                     </span>
             </div>
