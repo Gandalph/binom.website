@@ -465,3 +465,11 @@ img{
     margin: 0 auto;
     background-color: #ffffff;
 }
+
+#logo-window {
+    overflow: hidden;
+}
+
+#logo-wrapper {
+    position: relative;
+}
