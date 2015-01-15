@@ -189,7 +189,6 @@ $(document).ready(function () {
     /* pomeranje logo slike sa scroll-om */
     $(document).on("scroll", function() {
         var move = $(this).scrollTop() / 2;
-        console.log(move);
         $("#logo-wrapper").css("top", move);
     });
 
