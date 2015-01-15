@@ -194,6 +194,23 @@ $(document).ready(function () {
     });
 
 
+    $(".fancybox").fancybox({
+        wrapCSS    : 'fancybox-custom',
+        closeClick : true,
+
+        openEffect : 'none',
+
+        helpers : {
+            title : {
+                type : 'inside'
+            },
+            overlay : {
+                css : {
+                    'background' : 'rgba(10, 10, 10, 0.85)'
+                }
+            }
+        }
+    });
 	
 }); /***** end document.ready ******/
 

@@ -57,8 +57,9 @@ $result = json_decode($result);
 $i = 0;
 foreach ($result->data as $post) {
 	$i++;
-	$string = $post->images->thumbnail->url;
-	echo "<img class=\"thumbnail\" src=\"" . $string . "\" />";
+	$thumbnail = $post->images->thumbnail->url;
+	$standard = $post->images->standard_resolution->url;
+	echo "<a class=\"fancybox\" href=\"" . $standard . "\" data-fancybox-group=\"gallery\" title=\"Lorem ipsum dolor sit amet\"><img class=\"thumbnail\" src=\"" . $thumbnail . "\" /></a>";
 }
 
 ?>

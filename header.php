@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/article.css" />
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
     <script type="text/javascript" src="js/funkcije.js" ></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
 </head>
 <body>
 <div id="fb-root"></div>
