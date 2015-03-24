@@ -11,15 +11,16 @@
             global $link;
             connect();
 
-            $sql = "select t.comment_author, t.comment_content, t.comment_post_id "
-                . "from (select * from wp_comments limit 4) t "
+            $sql = "select t.comment_author, t.comment_content, t.comment_post_id, wp.post_title "
+                . "from (select * from wp_comments where comment_approved = 1 order by comment_date desc limit 4) t "
+                . "join wp_posts wp on wp.id = t.comment_post_id "
                 . "order by t.comment_date desc";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
             ?>
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <div class="recent-comment">
-                    <span class="comment-author"><?= $row['comment_author'] ?></span>
+                    <span class="comment-author"><?= $row['comment_author'] ?> <span style="color: white">на</span> <?= $row['post_title'] ?>: </span>
                     <span class="comment-content" onclick="window.location = 'ceo_post.php?post=<?= $row['comment_post_id'] ?>'"><?= $row['comment_content'] ?></span>
                 </div>
             <?php endwhile; ?>
