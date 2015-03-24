@@ -21,9 +21,7 @@
 
 html {
 	background-color: #eaeaea;
-
-/* 	prethodna boja */
-/*     background-color: #f0f0f0; */
+    background-image: url("../slike/swirl_pattern/swirl_pattern/swirl_pattern.png");
 }
 
 #nav-wrapper {

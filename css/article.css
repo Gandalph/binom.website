@@ -232,6 +232,9 @@ em {
     font-family: 'myFont3', sans-serif;
     border-bottom: 1px solid black;
     background-size: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background-image: url("../slike/clanci_pozadina.png");
 }
 
 .post-sa-strane-title {
