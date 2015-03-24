@@ -3,16 +3,75 @@
 <?php include("header.php"); ?>
 
 	<style>
-		.thumbnail{
-				margin:17px;
-				float:left;
-			}
+
+		.thumbnail
+		{
+		}
+		.imagewrapper
+		{
+			height:	200px;
+			width:	150px;
+			margin:	15px;
+			float:	left;
+			border:	2px solid black;
+			border-radius: 3px;
+		}
+		.imagebottom
+		{
+			border-top: 2px solid black;
+			cursor:	pointer;
+			position: relative;
+			bottom: 4px;
+		}
+		.insta
+		{
+			display:	inline-block;
+			width:	100px;
+			height:	50px;
+			background-image: url("./slike/insta1.jpg");
+			background-size: 100px 50px;
+		}
+		.heart
+		{
+			display:	inline-block;
+			width:	50px;
+			height:	50px;
+			background-image: url("./slike/srce2.jpg");
+			background-size: 50px 50px;
+			position:	absolute;
+			bottom:	2.5px;
+			text-align: center;
+			line-height: 50px;
+			color: #FF4152;
+			font-size:	10px;
+			font-weight:	bold;
+			
+		}
+		#naslov
+		{
+			font-size: 30px;
+			font-weight: bold;
+			margin-top: 40px;
+			margin-left: 20px;
+			margin-bottom: 40px; 
+			font-family: 'myFont3', sans-serif;
+			color: #666666;
+			display: inline-block;
+		}
+
+}
+
 	</style>
 
     <div id="content-wrapper">
         <main id="content">
+        <div style="width:750px; height:5px; border-bottom: 2px solid #666;  margin: auto; margin-top: 50px; "></div>
+		<div id="naslov">
+			<span>  ГАЛЕРИЈА СЛИКА </span>
+		</div>
+		<div style="width:750px; height:5px; border-bottom: 2px solid #666;  margin: auto; margin-bottom: 100px; "></div> 
+		
 		<?php
-
 
 function curl_download($Url){
 
@@ -59,7 +118,15 @@ foreach ($result->data as $post) {
 	$i++;
 	$thumbnail = $post->images->thumbnail->url;
 	$standard = $post->images->standard_resolution->url;
-	echo "<a class=\"fancybox\" href=\"" . $standard . "\" data-fancybox-group=\"gallery\" title=\"Lorem ipsum dolor sit amet\"><img class=\"thumbnail\" src=\"" . $thumbnail . "\" /></a>";
+	echo "<div class=\"imagewrapper\">";
+		echo "<a class=\"fancybox\" href=\"" . $standard . "\" data-fancybox-group=\"gallery\" title=" . $post->caption->text ."><img class=\"thumbnail\" src=\"" . $thumbnail . "\" /></a>";
+		echo "<div class=\"imagebottom\" >";
+			echo "<a href=\"$post->link\">";
+				echo "<div class=\"insta\">" . "</div>";
+				echo "<div class=\"heart\">" .  $post->likes->count . "</div>";
+			echo "</a>";
+		echo "</div>";
+	echo "</div>";
 }
 
 ?>
