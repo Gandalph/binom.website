@@ -2,13 +2,13 @@
  * Created by Gaf on 07-Nov-14.
  */
 $(document).ready(function () {
-
+	
 	/*brisemo one "ruzne" divove koje issuuova skripta sama generise*/
 	/*morali smo da pozivamo kod za brisanje neki duzi vremenski period jer se njihova skripta asinhrono ucitava i ne znamo dak ce tacno biti ucitana*/
-	var intervalId = setInterval( function(){
-   	$(".issuuembed.issuu-isrendered").children().children(":nth-child(2)").css("display","none");
-		console.log("ovo je ispis iz setIntervarl \n");
-       },500);
+	var intervalId = setInterval( function()
+	{
+		$(".issuuembed.issuu-isrendered").children().children(":nth-child(2)").css("display","none");
+    },500);
 	/*prekidamo pozivanje koda za brisanje gore pomenutog diva*/
 	setTimeout(function()
 	{
