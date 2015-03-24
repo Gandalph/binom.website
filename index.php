@@ -8,8 +8,9 @@
             <script>
             jQuery(document).ready(function ($) {
                 var _SlideshowTransitions = [
+						{$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2}
 //                        {$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$JssorEasing$.$EaseOutJump,$Round:{$Top:1.5}},
-                        {$Duration:1000,x:0.2,$Delay:40,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo,$Opacity:$JssorEasing$.$EaseInOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+//                        {$Duration:1000,x:0.2,$Delay:40,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo,$Opacity:$JssorEasing$.$EaseInOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
 //                        {$Duration:400,$Delay:100,$Cols:10,$Clip:2,$Formation:$JssorSlideshowFormations$.$FormationStraight}
                         ];
                         var options = {
@@ -53,11 +54,11 @@
 
                 <!-- Slides Container -->
                 <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 950px; height: 450px;"><!-- TODO ubaciti u css -->
-                    <div><img u="image" src="slike/Skyrim-Dragon-Flyby.jpg" />
+                    <div><img u="image" src="slike/startIt.jpg" />
                         <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 500px; height: 50px; background-color: #00A8EF; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
                         font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">D R A G O N</div><!-- TODO lepo srediti u css -->
                     </div>
-                    <div><img u="image" src="slike/the-joker-head-hd-fondos-276740.jpg" />
+                    <div><img u="image" src="slike/bubble-cup-microsoft.jpg" />
                         <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 300px; height: 50px; background-color: #A70201; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
                         font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">J O K E R</div><!-- TODO lepo srediti u css -->
                     </div>
