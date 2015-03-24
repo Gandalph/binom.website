@@ -68,7 +68,7 @@ $(document).ready(function () {
         if($scroll > 301 && fixed_navi == 0) {
             fixed_navi = 1;
             $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","1");
-            //$("#nav-wrapper").css({transform: scale(0.9) translate(100px, 0)}).css("top", "-5px");
+            $("#nav-wrapper").css("transform","scaleY(0.9)").css("top", "-5px");
             $("#slide-down").css("top", "70px");
 			$("main").css("margin-top", "70px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
         }
