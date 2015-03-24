@@ -59,7 +59,7 @@
                         <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 500px; height: 50px; background-color: #00A8EF; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
                         font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">D R A G O N</div><!-- TODO lepo srediti u css -->
                     </div>
-                    <div><img u="image" src="slike/startit.jpg" />
+                    <div><img u="image" src="slike/startIT.jpg" />
                         <div onclick="window.location = 'http://www.google.rs'" style="cursor: pointer ;width: 300px; height: 50px; background-color: #A70201; position: relative; top: 250px; opacity: 0.7; color: #ffffff; font-size: 25px; line-height: 50px; padding-left: 20px;
                         font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">J O K E R</div><!-- TODO lepo srediti u css -->
                     </div>

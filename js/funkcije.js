@@ -1,7 +1,8 @@
 /**
  * Created by Gaf on 07-Nov-14.
  */
-$(document).ready(function () {
+$(document).ready(function () 
+{
 	
 	/*brisemo one "ruzne" divove koje issuuova skripta sama generise*/
 	/*morali smo da pozivamo kod za brisanje neki duzi vremenski period jer se njihova skripta asinhrono ucitava i ne znamo dak ce tacno biti ucitana*/
@@ -155,17 +156,25 @@ $(document).ready(function () {
         }
     });
 	
-	
-	
-	/*      menjanje recent-postova      */
-	
+	/*      menjanje recent-postova na neki vremenski period (10sec)      */
 	var i;
 	for(i = 2; i < 4; i++)
 	{
 		$(".recent-article:eq(" + i + ")").fadeOut();
 	}
-	window.setInterval("promeni()",10000);
+		var articlesId = setInterval("promeni()",10000);
 	
+	
+	/* zaustavlja se menjanje recent articlesa kad je mish pozicioniran na neki od njih */
+	$(".recent-article").on({
+        mouseenter: function (){
+			    clearInterval(articlesId);
+			
+        },
+        mouseleave: function () {
+			articlesId = setInterval("promeni()",10000);
+        }
+    });
 	
 	
 	
@@ -230,11 +239,11 @@ $(document).ready(function () {
 var i = 0;
 function promeni()
 {
-    $(".recent-article:eq(" + i + ")").fadeOut(1000);//.css("display","none");
-    $(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);//.css("display","none");
+    $(".recent-article:eq(" + i + ")").fadeOut(1000);
+    $(".recent-article:eq(" + (i + 1) + ")").fadeOut(1000);
     i = (i + 2) % 4;
-    $(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);//.css("display","");
-    $(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);//.css("display","");
+    $(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);
+    $(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);
 };
 	
 

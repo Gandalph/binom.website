@@ -502,33 +502,22 @@ img{
 .imagebottom
 {
 	border-top: 2px solid black;
-	cursor:	pointer;
 	position: relative;
 	bottom: 4px;
 }
 .insta
 {
 	display:	inline-block;
-	width:	100px;
+	width:	150px;
 	height:	50px;
-	background-image: url("../slike/insta1.jpg");
-	background-size: 100px 50px;
-}
-.heart
-{
-	display:	inline-block;
-	width:	50px;
-	height:	50px;
-	background-image: url("../slike/srce2.jpg");
-	background-size: 50px 50px;
-	position:	absolute;
-	bottom:	2.5px;
+	background-image: url("../slike/instaCela.jpg");
+	background-size: 150px 50px;
 	text-align: center;
-	line-height: 48px;
-	color: #FF4152;
+	line-height: 50px;
 	font-size:	10px;
+	color: #FF4152;
 	font-weight:	bold;
-	
+	border-bottom: 1px solid black;
 }
 #naslov
 {
