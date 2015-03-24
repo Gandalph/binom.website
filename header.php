@@ -93,10 +93,9 @@
                                           . 'where wtt.taxonomy = "category"';
                                     $result = mysqli_query($link, $upit);
                                     $count = mysqli_num_rows($result);
-                                    for($i = 0; $i < $count; $i++)
-                                    {
+                                    for($i = 0; $i < $count; $i++) {
                                         $row = mysqli_fetch_assoc($result);
-                                        echo "<div class='categories'>$row[name]</div>";
+                                        echo "<div class='categories' onclick=\"window.location='./search.php?kategorija=$row[name]'\">$row[name]</div>";
                                     }
                                     //echo "<script>margin($count)</script>";
 
@@ -133,18 +132,18 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link">
-                        <div class="navBar-window">
-                            <div class="roll">
-                                <div class="roll-up">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
-                                </div>
-                                <div class="roll-down">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+<!--                    <li class="navBar-link">-->
+<!--                        <div class="navBar-window">-->
+<!--                            <div class="roll">-->
+<!--                                <div class="roll-up">-->
+<!--                                    <span><span class="prvo-slovo">О</span> нама</span>-->
+<!--                                </div>-->
+<!--                                <div class="roll-down">-->
+<!--                                    <span><span class="prvo-slovo">О</span> нама</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
                 </ul>
                 <!--Search-->
                 <form action="search.php" method="get" id="form" onsubmit="return checkSearch()">
