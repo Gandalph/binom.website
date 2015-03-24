@@ -67,8 +67,8 @@ foreach ($result->data as $post) {
 		echo "<a class=\"fancybox\" href=\"" . $standard . "\" data-fancybox-group=\"gallery\" title=" . $post->caption->text ."><img class=\"thumbnail\" src=\"" . $thumbnail . "\" /></a>";
 		echo "<div class=\"imagebottom\" >";
 			echo "<a href=\"$post->link\">";
-				echo "<div class=\"insta\">" . "</div>";
-				echo "<div class=\"heart\">" .  $post->likes->count . "</div>";
+				echo "<span class=\"insta\">" . "</span>";
+				echo "<span class=\"heart\">" .  $post->likes->count . "</span>";
 			echo "</a>";
 		echo "</div>";
 	echo "</div>";
