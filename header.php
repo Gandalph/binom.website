@@ -87,10 +87,9 @@
                                           . 'where wtt.taxonomy = "category"';
                                     $result = mysqli_query($link, $upit);
                                     $count = mysqli_num_rows($result);
-                                    for($i = 0; $i < $count; $i++)
-                                    {
+                                    for($i = 0; $i < $count; $i++) {
                                         $row = mysqli_fetch_assoc($result);
-                                        echo "<div class='categories'>$row[name]</div>";
+                                        echo "<div class='categories' onclick=\"window.location='./search.php?kategorija=$row[name]'\">$row[name]</div>";
                                     }
                                     //echo "<script>margin($count)</script>";
 
