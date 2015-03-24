@@ -132,18 +132,18 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link">
-                        <div class="navBar-window">
-                            <div class="roll">
-                                <div class="roll-up">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
-                                </div>
-                                <div class="roll-down">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+<!--                    <li class="navBar-link">-->
+<!--                        <div class="navBar-window">-->
+<!--                            <div class="roll">-->
+<!--                                <div class="roll-up">-->
+<!--                                    <span><span class="prvo-slovo">О</span> нама</span>-->
+<!--                                </div>-->
+<!--                                <div class="roll-down">-->
+<!--                                    <span><span class="prvo-slovo">О</span> нама</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
                 </ul>
                 <!--Search-->
                 <form action="search.php" method="get" id="form" onsubmit="return checkSearch()">
