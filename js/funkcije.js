@@ -18,24 +18,15 @@ $(document).ready(function ()
 	
 	/*Uvecanje slike clanaka */
 	$(".recent-article").hover(function () {
-        $(this).children().first().animate({
-            backgroundSize: "120%"
-    }, 100);
+        $(this).children().first().css("background-size","110%");
     }, function () {
-        $(this).children().first().animate({
-            backgroundSize: "100%"
-        })
-    }, 100);
-
+        $(this).children().first().css("background-size","100%");
+    });
     $(".regular-article").hover(function () {
-        $(this).children().first().animate({
-            backgroundSize: "120%"
-        }, 200);
+        $(this).children().first().css("background-size","110%");
     }, function () {
-        $(this).children().first().animate({
-            backgroundSize: "100%"
-        })
-    }, 200);
+        $(this).children().first().css("background-size","");
+    });
 
 
 
@@ -178,34 +169,35 @@ $(document).ready(function ()
 	$(".recent-article").on({
         mouseenter: function (){
 			    clearInterval(articlesId);
-
+			
         },
         mouseleave: function () {
 			articlesId = setInterval("promeni()",10000);
         }
     });
-
-
-
-    /*
-    *       pozicioniranje sredisnjeg dela slike headera
-    */
-    //if($(window).width() % 2 == 1 )
-    //	$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
-    //else
-    $("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
-    $("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
-
+	
+	
+	
+	/*
+	*       pozicioniranje sredisnjeg dela slike headera
+	*/
+	
+	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
+	if($(window).width() % 2 == 1 )
+		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
+	else
+		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+	
 	$(window).resize(function(){
 		
 		$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
-		$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
+		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
 		
 		
-		//if($("header").height() > 500)
-		//{
-		//	$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
-		//}
+		if($("header").height() > 500)
+		{
+			$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
+		}
 	});
 
 
