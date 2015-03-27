@@ -96,9 +96,9 @@ html {
 	
 }
 header {
-	background: linear-gradient(to right,  #333333 ,#B2B2B2);
-/* 	background-color: #FF3333; */
-/* 	background-color: gray; */
+
+/* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
+	background-color: #C8C3BC;
 }
 
 #content-wrapper {
@@ -370,7 +370,7 @@ footer {
 }
 
 .comment-author {
-    color: #FA3333;
+    color: #FF6B6B;
 }
 
 .comment-content {
@@ -485,6 +485,7 @@ img{
 
 #logo-wrapper {
     position: relative;
+    height: 300px;
 }
 
 /*sredjivanje galerije */

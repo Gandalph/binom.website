@@ -76,7 +76,7 @@ $(document).ready(function ()
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
             $("#nav-wrapper").css("transform", "scale(1.0)");
-            $("#nav-wrapper").css("position","relative");
+            $("#nav-wrapper").css("position","relative").css("top", "0px");
             $("#slide-down").css("top", "70px");
 			$("main").css("margin-top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
         }
@@ -197,7 +197,7 @@ $(document).ready(function ()
 		
 		if($("header").height() > 500)
 		{
-			$("img:eq(1)").width( ($(window).width()- 950)/2 -0.5 + "px" );
+			$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
 		}
 	});
 
@@ -246,9 +246,6 @@ function promeni()
     $(".recent-article:eq(" + i + ")").delay(1000).fadeIn(1000);
     $(".recent-article:eq(" + (i + 1) + ")").delay(1000).fadeIn(1000);
 };
-	
-
-
 
 function margin(count) {
     var margin = ($(document).width() - 300 - (count * 120)) / (count + 1);
