@@ -95,11 +95,10 @@ html {
 	display: inline-block;
 	
 }
-
-
 header {
-/* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
-	background-color: #FF3333;
+	background: linear-gradient(to right,  #333333 ,#B2B2B2);
+/* 	background-color: #FF3333; */
+/* 	background-color: gray; */
 }
 
 #content-wrapper {

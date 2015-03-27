@@ -169,7 +169,6 @@ $(document).ready(function ()
 	$(".recent-article").on({
         mouseenter: function (){
 			    clearInterval(articlesId);
-			
         },
         mouseleave: function () {
 			articlesId = setInterval("promeni()",10000);
@@ -182,12 +181,14 @@ $(document).ready(function ()
 	*       pozicioniranje sredisnjeg dela slike headera
 	*/
 	
-	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
-	if($(window).width() % 2 == 1 )
-		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
-	else
-		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
-	
+	console.log($(window).width());
+	$("img:eq(0)").width( ($(window).width()- 950)/2 - 1  + "px" );
+	$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+// 	if($(window).width() % 2 == 1 )
+// 		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
+// 	else
+// 		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+// 	
 	$(window).resize(function(){
 		
 		$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
