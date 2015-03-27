@@ -1,7 +1,8 @@
 <div id="right-regular-article">
     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
         <article class="regular-article">
-            <div class="r-article-image"></div>
+            <div class="r-article-image-front" data-post-id="<?= $row['id'] ?>"></div>
+            <div class="r-article-image" data-post-id="<?= $row['id'] ?>"></div>
             <div class="right-side">
                 <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>
                 <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
@@ -15,7 +16,8 @@
                             var $div = $('<div><?= $string ?></div>');
                             var $p = $("p[data-post-id=" + <?= $row['id'] ?> + "]");
                             $p.text($div.text());
-                            $("div[data-post-id=" + <?= $row['id'] ?> + "]").parent().prev().css("background-image", "url(<?php if($flag) echo $match[1] ?>)");
+                            $(".r-article-image[data-post-id=" + <?= $row['id'] ?> + "]").css("background-image", "url(<?php if($flag) echo $match[1] ?>)");
+                            $(".r-article-image-front[data-post-id=" + <?= $row['id'] ?> + "]").css("background-image", "url(<?php if($flag) echo $match[1] ?>)");
                         </script>
                     </p>
                 </div>

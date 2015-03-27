@@ -30,9 +30,10 @@ html {
 	background-color: #FF3333;
     color: white;
     z-index: 1;
-	box-shadow: 0px 4px 2px #FA3333;
+	box-shadow: 0px 4px 2px #FF3333;
 	position: relative;
     background-size: 50%;
+    opacity: 1;
 }
 
 #nav {
@@ -99,7 +100,8 @@ html {
 
 header {
 /* 	background: linear-gradient(to right,  #333333 ,#B2B2B2); */
-	background-color: #C8C3BC;
+	background-color: #C8C2BB;
+    /*background-image: url("../slike/swirl_pattern/swirl_pattern/swirl_pattern.png");*/
 }
 
 #content-wrapper {
