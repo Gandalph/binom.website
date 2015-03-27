@@ -267,3 +267,19 @@ em {
 .post {
     line-height: 20px;
 }
+
+.binom-wrapper
+{
+    width: 550px;
+    margin: auto;
+    font-family: myFont3,serif;
+    color: #666666;
+}
+
+.binom-wrapper  h1
+{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
