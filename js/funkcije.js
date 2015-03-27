@@ -182,8 +182,8 @@ $(document).ready(function ()
 	*/
 	
 	console.log($(window).width());
-	$("img:eq(0)").width( ($(window).width()- 950)/2 - 1  + "px" );
-	$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
+	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
+	$("img:eq(1)").width( ($(window).width()- 950)/2 -1  + "px" );
 // 	if($(window).width() % 2 == 1 )
 // 		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
 // 	else
@@ -192,13 +192,12 @@ $(document).ready(function ()
 	$(window).resize(function(){
 		
 		$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
-		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
-		
-		
+		$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
+/*		
 		if($("header").height() > 500)
 		{
 			$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
-		}
+		}*/
 	});
 
 
