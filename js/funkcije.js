@@ -18,14 +18,22 @@ $(document).ready(function ()
 	
 	/*Uvecanje slike clanaka */
 	$(".recent-article").hover(function () {
-        $(this).children().first().css("background-size","110%");
+        $(this).children().first().animate({
+            backgroundSize: "120%"
+        }, 100)
     }, function () {
-        $(this).children().first().css("background-size","100%");
+        $(this).children().first().animate({
+            backgroundSize: "100%"
+        }, 100);
     });
     $(".regular-article").hover(function () {
-        $(this).children().first().css("background-size","110%");
+        $(this).children().first().animate({
+            backgroundSize: "120%"
+        }, 200)
     }, function () {
-        $(this).children().first().css("background-size","");
+        $(this).children().first().animate({
+            backgroundSize: "100%"
+        }, 200);
     });
 
 
