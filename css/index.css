@@ -437,6 +437,8 @@ img{
 .weather {
     position: relative;
     top: 10px;
+    width: 250px;
+    left: 10px;
 }
 
 .tags {

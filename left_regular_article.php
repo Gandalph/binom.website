@@ -6,7 +6,7 @@
             <div class="r-article-image" data-post-id="<?= $row['id'] ?>"></div>
             <div class="right-side">
                 <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>
-                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
+                <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?><span class="post-category"><?= $row['name'] ?></span></p>
                 <div style="height: 164px; overflow: hidden;" data-post-id="<?= $row['id'] ?>"><!-- TODO style prebaciti u css -->
                     <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                         <?php

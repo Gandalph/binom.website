@@ -5,7 +5,7 @@
             <div class="article-image-black"></div>
             <div class="article-image" data-post-id="<?= $row['id'] ?>"></div>
             <h1 class="caption" title="<?= $row['post_title'] ?>"><?php echo $row['post_title']; $i++; ?></h1>
-            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?></p>
+            <p class="article-info"><?= $row['display_name'] ?> / <?= $row['date'] ?> /  <?= $row['comment_count'] ?> коментар<?php if( $row['comment_count'] != 1 ) echo 'a'; ?><span class="post-category"><?= $row['name'] ?></span></p>
             <div style="height: 75px; overflow: hidden;"><!-- TODO style ubaciti u css -->
                 <p class="piece-of-text" data-post-id="<?= $row['id'] ?>">
                     <?php

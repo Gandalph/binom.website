@@ -43,7 +43,7 @@
                     </script>
                 </div>
                 <img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300px" style="float:left;" >
-                <div id="logo">
+                <div id="logo" onclick="window.location = 'index.php'">
 
                 </div><!-- end logo -->
                 <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300px">
