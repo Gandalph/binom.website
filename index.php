@@ -185,11 +185,15 @@
                 <?php include("recent_article.php"); ?>
                 <div id="regular-article-wrapper">
                     <?php mysqli_data_seek($result, 4); ?>
-                    <?php include("right_regular_article.php"); ?>
-                    <div id="left-regular-article">
+                    <?php include("left_regular_article.php"); ?>
+                    <div id="right-regular-article">
                         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                         <div class="weather">
-                            <span style="display: block !important; width: 268px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.1.13274&bannertypeclick=wu_travel_landmarks2" title="Belgrade, Serbia Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_travel_landmarks2_metric&airportcode=LYBE&ForcedCity=Belgrade&ForcedState=Serbia&wmo=13274&language=EN" alt="Find more about Weather in Belgrade, RB" width="160" /></a></span>
+                            <a href="http://www.accuweather.com/sr/rs/belgrade/298198/weather-forecast/298198" class="aw-widget-legal">
+                                <!--
+                                By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+                                -->
+                            </a><div id="awcc1427565057854" class="aw-widget-current"  data-locationkey="298198" data-unit="c" data-language="sr" data-useip="false" data-uid="awcc1427565057854"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
                         </div>
                     </div>
                 </div><!-- end regular-article-wrapper -->

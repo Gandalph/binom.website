@@ -63,13 +63,14 @@ $(document).ready(function ()
         if($scroll > 301 && fixed_navi == 0) {
             fixed_navi = 1;
             $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","2");
-            $("#nav-wrapper").css("transform","scaleY(0.9)").css("top", "-5px");
+            $("#nav-wrapper").css("transform","scaleY(0.8)").css("top", "-7px");
+            $("#search").css("transform", "scaleY(1.2)");
             $("#slide-down").css("top", "70px");
 			$("main").css("margin-top", "70px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
         }
         else if($scroll < 301 && fixed_navi == 1){
             fixed_navi = 0;
-            $("#nav-wrapper").css("transform", "scale(1.0)");
+            $("#nav-wrapper, #search").css("transform", "scale(1.0)");
             $("#nav-wrapper").css("position","relative").css("top", "0px");
             $("#slide-down").css("top", "70px");
 			$("main").css("margin-top", "0px"); //ubaceno zato sto kad se zalepi gore naw-bar velicina celig maina se smanji za tih 70px
@@ -198,7 +199,7 @@ $(document).ready(function ()
 
     /* margin za post sa strane */
     var height = $(".post-title").height() + 15;
-    $("#postovi-sa-strane").css("margin-top", height + "px");
+    $(".postovi-sa-strane").first().css("margin-top", height + "px");
 
 
 

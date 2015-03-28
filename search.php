@@ -46,7 +46,7 @@
     }
     ?>
         <div id="regular-article-wrapper">
-           <?php include("right_regular_article.php"); ?>
+           <?php include("left_regular_article.php"); ?>
             <div id="left-regular-article">
                 <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
             </div>

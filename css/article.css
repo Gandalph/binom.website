@@ -160,13 +160,13 @@
     top: 30px;
 }
 
-#right-regular-article {
+#left-regular-article {
     float: left;
     width: 630px;
     margin-top: 10px;
 }
 
-#left-regular-article {
+#right-regular-article {
     float: left;
     width: 268px;
     margin-left: 20px;
