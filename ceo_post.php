@@ -19,6 +19,7 @@
 
 
                 if(($row = mysqli_fetch_assoc($result)) != NULL): ?>
+                    <?php $author = $row['display_name']; ?>
                     <h1 class="post-title"><?= $row['post_title'] ?></h1>
                     <?php
                         preg_match_all("/\bhttps:\/\/www.youtube.com\/watch\?v=(\w+)\b/", $row['post_content'], $out);
@@ -38,7 +39,7 @@
                 <br /><br />
             </div><!-- end post -->
             <div id="right-ceo-post">
-                <div id="postovi-sa-strane">
+                <div class="postovi-sa-strane">
                     <p class="postovi-sa-strane-section">Чланци</p>
                     <?php
                     $sql = "select post_title, display_name "
@@ -53,6 +54,25 @@
                         <div class="post-sa-strane">
                             <span class="post-sa-strane-title"><?= $row['post_title'] ?> - </span>
                             <span class="post-sa-strane-author"><?= $row['display_name'] ?></span>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+
+                <div class="postovi-sa-strane">
+                    <p class="postovi-sa-strane-section">Још од аутора</p>
+                    <?php
+                    $sql = "select post_title, display_name "
+                        .  "from wp_posts wp join wp_users wu on wp.post_author = wu.id "
+                        .  "where wp.post_status = 'publish' and post_type = 'post' and display_name = '$author' "
+                        .  "limit 5";
+
+                    $result = mysqli_query($link, $sql);
+
+                    while(($row = mysqli_fetch_assoc($result)) != NULL):
+                        ?>
+                        <div class="post-sa-strane">
+                            <span class="post-sa-strane-title"><?= $row['post_title'] ?></span>
+<!--                            <span class="post-sa-strane-author">--><?//= $row['display_name'] ?><!--</span>-->
                         </div>
                     <?php endwhile; ?>
                 </div>

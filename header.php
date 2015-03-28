@@ -59,10 +59,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">Н</span>асловна</span>
+                                    <span><span class="prvo-slovo"></span>Насловна</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">Н</span>асловна</span>
+                                    <span><span class="prvo-slovo"></span>Насловна</span>
                                 </div>
                             </div>
                         </div>
@@ -71,10 +71,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">В</span>ести</span>
+                                    <span><span class="prvo-slovo"></span>Вести</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">В</span>ести</span>
+                                    <span><span class="prvo-slovo"></span>Вести</span>
                                 </div>
                             </div>
                         </div>
@@ -112,10 +112,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">Г</span>алерија</span>
+                                    <span><span class="prvo-slovo"></span>Галерија</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">Г</span>алерија</span>
+                                    <span><span class="prvo-slovo"></span>Галерија</span>
                                 </div>
                             </div>
                         </div>
@@ -124,10 +124,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">А</span>рхива</span>
+                                    <span><span class="prvo-slovo"></span>Архива</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">А</span>рхива</span>
+                                    <span><span class="prvo-slovo"></span>Архива</span>
                                 </div>
                             </div>
                         </div>
@@ -136,10 +136,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
+                                    <span><span class="prvo-slovo"></span>О нама</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo">О</span> нама</span>
+                                    <span><span class="prvo-slovo"></span>О нама</span>
                                 </div>
                             </div>
                         </div>
