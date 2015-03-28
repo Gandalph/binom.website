@@ -2,6 +2,7 @@
     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
         <article class="regular-article">
             <div class="r-article-image-front" data-post-id="<?= $row['id'] ?>"></div>
+            <div class="r-article-image-black"></div>
             <div class="r-article-image" data-post-id="<?= $row['id'] ?>"></div>
             <div class="right-side">
                 <h1 class="caption" title="<?= $row['post_title'] ?>"><?= $row['post_title'] ?></h1>

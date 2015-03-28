@@ -20,8 +20,8 @@
             ?>
             <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
                 <div class="recent-comment">
-                    <span class="comment-author"><?= $row['comment_author'] ?> <span style="color: white">на</span> <?= $row['post_title'] ?>: </span>
-                    <span class="comment-content" onclick="window.location = 'ceo_post.php?post=<?= $row['comment_post_id'] ?>'"><?= $row['comment_content'] ?></span>
+                    <p class="comment-author"><?= $row['comment_author'] ?></p>
+                    <p class="comment-content" onclick="window.location = 'ceo_post.php?post=<?= $row['comment_post_id'] ?>'"><?= $row['comment_content'] ?></p>
                 </div>
             <?php endwhile; ?>
         </div>
