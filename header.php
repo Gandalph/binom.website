@@ -46,7 +46,7 @@
                 <div id="logo">
 
                 </div><!-- end logo -->
-                <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300px" >
+                <img class="header-image" src="slike/logo-right.jpg" alt="logo-right" height="300px">
             </div><!-- end logo-wrapper -->
         </div><!-- end logo-window -->
         <div id="nav-wrapper">
