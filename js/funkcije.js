@@ -26,6 +26,7 @@ $(document).ready(function ()
             backgroundSize: "100%"
         }, 100);
     });
+
     $(".regular-article").hover(function () {
         $(this).children().first().animate({
             backgroundSize: "120%"
@@ -62,7 +63,7 @@ $(document).ready(function ()
         var $scroll = $(this).scrollTop();
         if($scroll > 301 && fixed_navi == 0) {
             fixed_navi = 1;
-            $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","2");
+            $("#nav-wrapper").css("position","fixed").css("top","0").css("z-index","99");
             $("#nav-wrapper").css("transform","scaleY(0.8)").css("top", "-7px");
             $("#search").css("transform", "scaleY(1.2)");
             $("#slide-down").css("top", "70px");

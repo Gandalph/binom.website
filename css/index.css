@@ -24,7 +24,6 @@ html {
     background-image: url("../slike/nP2IXx0.jpg");
 }
 
-
 #nav-wrapper {
     height: 70px;
     width: 100%;
@@ -34,14 +33,13 @@ html {
 	position: relative;
     background-size: 50%;
     opacity: 1;
-    z-index: 2;
 }
 
 #nav {
     height: 70px;
     width: 950px;
     margin: 0 auto;
-    z-index: 2
+    z-index: 2;
 }
 
 /*.navBar {*/
