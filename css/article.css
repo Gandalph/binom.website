@@ -323,7 +323,8 @@ em {
 
 .binom-wrapper
 {
-    width: 550px;
+    width: 750px;
+/* 	height: 470px; */
     margin: auto;
     font-family: myFont3,serif;
     color: #666666;
