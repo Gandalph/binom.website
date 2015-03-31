@@ -258,24 +258,21 @@ em {
     box-sizing: border-box;
 }
 
-#recent-article-wrapper
-{
+#recent-article-wrapper {
 	height: 420px;
 	overflow: hidden;
-	margin: 0 auto;
-	margin-top: 20px;
+    margin: 20px auto 0;
 }
 
-#recent-article-title
-{
+#recent-article-title {
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: bold;f
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-bottom: 40px; 
 	font-family: 'myFont3', sans-serif;
 	color: #666666;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 .postovi-sa-strane {
