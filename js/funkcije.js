@@ -30,22 +30,22 @@ $(document).ready(function ()
 	/*Uvecanje slike clanaka */
 	$(".recent-article").hover(function () {
         $(this).children().first().animate({
-            backgroundSize: "130%"
-        },{duration: 500,easing: 'easeOutBack' ,queue: false});
+            backgroundSize: "120%"
+        }, {duratino: 150, queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        },{duration: 500,easing: 'easeOutBack' ,queue: false});
+        }, {duration: 150, queue: false});
     });
 
     $(".regular-article").hover(function () {
         $(this).children().first().animate({
-            backgroundSize: "130%"
-        },{ duration: 300, easing: 'easeInOutExpo', queue: false});
+            backgroundSize: "120%"
+        }, {duration: 150, queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        },{ duration: 300, easing: 'easeInOutExpo', queue: false});
+        }, {duration: 150, queue: false});
     });
 
 
