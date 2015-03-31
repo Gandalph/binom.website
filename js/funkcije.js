@@ -20,21 +20,21 @@ $(document).ready(function ()
 	$(".recent-article").hover(function () {
         $(this).children().first().animate({
             backgroundSize: "120%"
-        }, 100)
+        }, {duratino: 150, queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        }, 100);
+        }, {duration: 150, queue: false});
     });
 
     $(".regular-article").hover(function () {
         $(this).children().first().animate({
             backgroundSize: "120%"
-        }, 200)
+        }, {duration: 150, queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        }, 200);
+        }, {duration: 150, queue: false});
     });
 
 
