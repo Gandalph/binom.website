@@ -15,6 +15,7 @@
 		}
     </script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
     <script type="text/javascript" src="js/funkcije.js" ></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
 </head>

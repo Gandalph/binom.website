@@ -4,6 +4,17 @@
 $(document).ready(function () 
 {
 	
+	/* aninmacija koja izbacuje div na kome pise preporucujemo u arhiva.php */
+	$(".issuuembed").on({
+	mouseenter: function (){
+			$(this).parent().siblings(".skrivalica").animate({right: "0px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false})
+		
+	},
+	mouseleave: function () {
+		$(this).parent().siblings(".skrivalica").animate({right: "200px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false})
+	}
+	});
+	
 	/*brisemo one "ruzne" divove koje issuuova skripta sama generise*/
 	/*morali smo da pozivamo kod za brisanje neki duzi vremenski period jer se njihova skripta asinhrono ucitava i ne znamo dak ce tacno biti ucitana*/
 	var intervalId = setInterval( function()

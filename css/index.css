@@ -1,3 +1,4 @@
+/*@import url(http://fonts.googleapis.com/css?family=BenchNine&subset=latin,latin-ext);*/
 @font-face {
     font-family: myFont;
     src: url("../font/whipsmart_regular/Whipsmart.ttf");
@@ -19,7 +20,8 @@
 }
 
 html {
-    background: #eaeaea url("../slike/swirl_pattern/geometry2/geometry2.png");
+	background-color: #eaeaea;
+    background-image: url("../slike/pozadina1.jpg");
 }
 
 #nav-wrapper {
@@ -111,7 +113,6 @@ main {
     box-sizing: border-box;
     padding: 10px;
     float: left;
-    box-shadow: 0 0 5px #d9d9d9;
 }
 
 #slider {
@@ -200,7 +201,7 @@ main {
     z-index: 1;
     left: 0;
     top: 70px;
-    box-shadow: 0 4px 2px #FA3333;
+    box-shadow: 0px 4px 2px #FA3333;
 }
 
 
@@ -326,11 +327,12 @@ input[type=text], input[type=email] {
 footer {
     width: 950px;
     height: 350px;
+    background-color: #3F3E3C;
     padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
     clear: left;
-    background: #3F3E3C url("../slike/glass-black.png");
+    background-image: url("../slike/glass-black.png");
 }
 
 .footer-div {
@@ -475,10 +477,11 @@ img{
     clear: both;
     height: 50px;
     width: 950px;
-    background: #ffffff url("../slike/footer_3.png");
+    background-image: url("../slike/footer_3.png");
     background-size: 50%;
     position: relative;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 #logo-window {
