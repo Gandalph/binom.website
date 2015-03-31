@@ -6,13 +6,17 @@ $(document).ready(function ()
 	
 	/* aninmacija koja izbacuje div na kome pise preporucujemo u arhiva.php */
 	$(".issuuembed").on({
-	mouseenter: function (){
-			$(this).parent().siblings(".skrivalica").animate({right: "0px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
-		
-	},
-	mouseleave: function () {
-		$(this).parent().siblings(".skrivalica").animate({right: "200px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
-	}
+        mouseenter: function (){
+                $(this).parent().siblings(".skrivalica").animate({
+                    right: "0px"
+                }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
+
+        },
+        mouseleave: function () {
+            $(this).parent().siblings(".skrivalica").animate({
+                right: "200px"
+            }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
+        }
 	});
 	
 	/*brisemo one "ruzne" divove koje issuuova skripta sama generise*/
@@ -169,14 +173,13 @@ $(document).ready(function ()
 	{
 		$(".recent-article:eq(" + i + ")").fadeOut();
 	}
-		var articlesId = setInterval("promeni()",10000);
+	var articlesId = setInterval("promeni()",10000);
 	
 	
 	/* zaustavlja se menjanje recent articlesa kad je mish pozicioniran na neki od njih */
 	$(".recent-article").on({
         mouseenter: function (){
 			    clearInterval(articlesId);
-			
         },
         mouseleave: function () {
 			articlesId = setInterval("promeni()",10000);
@@ -239,7 +242,7 @@ $(document).ready(function ()
             }
         }
     });
-	
+
 }); /***** end document.ready ******/
 
 

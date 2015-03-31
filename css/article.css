@@ -197,6 +197,7 @@
 .read-more {
     cursor: pointer;
     background-color: #FF3333;
+    transition: background-color 1s;
     height: 25px;
     width: 120px;
     text-align: center;
@@ -212,7 +213,7 @@
 }
 
 .read-more:hover {
-    background-color: #DD3333;
+    background-color: #5883E7;
 }
 
 #post {
@@ -266,12 +267,14 @@ em {
 
 #recent-article-title {
 	font-size: 30px;
-	font-weight: bold;f
-	margin-top: 40px;
-	margin-left: 20px;
-	margin-bottom: 40px; 
+	/*font-weight: bold;*/
+    margin: 40px 16px 0 20px;
 	font-family: 'myFont3', sans-serif;
-	color: #666666;
+	/*color: #666666;*/
+    color: #ffffff;
+    background-color: #5883E7;
+    box-sizing: border-box;
+    padding: 10px;
 	/*display: inline-block;*/
 }
 

@@ -20,8 +20,7 @@
 }
 
 html {
-	background-color: #eaeaea;
-    background-image: url("../slike/r1.jpg");
+    background: #eaeaea url("../slike/r1.jpg");
 }
 
 #nav-wrapper {
