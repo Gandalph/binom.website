@@ -7,11 +7,11 @@ $(document).ready(function ()
 	/* aninmacija koja izbacuje div na kome pise preporucujemo u arhiva.php */
 	$(".issuuembed").on({
 	mouseenter: function (){
-			$(this).parent().siblings(".skrivalica").animate({right: "0px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false})
+			$(this).parent().siblings(".skrivalica").animate({right: "0px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
 		
 	},
 	mouseleave: function () {
-		$(this).parent().siblings(".skrivalica").animate({right: "200px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false})
+		$(this).parent().siblings(".skrivalica").animate({right: "200px"}, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
 	}
 	});
 	
@@ -30,22 +30,22 @@ $(document).ready(function ()
 	/*Uvecanje slike clanaka */
 	$(".recent-article").hover(function () {
         $(this).children().first().animate({
-            backgroundSize: "120%"
-        }, {duratino: 150, queue: false})
+            backgroundSize: "130%"
+        }, {duration: 500,easing: 'easeOutBack' ,queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        }, {duration: 150, queue: false});
+        }, {duration: 500,easing: 'easeOutBack' ,queue: false});
     });
 
     $(".regular-article").hover(function () {
         $(this).children().first().animate({
-            backgroundSize: "120%"
-        }, {duration: 150, queue: false})
+            backgroundSize: "130%"
+        }, {duration: 500,easing: 'easeOutBack' ,queue: false})
     }, function () {
         $(this).children().first().animate({
             backgroundSize: "100%"
-        }, {duration: 150, queue: false});
+        }, {duration: 500,easing: 'easeOutBack' ,queue: false});
     });
 
 
