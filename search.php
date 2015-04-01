@@ -11,9 +11,12 @@
         $terms = explode(" ", mysqli_real_escape_string($link, $_GET['term']));
 
 
-        $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count "
+        $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count, name "
             . "from wp_posts p join wp_users u on p.post_author = u.id "
-            . "where post_status = 'publish' and post_type = 'post' and post_content like \"%$terms[0]%\" ";
+            . "join wp_term_relationships wtr on wtr.object_id = p.id "
+            . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
+            . "join wp_terms wt on wtt.term_id = wt.term_id "
+            . "where post_status = 'publish' and post_type = 'post' and post_content like \"%$terms[0]%\" and wtt.taxonomy = 'category'";
         for ($i = 1; $i < count($terms); $i++) {
             $sql .= "or post_content like \"%$terms[$i]%\" ";
         }
