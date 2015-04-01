@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/article.css" />
     <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-    <script>
-		if (navigator.userAgent.toLowerCase().match('chrome'))
-		{
-			document.write('<link rel="stylesheet" type="text/css" href="css/chrome.css"/>');
-		}
-    </script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
+    <script>
+        if (navigator.userAgent.toLowerCase().match('chrome'))
+        {
+            document.write('<link rel="stylesheet" type="text/css" href="css/chrome.css"/>');
+        }
+    </script>
     <script type="text/javascript" src="js/funkcije.js" ></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
     <script type="text/javascript" src="js/spin.min.js"></script>

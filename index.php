@@ -180,7 +180,7 @@
             <div id="recent-article-title">
                 <span> НАЈНОВИЈИ ЧЛАНЦИ </span>
             </div>
-            <div style="width:585px; height:5px; border-bottom: 2px solid #666; display: inline-block; "></div> <!--TODO PREBACI U CSS -->
+<!--            <div style="width:585px; height:5px; border-bottom: 2px solid #666; display: inline-block; "></div> <!--TODO PREBACI U CSS -->
             <div id="article-wrapper">
                 <?php include("recent_article.php"); ?>
                 <div id="regular-article-wrapper">
@@ -197,5 +197,6 @@
                         </div>
                     </div>
                 </div><!-- end regular-article-wrapper -->
+
             </div><!-- end article-wrapper -->
  <?php include("footer.php"); ?>

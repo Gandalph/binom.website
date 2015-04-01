@@ -20,8 +20,7 @@
 }
 
 html {
-	background-color: #eaeaea;
-    background-image: url("../slike/r1.jpg");
+    background: #eaeaea url("../slike/r1.jpg");
 }
 
 #nav-wrapper {
@@ -417,6 +416,7 @@ img{
     float: left;
     height: 20px;
     background-color: #191919;
+    transition: background 0.5s;
     width: auto;
     font-family: 'myFont3', sans-serif;
     font-size: 14px;
