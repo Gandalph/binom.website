@@ -66,7 +66,7 @@
 }
 
 .caption {
-    font-family: 'myFontSerbian', sans-serif;
+    font-family: 'myFont3', sans-serif;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -132,9 +132,8 @@
 .r-article-image-black {
     height: 180px;
     width: 270px;
-    background: no-repeat center;
     background-size: 100%;
-    background-color: #000000;
+    background: #000000 no-repeat center;
     position: absolute;
     bottom: 93px;
     opacity: 0.8;
@@ -197,7 +196,7 @@
 .read-more {
     cursor: pointer;
     background-color: #FF3333;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     height: 25px;
     width: 120px;
     text-align: center;
@@ -276,6 +275,18 @@ em {
     box-sizing: border-box;
     padding: 10px;
 	/*display: inline-block;*/
+}
+
+#regular-article-title {
+    font-size: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #5883E7;
+    font-family: 'myFont3', sans-serif;
+    width: 640px;
+    margin-bottom: 30px;
+
 }
 
 .postovi-sa-strane {

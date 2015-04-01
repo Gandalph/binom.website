@@ -1,4 +1,7 @@
 <div id="left-regular-article">
+    <div id="regular-article-title">
+        <span> ЧЛАНЦИ </span>
+    </div>
     <?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
         <article class="regular-article">
             <div class="r-article-image-front" data-post-id="<?= $row['id'] ?>"></div>

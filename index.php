@@ -197,5 +197,6 @@
                         </div>
                     </div>
                 </div><!-- end regular-article-wrapper -->
+
             </div><!-- end article-wrapper -->
  <?php include("footer.php"); ?>
