@@ -18,8 +18,17 @@
     <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
     <script type="text/javascript" src="js/funkcije.js" ></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="js/spin.min.js"></script>
+
 </head>
 <body>
+
+<div id="loadingDiv" style=" display:none; z-index:100; position:fixed; top: 0px; left: 0px; width:100%; height:100%; background-color: gray; opacity:0.7; " ></div>
+<script>
+
+</script>
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -35,14 +44,14 @@
     <header>
         <div id="logo-window">
             <div id="logo-wrapper">
-                <div id="date">
+<!--                <div id="date">
                     <script>
                         var date = new Date();
                         var monthNames = ["Јануар", "фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"];
 
                         $("#date").text(date.getDate() + ". " + monthNames[date.getMonth()] + " " + date.getFullYear());
                     </script>
-                </div>
+                </div>-->
                 <img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300px" style="float:left;" >
                 <div id="logo" onclick="window.location = 'index.php'">
 
@@ -98,9 +107,6 @@
                                         $row = mysqli_fetch_assoc($result);
                                         echo "<div class='categories' onclick=\"window.location='./search.php?kategorija=$row[name]'\">$row[name]</div>";
                                     }
-                                    //echo "<script>margin($count)</script>";
-
-
                                     disconnect();
                                     ?>
 
