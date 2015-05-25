@@ -42,7 +42,7 @@
                 <div class="postovi-sa-strane">
                     <p class="postovi-sa-strane-section">Чланци</p>
                     <?php
-                    $sql = "select post_title, display_name "
+                    $sql = "select post_title, display_name, wp.id "
                         .  "from wp_posts wp join wp_users wu on wp.post_author = wu.id "
                         .  "where wp.post_status = 'publish' and post_type = 'post'"
                         .  "limit 5";
@@ -52,7 +52,7 @@
                     while(($row = mysqli_fetch_assoc($result)) != NULL):
                     ?>
                         <div class="post-sa-strane">
-                            <span class="post-sa-strane-title"><?= $row['post_title'] ?> - </span>
+                            <span onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'" class="post-sa-strane-title"><?= $row['post_title'] ?> - </span>
                             <span class="post-sa-strane-author"><?= $row['display_name'] ?></span>
                         </div>
                     <?php endwhile; ?>
@@ -61,7 +61,7 @@
                 <div class="postovi-sa-strane">
                     <p class="postovi-sa-strane-section">Још од аутора</p>
                     <?php
-                    $sql = "select post_title, display_name "
+                    $sql = "select post_title, display_name, wp.id "
                         .  "from wp_posts wp join wp_users wu on wp.post_author = wu.id "
                         .  "where wp.post_status = 'publish' and post_type = 'post' and display_name = '$author' "
                         .  "limit 5";
@@ -71,8 +71,7 @@
                     while(($row = mysqli_fetch_assoc($result)) != NULL):
                         ?>
                         <div class="post-sa-strane">
-                            <span class="post-sa-strane-title"><?= $row['post_title'] ?></span>
-<!--                            <span class="post-sa-strane-author">--><?//= $row['display_name'] ?><!--</span>-->
+                            <span onclick="window.location = 'ceo_post.php?post=<?= $row['id'] ?>'" class="post-sa-strane-title"><?= $row['post_title'] ?></span>
                         </div>
                     <?php endwhile; ?>
                 </div>
