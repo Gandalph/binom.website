@@ -196,7 +196,6 @@ $(document).ready(function ()
             );
         }
     });
-	
 	/*      menjanje recent-postova na neki vremenski period (10sec)      */
 	var i;
 	for(i = 2; i < 4; i++)
@@ -250,6 +249,7 @@ $(document).ready(function ()
 
     /* pomeranje logo slike sa scroll-om */
     $(document).on("scroll", function() {
+        console.log($(this).scrollTop());
         var move = $(this).scrollTop() / 2;
         $("#logo-wrapper").css("top", move);
     });
@@ -347,6 +347,9 @@ function searchTag(tagDiv) {
 }
 
 
+function changePage(page) {
+    window.location = '../index.php?page_num='+page;
+}
 
 
 

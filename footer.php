@@ -1,5 +1,21 @@
     </main>
 </div><!-- end content-wrapper -->
+<div id="pages"> 
+    <div id="page_container">
+        <?php 
+            $i = 1; 
+            $post_num = mysqli_fetch_row($post_num)[0];
+            $post_num = intval($post_num);
+            $post_num = ceil(($post_num-4)/5);
+            while($i <= $post_num): ?>
+                <?php if($i == $temp): ?>
+                    <div class="page_num current" onclick="changePage(<?=$i?>)"><?= $i++ ?></div><!-- end page_num -->
+                <?php else: ?>
+                    <div class="page_num" onclick="window.location='index.php?page_num=<?=$i?>'"><?= $i++ ?></div><!-- end page_num -->
+                <?php endif; ?>
+            <?php endwhile; ?>
+    </div><!-- end page_container -->
+</div><!-- end pages -->
 <div id="zgrade"></div>
 <footer>
     <div class="footer-div">
