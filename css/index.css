@@ -20,7 +20,7 @@
 }
 
 html {
-    background: #eaeaea url("../slike/r1.jpg");
+    background: #eaeaea; /*url("../slike/r1.jpg");*/
 }
 
 #nav-wrapper {
@@ -471,6 +471,41 @@ img{
     font-family: 'myFont3', sans-serif;
     text-align: right;
 	box-sizing: border-box;
+}
+
+#pages {
+	width: 950px;
+	height: 50px;
+	margin: 0 auto;
+	clear: both;
+	position: relative; 
+}
+
+#page_container {
+    float: left;
+    position: relative;
+    left: 50%;
+    width: fit-content;
+    height: 50px;
+}
+
+.current {
+    background-color: #FA3333;
+    color: white !important;
+    height: 50px;
+}
+
+.page_num {
+    position: relative;
+	height: 50px;
+	width: 15px;
+	color: #FA3333;
+	font-weight: bold;
+	line-height: 50px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+    float: left;
 }
 
 #zgrade {

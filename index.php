@@ -1,4 +1,5 @@
 <?php include("./baza/db.inc"); ?>
+<?php include("./baza/functionPHP/functions.php"); ?>
 <?php include("header.php") ?>
 
     <div id="content-wrapper">
@@ -170,8 +171,8 @@
                 . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
                 . "join wp_terms wt on wtt.term_id = wt.term_id "
                 . "where post_status = 'publish' and post_type = 'post' and wtt.taxonomy = 'category' "
-                . "order by post_date desc";
-                //. "limit 4";
+                . "order by post_date desc "
+                . "limit 4";
 
             $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
@@ -181,25 +182,39 @@
             <div id="recent-article-title">
                 <span> НАЈНОВИЈИ ЧЛАНЦИ </span>
             </div>
-<!--            <div style="width:585px; height:5px; border-bottom: 2px solid #666; display: inline-block; "></div> <!--TODO PREBACI U CSS -->
             <div id="article-wrapper">
                 <?php include("recent_article.php"); ?>
                 <div id="regular-article-wrapper">
                     <?php 
+                    $temp = 1;
+                    if(!isset($_GET['page_num'])) {
+                        $post_start = 4;
+                    }
+                    else {
+                        echo "<script> console.log($(document).height()); window.scrollTo(0, 1320); </script>";
+                        $temp = $_GET['page_num'];
+                        if($temp == 1) {
+                            $post_start = 4;
+                        }
+                        else {
+                            $post_start = $temp*4 + ($temp - 1);
+                        }
+                    }
 
-                    // $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count, name "
-                    //     . "from wp_posts p join wp_users u on p.post_author = u.id "
-                    //     . "join wp_term_relationships wtr on wtr.object_id = p.id "
-                    //     . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
-                    //     . "join wp_terms wt on wtt.term_id = wt.term_id "
-                    //     . "where post_status = 'publish' and post_type = 'post' and wtt.taxonomy = 'category' "
-                    //     . "order by post_date desc "
-                    //     . "limit 4, 100";
+                    $sql = "select p.id, post_title, post_content, date(post_date) as date, display_name, post_name, comment_count, name "
+                        . "from wp_posts p join wp_users u on p.post_author = u.id "
+                        . "join wp_term_relationships wtr on wtr.object_id = p.id "
+                        . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
+                        . "join wp_terms wt on wtt.term_id = wt.term_id "
+                        . "where post_status = 'publish' and post_type = 'post' and wtt.taxonomy = 'category' "
+                        . "order by post_date desc "
+                        . "limit $post_start,5";
 
-                    //$result = mysqli_query($link, $sql); 
+                    
+                    $result = mysqli_query($link, $sql); 
 
-                    mysqli_data_seek($result, 4); 
-
+                    $sql = "select count(*) from wp_posts where post_status='publish'";
+                    $post_num = mysqli_query($link, $sql);
                     ?>
                     <?php include("left_regular_article.php"); ?>
                     <div id="right-regular-article">
