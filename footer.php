@@ -4,10 +4,10 @@
     <div id="page_container">
         <?php 
             $i = 1; 
+            debug_to_console($_SERVER['HTTP_HOST']);
             $post_num = mysqli_fetch_row($post_num)[0];
             $post_num = intval($post_num);
             $post_num = ceil(($post_num)/5);
-            debug_to_console('post num '.$post_num);
             while($i <= $post_num): ?>
                 <?php  if($i == $temp): ?>
                     <div class="page_num current" onclick="window.location= window.location.pathname.split('/')[2] + '?page_num=<?=$i?><?= $window_location ?>'"><?= $i++ ?></div><!-- end page_num -->

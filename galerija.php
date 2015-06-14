@@ -1,5 +1,6 @@
 
 <?php include("./baza/db.inc"); ?>
+<?php include("baza/functionPHP/functions.php"); ?>
 <?php include("header.php"); ?>
 
 	<style>
