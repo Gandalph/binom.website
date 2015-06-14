@@ -2,6 +2,7 @@
 </div><!-- end content-wrapper -->
 <div id="pages"> 
     <div id="page_container">
+                <script>console.log(window.location.pathname.split('/')[2] + '?page_num=<?=$i?>')</script>
         <?php 
             $i = 1; 
             $post_num = mysqli_fetch_row($post_num)[0];
@@ -11,7 +12,7 @@
                 <?php if($i == $temp): ?>
                     <div class="page_num current" onclick="changePage(<?=$i?>)"><?= $i++ ?></div><!-- end page_num -->
                 <?php else: ?>
-                    <div class="page_num" onclick="window.location='index.php?page_num=<?=$i?>'"><?= $i++ ?></div><!-- end page_num -->
+                    <div class="page_num" onclick="window.location= window.location.pathname.split('/')[2] + '?page_num=<?=$i?>'"><?= $i++ ?></div><!-- end page_num -->
                 <?php endif; ?>
             <?php endwhile; ?>
     </div><!-- end page_container -->

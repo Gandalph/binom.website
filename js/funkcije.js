@@ -3,7 +3,6 @@
  */
 $(document).ready(function () 
 {
-	
 	/*namestamo visinu loading diva*/
 // 	var documentHeight = $(document).height();
 // 	$("#loadingDiv").css("height", documentHeight );
@@ -84,6 +83,7 @@ $(document).ready(function ()
 
 
 
+
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
         $(this).children().first().children().first().animate({top: "0px"}, {duration: 200, queue: false});
@@ -99,7 +99,6 @@ $(document).ready(function ()
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");
     
-
     /* Fixed navigacioni bar */
     var fixed_navi = 0;
 
@@ -168,8 +167,6 @@ $(document).ready(function ()
     $("#slide-top").click(function() {
         $("html, body").animate({scrollTop: $("html").position().top}, "easeInQuart");
     });
-
-
 
     /* Animacija za padajuci meni navBara */
 	var testTimeout = 0;
@@ -249,7 +246,6 @@ $(document).ready(function ()
 
     /* pomeranje logo slike sa scroll-om */
     $(document).on("scroll", function() {
-        console.log($(this).scrollTop());
         var move = $(this).scrollTop() / 2;
         $("#logo-wrapper").css("top", move);
     });
