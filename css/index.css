@@ -479,6 +479,7 @@ img{
 	margin: 0 auto;
 	clear: both;
 	position: relative; 
+    background-color: white;
 }
 
 #page_container {

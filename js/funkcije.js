@@ -343,9 +343,6 @@ function searchTag(tagDiv) {
 }
 
 
-function changePage(page) {
-    window.location = '../index.php?page_num='+page;
-}
 
 
 
