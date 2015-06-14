@@ -191,7 +191,6 @@
                         $post_start = 4;
                     }
                     else {
-                        echo "<script> console.log($(document).height()); window.scrollTo(0, 1320); </script>";
                         $temp = $_GET['page_num'];
                         if($temp == 1) {
                             $post_start = 4;
@@ -216,6 +215,9 @@
                     $sql = "select count(*) from wp_posts where post_status='publish'";
                     $post_num = mysqli_query($link, $sql);
                     ?>
+                    <div id="regular-article-title">
+                        <span> ЧЛАНЦИ </span>
+                    </div>
                     <?php include("left_regular_article.php"); ?>
                     <div id="right-regular-article">
                         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>

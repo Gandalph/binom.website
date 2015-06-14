@@ -4,6 +4,17 @@
 <div id="content-wrapper">
     <main id="content">
     <?php
+$temp = 1;
+    if(!isset($_GET['page_num'])) {
+        $post_start = 1;
+    }
+    else {
+        $temp = $_GET['page_num'];
+        if($temp == 1)
+            $post_start = 1;
+        else 
+            $post_start = $temp*5;
+    }
 
     global $link;
     connect();
@@ -31,7 +42,8 @@
             . "join wp_term_relationships wtr on p.id = wtr.object_id "
             . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
             . "join wp_terms wt on wt.term_id = wtt.term_id "
-            . "where post_status = 'publish' and post_type = 'post' and wt.name = '$tag' and wtt.taxonomy = 'post_tag' ";
+            . "where post_status = 'publish' and post_type = 'post' and wt.name = '$tag' and wtt.taxonomy = 'post_tag' "
+            . "limit $post_start, 5";
 
         $result = mysqli_query($link, $sql);
     }
@@ -43,12 +55,22 @@
             . "join wp_term_relationships wtr on p.id = wtr.object_id "
             . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
             . "join wp_terms wt on wt.term_id = wtt.term_id "
-            . "where post_status = 'publish' and post_type = 'post' and wt.name = '$kategorija' and wtt.taxonomy = 'category' ";
+            . "where post_status = 'publish' and post_type = 'post' and wt.name = '$kategorija' and wtt.taxonomy = 'category' "
+            . "limit $post_start, 5";
 
         $result = mysqli_query($link, $sql);
+        $sql = "select count(*) from wp_posts where post_status='publish'";
+        $post_num = mysqli_query($link, $sql);
     }
     ?>
         <div id="regular-article-wrapper">
+    <?php 
+        if(!isset($_GET['kategorija'])) { 
+            echo '<div id="regular-article-title">';
+                echo "<span>РЕЗУЛТАТ ПРЕТРАГЕ</span>"; 
+            echo "</div>";
+        }    
+    ?>
            <?php include("left_regular_article.php"); ?>
             <div id="right-regular-article">
                 <div class="fb-like-box" data-href="https://www.facebook.com/pages/Бином/793414824064109" data-width="268" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
