@@ -5,7 +5,7 @@
  */
 function connect() {
     global $link;
-    $link = mysqli_connect("localhost", "root", "", "wordpress");
+    $link = mysqli_connect("localhost", "root", "multitouch", "wordpress");
     mysqli_query($link, "SET NAMES UTF8");
 }
 
