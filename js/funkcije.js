@@ -37,13 +37,13 @@ $(document).ready(function ()
 	$(".issuuembed").on({
         mouseenter: function (){
                 $(this).parent().siblings(".skrivalica").animate({
-                    right: "0px"
+                    right: "-80px"
                 }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
 
         },
         mouseleave: function () {
             $(this).parent().siblings(".skrivalica").animate({
-                right: "200px"
+                right: "250px"
             }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
         }
 	});

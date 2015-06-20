@@ -32,12 +32,13 @@
 					<script type="text/javascript" src="//e.issuu.com/embed.js" async="false"></script>
 				</div>
 				<div class="skrivalica" style=" width:200px; height:349px;  float:left; position:relative; right: 200px;  " >
-					 <ul>
-						
-						<li>Coffee</li>
-						<li>Tea</li>
-						<li>Milk</li>
-					</ul> 
+					<h2 style="font-size:20px; position:relative; right:20px; ">Издвајамо: </h2>
+					</br>
+					 <ol style=" list-style-type: disc;" >
+						<li>Неки чланак стр.22</li>
+						<li>Неки чланак стр.42</li>
+						<li>Неки чланак стр.56</li>
+					</ol> 
 				</div>
 				<div style="clear:both;" ></div>
 			</div>
@@ -49,12 +50,13 @@
 					<script type="text/javascript" src="//e.issuu.com/embed.js" async="false"></script>
 				</div>
 				<div class="skrivalica" style=" width:200px; height:349px;  float:left; position:relative; right: 200px;  " >
-					 <ul>
-						
-						<li>Coffee</li>
-						<li>Tea</li>
-						<li>Milk</li>
-					</ul> 
+					 <h2 style="font-size:20px; position:relative; right:20px; ">Издвајамо: </h2>
+					</br>
+					 <ol style=" list-style-type: disc;" >
+						<li>Неки чланак стр.22</li>
+						<li>Неки чланак стр.42</li>
+						<li>Неки чланак стр.56</li>
+					</ol> 
 				</div>
 				<div style="clear:both;" ></div>
 			</div>
@@ -67,12 +69,13 @@
 					<script type="text/javascript" src="//e.issuu.com/embed.js" async="false"></script>
 				</div>
 				<div class="skrivalica" style=" width:200px; height:349px;  float:left; position:relative; right: 200px;  " >
-					 <ul>
-						
-						<li>Coffee</li>
-						<li>Tea</li>
-						<li>Milk</li>
-					</ul> 
+					 <h2 style="font-size:20px; position:relative; right:20px; ">Издвајамо: </h2>
+					</br>
+					 <ol style=" list-style-type: disc;" >
+						<li>Неки чланак стр.22</li>
+						<li>Неки чланак стр.42</li>
+						<li>Неки чланак стр.56</li>
+					</ol> 
 				</div>
 				<div style="clear:both;" ></div>
 			</div>

@@ -155,7 +155,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = 'onama.php'" >
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
