@@ -107,7 +107,7 @@
 
                         </div>
                     </li>
-                    <li class="navBar-link" onclick="window.location = 'galerija.php'">
+                    <li class="navBar-link" onclick="window.location = 'intervjui.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link" onclick="window.location = 'galerija.php'">
+                    <li class="navBar-link" onclick="window.location = 'reportaze.php'">
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
