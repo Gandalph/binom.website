@@ -30,7 +30,8 @@
     padding: 20px;
     overflow: hidden;
     float: left;
-    background-color: #f5f5f5;
+    /* prethodna boja background-color: #f5f5f5; */
+    background-color: #d8cfc0;
     margin-right: 15px;
 	margin-left: 20px;
     height: 420px;
@@ -274,7 +275,8 @@ em {
 	font-family: 'myFont3', sans-serif;
 	/*color: #666666;*/
     color: #ffffff;
-    background-color: #5883E7;
+    /*prethodna boja background-color: #5883E7;*/
+    background-color: #d8cfc0;
     box-sizing: border-box;
     padding: 10px;
 	/*display: inline-block;*/

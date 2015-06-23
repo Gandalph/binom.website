@@ -20,16 +20,19 @@
 }
 
 html {
-    background: #eaeaea; /*url("../slike/r1.jpg");*/
+    
+/*     background: #eaeaea;  */
+    background-image: url("../slike/patern.jpg");
 }
 
 #nav-wrapper {
     height: 70px;
     width: 100%;
-	background-color: #FF3333;
+    /*prethodne boje background-color: #FF3333;  */
+    background-color: #811a2f;
     color: white;
-	/*box-shadow: 0px 4px 2px #FF3333;*/
-	position: relative;
+    /*box-shadow: 0px 4px 2px #FF3333;*/
+    position: relative;
     background-size: 50%;
     opacity: 1;
 }
@@ -75,13 +78,15 @@ html {
 
 .roll-up {
     height: 40px;
-    color: 	#f2f2f2;
+    /*prethodne boje color: #f2f2f2; */
+    color: #c43d44;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #003333;
+    /*prethodne boje color: #003333; */
+    color: #eae0ce;
     line-height: 40px;
 }
 
@@ -108,7 +113,8 @@ header {
 
 main {
     width: 950px;
-    background-color: #ffffff;
+    /*prethodne boje background-color: #d8cfc0;*/
+    background-color: #d8cfc0;
     box-sizing: border-box;
     padding: 10px;
     float: left;
@@ -153,7 +159,8 @@ main {
     width: 190px;
     position: relative;
     left: 200px;
-    background-color: #FF3333;
+    /*prethodne boje background-color: #FF3333; */
+    background-color: #811a2f;
     color: #003333;
 }
 
@@ -193,14 +200,15 @@ main {
 }
 
 #slide-down {
-    background-color:  #FF3333;
+    background-color:  #811a2f;
     height: 0;
     width: 100%;
     position: absolute;
     z-index: 1;
     left: 0;
     top: 70px;
-    box-shadow: 0px 4px 2px #FA3333;
+    /*prethodna boja* box-shadow: 0px 4px 2px #FA3333; */
+    box-shadow: 0px 4px 2px #811a2f;
 }
 
 
@@ -210,25 +218,25 @@ main {
 }
 
 #categories {
-	border-top: 2px solid white;
-	width: 100%;
-	height: 70px;
-	opacity: 0;
- 	display: none;
-	z-index: 1;
-	position: absolute;
-	color: #ffffff;
+    border-top: 2px solid white;
+    width: 100%;
+    height: 70px;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    color: #ffffff;
 }
 .categories {
-	margin-top: 20px;
-	margin-left: 0;
-	height: 30px;
-	width: 130px;
-	float: left;
-	text-align: center;
+    margin-top: 20px;
+    margin-left: 0;
+    height: 30px;
+    width: 130px;
+    float: left;
+    text-align: center;
 }
 .categories:hover {
-	cursor:pointer;
+    cursor:pointer;
     color: #303030;
 }
 
