@@ -179,6 +179,10 @@ main {
     background-size: 70%;
     cursor: pointer;
 }
+#search:hover
+{
+    background: url("../slike/lupa1.jpg") no-repeat center;
+}
 
 #search:focus {
     outline-width: 0;
