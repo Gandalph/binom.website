@@ -94,8 +94,8 @@ $(document).ready(function ()
     /* Border na navigaciji */
     var $nav_window = $(".navBar-window");
     //prethodna boja: $nav_window.first().css({"border-left": "1px solid #003333"});
-    $nav_window.first().css({"border-left": "1px solid #eae0ce"});
-    $nav_window.css({"border-right": "1px solid #eae0ce"});
+    $nav_window.first().css({"border-left": "1px solid #73706a"});
+    $nav_window.css({"border-right": "1px solid #73706a"});
 
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");

@@ -487,7 +487,8 @@ img{
 	margin: 0 auto;
 	clear: both;
 	position: relative; 
-    background-color: #FFFFFF;
+/*prethodne boje     background-color: #FFFFFF; */
+        background-color: #d8cfc0;
 }
 
 #page_container {
@@ -528,7 +529,8 @@ img{
     background-size: 50%;
     position: relative;
     margin: 0 auto;
-    background-color: #ffffff;
+/*prethodne boje     background-color: #ffffff; */
+    background-color: #d8cfc0;
 }
 
 #logo-window {
