@@ -499,8 +499,10 @@ img{
 }
 
 .current {
-    background-color: #FA3333;
-    color: white !important;
+/*prethodna boja     background-color: #FA3333; */
+    background-color:   #ecdfd0;
+/*prethodna boja     color: white !important; */
+    color: #c03c3c !important;
     height: 50px;
 }
 
@@ -508,8 +510,9 @@ img{
     position: relative;
 	height: 50px;
 	width: 15px;
-	color: #FA3333;
-	font-weight: bold;
+/*#ecdfd0 	color: #FA3333; */
+	color: #9e9696;
+        font-weight: bold;
 	line-height: 50px;
 	margin: 0 auto;
 	text-align: center;
