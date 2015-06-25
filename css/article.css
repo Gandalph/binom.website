@@ -199,7 +199,8 @@
 
 .read-more {
     cursor: pointer;
-    background-color: #FF3333;
+/*prethodna boja     background-color: #FF3333; */
+    background-color: #b97777;
     transition: background-color 0.5s;
     height: 25px;
     width: 120px;
@@ -207,7 +208,8 @@
     box-sizing: border-box;
     padding: 2px;
     line-height: 21px;
-    color: #ffffff;
+/*prethodna boja     color: #ffffff; */
+    color: #fffcfc;
     position: relative;
     top: 10px;
     float: right;
@@ -216,7 +218,8 @@
 }
 
 .read-more:hover {
-    background-color: #B61D1D;
+/*prethodna boja     background-color: #B61D1D; */
+        background-color: #811a2f;
 }
 
 #post {
