@@ -22,7 +22,8 @@
 html {
     
 /*     background: #eaeaea;  */
-    background-image: url("../slike/patern.jpg");
+/*prethodna slika     background-image: url("../slike/patern.jpg"); */
+    background-image: url("../slike/probajManji.jpg"); 
 }
 
 #nav-wrapper {
@@ -170,7 +171,8 @@ main {
 
 #search {
     float: left;
-    background: url("../ikonice/magnifier.png") no-repeat center;
+/*prethodna lupa     background: url("../ikonice/magnifier.png") no-repeat center; */
+    background: url("../ikonice/lupa2.jpg") no-repeat center;
     width: 45px;
     height: 45px;
     border: none;
