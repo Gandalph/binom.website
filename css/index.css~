@@ -20,19 +20,16 @@
 }
 
 html {
-    
-/*     background: #eaeaea;  */
-    background-image: url("../slike/patern.jpg");
+    background: #eaeaea; /*url("../slike/r1.jpg");*/
 }
 
 #nav-wrapper {
     height: 70px;
     width: 100%;
-    /*prethodne boje background-color: #FF3333;  */
-    background-color: #811a2f;
+	background-color: #FF3333;
     color: white;
-    /*box-shadow: 0px 4px 2px #FF3333;*/
-    position: relative;
+	/*box-shadow: 0px 4px 2px #FF3333;*/
+	position: relative;
     background-size: 50%;
     opacity: 1;
 }
@@ -78,15 +75,13 @@ html {
 
 .roll-up {
     height: 40px;
-    /*prethodne boje color: #f2f2f2; */
-    color: #c43d44;
+    color: 	#f2f2f2;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    /*prethodne boje color: #003333; */
-    color: #eae0ce;
+    color: #003333;
     line-height: 40px;
 }
 
@@ -113,8 +108,7 @@ header {
 
 main {
     width: 950px;
-    /*prethodne boje background-color: #d8cfc0;*/
-    background-color: #d8cfc0;
+    background-color: #ffffff;
     box-sizing: border-box;
     padding: 10px;
     float: left;
@@ -159,8 +153,7 @@ main {
     width: 190px;
     position: relative;
     left: 200px;
-    /*prethodne boje background-color: #FF3333; */
-    background-color: #811a2f;
+    background-color: #FF3333;
     color: #003333;
 }
 
@@ -200,15 +193,14 @@ main {
 }
 
 #slide-down {
-    background-color:  #811a2f;
+    background-color:  #FF3333;
     height: 0;
     width: 100%;
     position: absolute;
     z-index: 1;
     left: 0;
     top: 70px;
-    /*prethodna boja* box-shadow: 0px 4px 2px #FA3333; */
-    box-shadow: 0px 4px 2px #811a2f;
+    box-shadow: 0px 4px 2px #FA3333;
 }
 
 
@@ -218,25 +210,25 @@ main {
 }
 
 #categories {
-    border-top: 2px solid white;
-    width: 100%;
-    height: 70px;
-    opacity: 0;
-    display: none;
-    z-index: 1;
-    position: absolute;
-    color: #ffffff;
+	border-top: 2px solid white;
+	width: 100%;
+	height: 70px;
+	opacity: 0;
+ 	display: none;
+	z-index: 1;
+	position: absolute;
+	color: #ffffff;
 }
 .categories {
-    margin-top: 20px;
-    margin-left: 0;
-    height: 30px;
-    width: 130px;
-    float: left;
-    text-align: center;
+	margin-top: 20px;
+	margin-left: 0;
+	height: 30px;
+	width: 130px;
+	float: left;
+	text-align: center;
 }
 .categories:hover {
-    cursor:pointer;
+	cursor:pointer;
     color: #303030;
 }
 
@@ -559,7 +551,7 @@ img{
 	display:	inline-block;
 	width:	150px;
 	height:	50px;
-	background-image: url("../slike/instaNew.jpg");
+	background-image: url("../slike/instaCela.jpg");
 	background-size: 150px 50px;
 	text-align: center;
 	line-height: 50px;
@@ -580,9 +572,3 @@ img{
 	display: inline-block;
 }
 
-.skrivalica
-{
-    font-size: 15px;
-    text-align: left;
-    list-style-type: disc;
-}

@@ -44,14 +44,6 @@
     <header>
         <div id="logo-window">
             <div id="logo-wrapper">
-<!--                <div id="date">
-                    <script>
-                        var date = new Date();
-                        var monthNames = ["Јануар", "фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"];
-
-                        $("#date").text(date.getDate() + ". " + monthNames[date.getMonth()] + " " + date.getFullYear());
-                    </script>
-                </div>-->
                 <img class="header-image" src="slike/logo-left.jpg" alt="logo-left" height="300px" style="float:left;" >
                 <div id="logo" onclick="window.location = 'index.php'">
 
@@ -69,10 +61,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo"></span>Насловна</span>
+                                    <span><span class="prvo-slovo"></span>Почетна</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo"></span>Насловна</span>
+                                    <span><span class="prvo-slovo"></span>Почетна</span>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +73,10 @@
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">
-                                    <span><span class="prvo-slovo"></span>Вести</span>
+                                    <span><span class="prvo-slovo"></span>Чланци</span>
                                 </div>
                                 <div class="roll-down">
-                                    <span><span class="prvo-slovo"></span>Вести</span>
+                                    <span><span class="prvo-slovo"></span>Чланци</span>
                                 </div>
                             </div>
                         </div>
@@ -115,6 +107,30 @@
 
                         </div>
                     </li>
+                    <li class="navBar-link" onclick="window.location = 'intervjui.php'">
+                        <div class="navBar-window">
+                            <div class="roll">
+                                <div class="roll-up">
+                                    <span><span class="prvo-slovo"></span>Интервјуи</span>
+                                </div>
+                                <div class="roll-down">
+                                    <span><span class="prvo-slovo"></span>Интервјуи</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navBar-link" onclick="window.location = 'reportaze.php'">
+                        <div class="navBar-window">
+                            <div class="roll">
+                                <div class="roll-up">
+                                    <span><span class="prvo-slovo"></span>Репортаже</span>
+                                </div>
+                                <div class="roll-down">
+                                    <span><span class="prvo-slovo"></span>Репортаже</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <li class="navBar-link" onclick="window.location = 'galerija.php'">
                         <div class="navBar-window">
                             <div class="roll">
@@ -139,7 +155,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navBar-link">
+                    <li class="navBar-link" onclick="window.location = 'onama.php'" >
                         <div class="navBar-window">
                             <div class="roll">
                                 <div class="roll-up">

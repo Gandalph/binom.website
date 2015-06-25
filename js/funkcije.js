@@ -3,7 +3,6 @@
  */
 $(document).ready(function () 
 {
-	
 	/*namestamo visinu loading diva*/
 // 	var documentHeight = $(document).height();
 // 	$("#loadingDiv").css("height", documentHeight );
@@ -38,13 +37,13 @@ $(document).ready(function ()
 	$(".issuuembed").on({
         mouseenter: function (){
                 $(this).parent().siblings(".skrivalica").animate({
-                    right: "0px"
+                    right: "-80px"
                 }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
 
         },
         mouseleave: function () {
             $(this).parent().siblings(".skrivalica").animate({
-                right: "200px"
+                right: "250px"
             }, {duration: 1000,easing: 'easeOutElastic' ,queue: false});
         }
 	});
@@ -84,6 +83,7 @@ $(document).ready(function ()
 
 
 
+
     /* Animacija navigacije */
     $(".navBar-link").hover(function () {
         $(this).children().first().children().first().animate({top: "0px"}, {duration: 200, queue: false});
@@ -93,13 +93,13 @@ $(document).ready(function ()
 
     /* Border na navigaciji */
     var $nav_window = $(".navBar-window");
-    $nav_window.first().css({"border-left": "1px solid #003333"});
-    $nav_window.css({"border-right": "1px solid #003333"});
+    //prethodna boja: $nav_window.first().css({"border-left": "1px solid #003333"});
+    $nav_window.first().css({"border-left": "1px solid #eae0ce"});
+    $nav_window.css({"border-right": "1px solid #eae0ce"});
 
     /* Margina last footer-div */
     $(".footer-div").last().css("margin", "0");
     
-
     /* Fixed navigacioni bar */
     var fixed_navi = 0;
 
@@ -169,8 +169,6 @@ $(document).ready(function ()
         $("html, body").animate({scrollTop: $("html").position().top}, "easeInQuart");
     });
 
-
-
     /* Animacija za padajuci meni navBara */
 	var testTimeout = 0;
 	$(".navBar-link").first().next().on({
@@ -196,7 +194,6 @@ $(document).ready(function ()
             );
         }
     });
-	
 	/*      menjanje recent-postova na neki vremenski period (10sec)      */
 	var i;
 	for(i = 2; i < 4; i++)
