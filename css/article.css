@@ -282,17 +282,18 @@ em {
 }
 
 #recent-article-title {
-	font-size: 30px;
-	/*font-weight: bold;*/
+    font-size: 30px;
+    /*font-weight: bold;*/
     margin: 40px 16px 0 20px;
-	font-family: 'myFont3', sans-serif;
-	/*color: #666666;*/
+    font-family: 'myFont3', sans-serif;
+    /*color: #666666;*/
     color: #ffffff;
     /*prethodna boja background-color: #5883E7;*/
     background-color: #8f817e;
     box-sizing: border-box;
     padding: 10px;
-	/*display: inline-block;*/
+    /*display: inline-block;*/
+    opacity: 0.24;
 }
 
 #regular-article-title {
