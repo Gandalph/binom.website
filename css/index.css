@@ -23,7 +23,7 @@ html {
     
 /*     background: #eaeaea;  */
 /*prethodna slika     background-image: url("../slike/patern.jpg"); */
-    background-image: url("../slike/probajNajmanji.jpg"); 
+    background-image: url("../slike/pozadina1.jpg"); 
     
 }
 
@@ -163,7 +163,7 @@ main {
     left: 200px;
     /*prethodne boje background-color: #FF3333; */
     background-color: #811a2f;
-    color: #003333;
+    color: #ffffff;
 }
 
 #search-field:focus {
