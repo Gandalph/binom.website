@@ -212,7 +212,7 @@ main {
 
 #slide-down {
 /*     background-color:  #811a2f; */
-    background-color: rgba(216, 207, 192, 0.5);
+    background-color: rgba(216, 207, 192);
     height: 0;
     width: 100%;
     position: absolute;
