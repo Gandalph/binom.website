@@ -154,7 +154,7 @@ main {
 #search-field {
     float: left;
     border: none;
-    border-bottom: 2px solid #73706a;
+    border-bottom: 2px solid #d8cfc0;
     padding: 5px 2px;
     font-size: 16px;
     margin-left: 15px;
@@ -198,15 +198,16 @@ main {
     position: fixed;
     top: 80%;
     right: -60px;
-    opacity: 0.8;
+/*     opacity: 0.8; */
     font-size: 40px;
     cursor: pointer;
     text-align: center;
-    background-image: url("../slike/strelica.png");
+    background-image: url("../slike/strelica1.png");
     background-size: 100%;
 }
 #slide-top:hover {
-    opacity:1;
+/*     opacity:1; */
+    background-image: url("../slike/strelica2.png");
 }
 
 #slide-down {
