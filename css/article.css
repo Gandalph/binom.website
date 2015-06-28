@@ -49,7 +49,9 @@
     height: 175px;
     width: 390px;
     background-size: 100%;
-    background-color: #000000;
+/*     prethodna boja background-color: #000000; */
+    background-color: #cec6c6;
+
     opacity: 0.8;
     position: absolute;
     bottom: 225px;
@@ -75,12 +77,15 @@
     height: 49px;
     overflow: hidden;
     margin-top: 5px;
-	text-transform: uppercase;
+    text-transform: uppercase;
     cursor: pointer;
+/*     dodata boja */
+    color: #595050;
 }
 
 .caption:hover {
-    color: #FF3333;
+/*     prethodna boja color: #FF3333; */
+    color: #b72108;
 }
 
 .article-info {
@@ -88,8 +93,11 @@
     font-size: 10px;
     margin-bottom: 15px;
     /*border-bottom: 1px solid #808080;*/
-    border-top: 1px solid #808080;
+/*     prethodna boja border-top: 1px solid #808080; */
+    border-top: 1px solid #cc1d1d;
     padding: 5px 0;
+/*     dodata boja */
+    color:  #847b78;
 }
 
 .post-category {
@@ -106,6 +114,8 @@
     line-height: 19px;
     height: 150px;
     overflow: hidden;
+/*     dodata boja */
+    color: #504b4b;
 }
 
 .regular-article {
@@ -279,7 +289,7 @@ em {
 	/*color: #666666;*/
     color: #ffffff;
     /*prethodna boja background-color: #5883E7;*/
-    background-color: #d8cfc0;
+    background-color: #8f817e;
     box-sizing: border-box;
     padding: 10px;
 	/*display: inline-block;*/
