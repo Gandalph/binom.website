@@ -211,7 +211,8 @@ main {
 }
 
 #slide-down {
-    background-color:  #811a2f;
+/*     background-color:  #811a2f; */
+    background-color: rgba(216, 207, 192, 0.5);
     height: 0;
     width: 100%;
     position: absolute;
@@ -236,7 +237,7 @@ main {
     display: none;
     z-index: 1;
     position: absolute;
-    color: #ffffff;
+    color: #fffdfd;
 }
 .categories {
     margin-top: 20px;
@@ -248,7 +249,7 @@ main {
 }
 .categories:hover {
     cursor:pointer;
-    color: #303030;
+    color: #c43d44;
 }
 
 #comments {
