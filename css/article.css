@@ -289,7 +289,8 @@ em {
     /*color: #666666;*/
     color: #ffffff;
     /*prethodna boja background-color: #5883E7;*/
-    background-color: #8f817e;
+/*     background-color: #8f817e; */
+    background-color: rgba(143, 129, 126, 0.24);
     box-sizing: border-box;
     padding: 10px;
     /*display: inline-block;*/
