@@ -317,17 +317,20 @@ em {
     margin-bottom: 20px;
     background-size: 100%;
     box-sizing: border-box;
-    background-color: #fafafa;
+/*     prethodna boja background-color: #fafafa; */
+    background-color: #e9e2d7;
     padding: 15px;
     /*background-image: url("../slike/clanci_pozadina.png");*/
 }
 
 .post-sa-strane-title {
     cursor: pointer;
+    color: #847b78;
 }
 
 .post-sa-strane-title:hover {
-    color: #033e9f;
+/*     prethodna boja color: #033e9f; */
+    color: #cc1d1d;
     /*font-weight: bold;*/
 }
 
@@ -341,9 +344,11 @@ em {
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-    border-bottom: 1px solid #033e9f;
+/*     prethodna boja border-bottom: 1px solid #033e9f; */
+    border-bottom: 1px solid #cc1d1d;
     /*border-top: 1px solid black;*/
     padding: 5px 5px 10px 5px;
+    color: #595050;
 }
 
 .post-sa-strane {
