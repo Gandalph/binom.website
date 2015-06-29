@@ -254,7 +254,8 @@ main {
 
 #comments {
     width: 600px;
-    background: #ffffff;
+/*     prethodna boja background: #ffffff; */
+    background: #d8cfc0;
     margin: 0 auto 50px;
     padding: 25px;
     box-sizing: border-box;
@@ -264,7 +265,8 @@ main {
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ff3333;
+/*     prethodna boja border-bottom: 1px solid #ff3333; */
+    border-bottom: 1px solid #cc1d1d;
     box-sizing: border-box;
     padding-bottom: 20px;
     font-size: 13px;
@@ -324,7 +326,8 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #ff3333;
+/*     prethodna boja background-color: #ff3333; */
+    background-color: #811a2f;
     border: 0;
     width: 100%;
 }
@@ -332,7 +335,8 @@ input[type=text], input[type=email] {
 #send:hover {
     border: 0;
     text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #f95635;
+/*     prethodna boja background-color: #f95635; */
+    background-color: #b97777;
 }
 
 .prvo-slovo {
