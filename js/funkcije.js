@@ -97,10 +97,14 @@ $(document).ready(function ()
     $nav_window.first().css({"border-left": "1px solid #73706a"});
     $nav_window.css({"border-right": "1px solid #73706a"});
 
-    /* Margina last footer-div */
+    /* 
+     * Margina last footer-div 
+     */
     $(".footer-div").last().css("margin", "0");
     
-    /* Fixed navigacioni bar */
+    /* 
+     * Fixed navigacioni bar 
+     */
     var fixed_navi = 0;
 
     $(document).on("scroll" ,function()
@@ -124,7 +128,9 @@ $(document).ready(function ()
     });
 
 
-    /* Animacija za search bar */
+    /* 
+     * Animacija za search bar 
+     */
     var indicate = 0;
     $("#search").click(function() {
         if(indicate == 0)
@@ -149,7 +155,9 @@ $(document).ready(function ()
         });
     });
 
-    /* Animacija scroll top */
+    /* 
+     * Animacija scroll top 
+     */
     var slide_right = 0;
     $(document).on("scroll" ,function()
     {
@@ -169,7 +177,9 @@ $(document).ready(function ()
         $("html, body").animate({scrollTop: $("html").position().top}, "easeInQuart");
     });
 
-    /* Animacija za padajuci meni navBara */
+    /* 
+     * Animacija za padajuci meni navBara 
+     */
 	var testTimeout = 0;
 	$(".navBar-link").first().next().on({
         mouseenter: function (){
@@ -194,7 +204,10 @@ $(document).ready(function ()
             );
         }
     });
-	/*      menjanje recent-postova na neki vremenski period (10sec)      */
+
+	/*      
+     * menjanje recent-postova na neki vremenski period (10sec)      
+     */
 	var i;
 	for(i = 2; i < 4; i++)
 	{
@@ -203,7 +216,9 @@ $(document).ready(function ()
 	var articlesId = setInterval("promeni()",10000);
 	
 	
-	/* zaustavlja se menjanje recent articlesa kad je mish pozicioniran na neki od njih */
+    /* 
+     * zaustavlja se menjanje recent articlesa kad je mish pozicioniran na neki od njih 
+     */
 	$(".recent-article").on({
         mouseenter: function (){
 			    clearInterval(articlesId);
@@ -215,9 +230,9 @@ $(document).ready(function ()
 	
 	
 	
-	/*
-	*       pozicioniranje sredisnjeg dela slike headera
-	*/
+   /*
+    * pozicioniranje sredisnjeg dela slike headera
+    */
 	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
 	if($(window).width() % 2 == 1 )
 		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
@@ -238,13 +253,17 @@ $(document).ready(function ()
 
 
 
-    /* margin za post sa strane */
+    /* 
+     * margin za post sa strane 
+     */
     var height = $(".post-title").height() + 15;
     $(".postovi-sa-strane").first().css("margin-top", height + "px");
 
 
 
-    /* pomeranje logo slike sa scroll-om */
+    /* 
+     * pomeranje logo slike sa scroll-om 
+     */
     $(document).on("scroll", function() {
         var move = $(this).scrollTop() / 2;
         $("#logo-wrapper").css("top", move);
