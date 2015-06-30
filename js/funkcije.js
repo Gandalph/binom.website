@@ -218,7 +218,6 @@ $(document).ready(function ()
 	/*
 	*       pozicioniranje sredisnjeg dela slike headera
 	*/
-	
 	$("img:eq(0)").width( ($(window).width()- 950)/2 + "px" );
 	if($(window).width() % 2 == 1 )
 		$("img:eq(1)").width( ($(window).width()- 950)/2 - 0.5 + "px" );
