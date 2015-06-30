@@ -1,5 +1,6 @@
 <?php include("./baza/db.inc"); ?>
 <?php include("./header.php"); ?>
+<?php include("./baza/functionPHP/functions.php"); ?>
 
     <div id="content-wrapper">
         <main id="content">
