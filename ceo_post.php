@@ -120,7 +120,7 @@
                 <?php endwhile; ?>
                 <?php } ?>
                 <div id="comment-replay">
-                    <p>Остави коментар</p>
+                    <p style="color: #595050;">Остави коментар</p>
                     <div id="set-comment">
                         <input type="text" name="name" placeholder="Име*" id="ime"/><br />
                         <input type="email" name="email" placeholder="Емаил*" id="email"/><br />
