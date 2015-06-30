@@ -20,16 +20,21 @@
 }
 
 html {
-    background: #eaeaea; /*url("../slike/r1.jpg");*/
+    
+/*     background: #eaeaea;  */
+/*prethodna slika     background-image: url("../slike/patern.jpg"); */
+    background-image: url("../slike/pozadina2.jpg"); 
+    
 }
 
 #nav-wrapper {
     height: 70px;
     width: 100%;
-	background-color: #FF3333;
+    /*prethodne boje background-color: #FF3333;  */
+    background-color: #811a2f;
     color: white;
-	/*box-shadow: 0px 4px 2px #FF3333;*/
-	position: relative;
+    /*box-shadow: 0px 4px 2px #FF3333;*/
+    position: relative;
     background-size: 50%;
     opacity: 1;
 }
@@ -75,19 +80,21 @@ html {
 
 .roll-up {
     height: 40px;
-    color: 	#f2f2f2;
+    /*prethodne boje color: #f2f2f2; */
+    color: #c43d44;
     line-height: 40px;
 }
 
 .roll-down {
     height: 40px;
-    color: #003333;
+    /*prethodne boje color: #003333; */
+    color: #eae0ce;
     line-height: 40px;
 }
 
 #logo {
 	width: 950px;
-	background: #ffffff url("../slike/zag.jpg") no-repeat left top;
+	background: #ffffff url("../slike/zag5.jpg") no-repeat left top;
 	background-size: 100% 300px;
     height: 300px;
 	float:left;
@@ -108,7 +115,8 @@ header {
 
 main {
     width: 950px;
-    background-color: #ffffff;
+    /*prethodne boje background-color: #d8cfc0;*/
+    background-color: #d8cfc0;
     box-sizing: border-box;
     padding: 10px;
     float: left;
@@ -146,15 +154,16 @@ main {
 #search-field {
     float: left;
     border: none;
-    border-bottom: 2px solid #003333;
+    border-bottom: 2px solid #d8cfc0;
     padding: 5px 2px;
     font-size: 16px;
     margin-left: 15px;
     width: 190px;
     position: relative;
     left: 200px;
-    background-color: #FF3333;
-    color: #003333;
+    /*prethodne boje background-color: #FF3333; */
+    background-color: #811a2f;
+    color: #ffffff;
 }
 
 #search-field:focus {
@@ -163,12 +172,20 @@ main {
 
 #search {
     float: left;
-    background: url("../ikonice/magnifier.png") no-repeat center;
+/*prethodna lupa     background: url("../ikonice/magnifier.png") no-repeat center; */
+    background: url("../slike/lupa2.png") no-repeat center;
     width: 45px;
     height: 45px;
     border: none;
-    background-size: 70%;
+/*     prethodna vrednost background-size: 70%;  */
+    background-size: 80%;
     cursor: pointer;
+}
+#search:hover
+{
+    background: url("../slike/lupa1.png") no-repeat center;
+    /*     prethodna vrednost background-size: 70%;  */
+    background-size: 80%;
 }
 
 #search:focus {
@@ -181,26 +198,29 @@ main {
     position: fixed;
     top: 80%;
     right: -60px;
-    opacity: 0.8;
+/*     opacity: 0.8; */
     font-size: 40px;
     cursor: pointer;
     text-align: center;
-    background-image: url("../ikonice/strelica.png");
+    background-image: url("../slike/strelica1.png");
     background-size: 100%;
 }
 #slide-top:hover {
-    opacity:1;
+/*     opacity:1; */
+    background-image: url("../slike/strelica2.png");
 }
 
 #slide-down {
-    background-color:  #FF3333;
+    background-color:  #811a2f;
+/*     background-color: rgba(216, 207, 192); */
     height: 0;
     width: 100%;
     position: absolute;
     z-index: 1;
     left: 0;
     top: 70px;
-    box-shadow: 0px 4px 2px #FA3333;
+    /*prethodna boja* box-shadow: 0px 4px 2px #FA3333; */
+    box-shadow: 0px 4px 2px #811a2f;
 }
 
 
@@ -210,31 +230,32 @@ main {
 }
 
 #categories {
-	border-top: 2px solid white;
-	width: 100%;
-	height: 70px;
-	opacity: 0;
- 	display: none;
-	z-index: 1;
-	position: absolute;
-	color: #ffffff;
+    border-top: 2px solid white;
+    width: 100%;
+    height: 70px;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    color: #fffdfd;
 }
 .categories {
-	margin-top: 20px;
-	margin-left: 0;
-	height: 30px;
-	width: 130px;
-	float: left;
-	text-align: center;
+    margin-top: 20px;
+    margin-left: 0;
+    height: 30px;
+    width: 130px;
+    float: left;
+    text-align: center;
 }
 .categories:hover {
-	cursor:pointer;
-    color: #303030;
+    cursor:pointer;
+    color: #c43d44;
 }
 
 #comments {
     width: 600px;
-    background: #ffffff;
+/*     prethodna boja background: #ffffff; */
+    background: #d8cfc0;
     margin: 0 auto 50px;
     padding: 25px;
     box-sizing: border-box;
@@ -244,7 +265,8 @@ main {
 
 .comment {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ff3333;
+/*     prethodna boja border-bottom: 1px solid #ff3333; */
+    border-bottom: 1px solid #cc1d1d;
     box-sizing: border-box;
     padding-bottom: 20px;
     font-size: 13px;
@@ -304,7 +326,8 @@ input[type=text], input[type=email] {
     padding: 0 8px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #ff3333;
+/*     prethodna boja background-color: #ff3333; */
+    background-color: #811a2f;
     border: 0;
     width: 100%;
 }
@@ -312,7 +335,8 @@ input[type=text], input[type=email] {
 #send:hover {
     border: 0;
     text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #f95635;
+/*     prethodna boja background-color: #f95635; */
+    background-color: #b97777;
 }
 
 .prvo-slovo {
@@ -479,7 +503,8 @@ img{
 	margin: 0 auto;
 	clear: both;
 	position: relative; 
-    background-color: #FFFFFF;
+/*prethodne boje     background-color: #FFFFFF; */
+        background-color: #d8cfc0;
 }
 
 #page_container {
@@ -491,8 +516,10 @@ img{
 }
 
 .current {
-    background-color: #FA3333;
-    color: white !important;
+/*prethodna boja     background-color: #FA3333; */
+    background-color:   #ecdfd0;
+/*prethodna boja     color: white !important; */
+    color: #c03c3c !important;
     height: 50px;
 }
 
@@ -500,8 +527,9 @@ img{
     position: relative;
 	height: 50px;
 	width: 15px;
-	color: #FA3333;
-	font-weight: bold;
+/*#ecdfd0 	color: #FA3333; */
+	color: #9e9696;
+        font-weight: bold;
 	line-height: 50px;
 	margin: 0 auto;
 	text-align: center;
@@ -517,7 +545,8 @@ img{
     background-size: 50%;
     position: relative;
     margin: 0 auto;
-    background-color: #ffffff;
+/*prethodne boje     background-color: #ffffff; */
+    background-color: #d8cfc0;
 }
 
 #logo-window {

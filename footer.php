@@ -10,9 +10,9 @@
             $post_num = ceil(($post_num)/5);
             while($i <= $post_num): ?>
                 <?php  if($i == $temp): ?>
-                    <div class="page_num current" onclick="window.location= window.location.pathname.split('/')[2] + '?page_num=<?=$i?><?= $window_location ?>'"><?= $i++ ?></div><!-- end page_num -->
+                    <div class="page_num current" onclick="window.location= window.location.pathname.split('/')[1] + '?page_num=<?=$i?><?= $window_location ?>'"><?= $i++ ?></div><!-- end page_num -->
                 <?php else: ?>
-                    <div class="page_num" onclick="window.location= window.location.pathname.split('/')[2] + '?page_num=<?=$i?><?= $window_location ?>'"><?= $i++ ?></div><!-- end page_num -->
+                    <div class="page_num" onclick="window.location= window.location.pathname.split('/')[1] + '?page_num=<?=$i?><?= $window_location ?>'"><?= $i++ ?></div><!-- end page_num -->
                 <?php endif; ?>
             <?php endwhile; ?>
     </div><!-- end page_container -->
