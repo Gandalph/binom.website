@@ -245,11 +245,8 @@ $(document).ready(function ()
 		$("img:eq(1)").width( ($(window).width()- 950)/2 + "px" );
 		
 		
-		if($("header").height() > 500)
-		{
-			$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );
-		}
-	});
+        if($("header").height() > 500)         {
+$("img:eq(1)").width( ($(window).width()- 950)/2 - 1 + "px" );         }     });
 
 
 
@@ -312,32 +309,30 @@ function setComment(commentForm, postId) {
     var email = $cf.find("#email");
     var commentContent = $cf.find("#comment-content");
 
-    Date.prototype.today = function () {
-        return (this.getFullYear() + "-" + (((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-" + ((this.getDate() < 10)?"0":"") + this.getDate());
-    };
-    Date.prototype.timeNow = function () {
-        return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
-    };
+    if(ime.val() != "" && email.val() != "" && commentContent.val() != "") {
 
-    var currentDate = new Date();
-    currentDate = currentDate.today() + " " + currentDate.timeNow();
+        Date.prototype.today = function () {
+            return (this.getFullYear() + "-" + (((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-" + ((this.getDate() < 10)?"0":"") + this.getDate());
+        };
+        Date.prototype.timeNow = function () {
+            return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+        };
 
-    $.post(
-        "comment_post.php",
-        {author: ime.val(), email: email.val(), commentContent: commentContent.val(), postId: postId, date: currentDate},
-        function(data) {
-            ime.val("");
-            email.val("");
-            commentContent.val("");
-            location.reload();
-        }
-    );
+        var currentDate = new Date();
+        currentDate = currentDate.today() + " " + currentDate.timeNow();
 
-
-
-	
+        $.post(
+            "comment_post.php",
+            {author: ime.val(), email: email.val(), commentContent: commentContent.val(), postId: postId, date: currentDate},
+            function(data) {
+                ime.val("");
+                email.val("");
+                commentContent.val("");
+                location.reload();
+            }
+        );
+    }
 }
-
 
 /* Proverava da li je search prazan */
 function checkSearch() {

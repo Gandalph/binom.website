@@ -123,8 +123,8 @@
                 <div id="comment-replay">
                     <p style="color: #595050;">Остави коментар</p>
                     <div id="set-comment">
-                        <input type="text" name="name" placeholder="Име*" id="ime"/><br />
-                        <input type="email" name="email" placeholder="Емаил*" id="email"/><br />
+                        <input type="text" name="name" placeholder="Име*" id="ime" required><br />
+                        <input type="email" name="email" placeholder="Емаил*" id="email" required/><br />
                         <textarea id="comment-content"></textarea><br />
                         <button id="send" onclick="setComment(this.parentNode, <?= $post ?>)">Постави коментар</button>
                 </div>
