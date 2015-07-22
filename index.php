@@ -170,7 +170,7 @@
                 . "join wp_term_relationships wtr on wtr.object_id = p.id "
                 . "join wp_term_taxonomy wtt on wtr.term_taxonomy_id = wtt.term_taxonomy_id "
                 . "join wp_terms wt on wtt.term_id = wt.term_id "
-                . "where post_status = 'publish' and post_type = 'post' and wtt.taxonomy = 'category' "
+                . "where post_status = 'publish' and post_type = 'post' and wtt.taxonomy = 'category' wt.name != 'Intervju' and wt.name != 'Reportaza' "
                 . "order by post_date desc "
                 . "limit 4";
 
