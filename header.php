@@ -22,6 +22,11 @@
 
 </head>
 <body>
+<script type="text/javascript">
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location = "/mobilni";
+}
+</script>
 
 <div id="loadingDiv" style=" display:none; z-index:100; position:fixed; top: 0px; left: 0px; width:100%; height:100%; background-color: gray; opacity:0.7; " ></div>
 <script>

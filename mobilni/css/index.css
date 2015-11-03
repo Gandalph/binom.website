@@ -1,0 +1,307 @@
+@font-face {
+	src: url("segoeui.ttf");
+    font-family: "serbianFont";
+}
+
+html {
+	background-color: #D8CFC0;
+	font-family: "Droid Sans", sans-serif
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+header {
+    overflow: hidden;
+}
+
+.nav-bar {
+	width: 100%;
+	background-color: #000000;
+	padding: 10px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+.nav-icon {
+	width: 30px;
+	cursor: pointer;
+}
+
+.search-icon {
+	width: 30px;
+	margin-right: 0;
+	margin-top: 2px;
+	float: right;
+	position: relative;
+}
+
+.search-icon-submit {
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: #000000;
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	top: 6px;
+	background-image: url("../images/search-icon.png");
+	background-size: 30px;
+	display: none;
+}
+
+.nav-search {
+	position: fixed;
+	background-color: #000000;
+	width: 100%;
+	padding: 20px 5px;
+	top: -22px;
+	z-index: 1;
+}
+
+.cancel {
+	width: 30px;
+	float: left;
+	margin-right: 15px;
+	position: relative;
+	top: 3px;
+	
+}
+
+.search-field {
+	float: left;
+	width: calc(100% - 105px);
+	height: 25px;
+	text-decoration: none;
+	border: none;
+	/*box-sizing: border-box;*/
+	padding: 5px 5px;
+    font-family: "serbianFont", sans-serif;
+}
+
+.content {
+	width: 100%;
+	float: left;
+}
+
+.recent-articles {
+	float: left;
+	padding: 10px 5px 10px 10px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.recent-article {
+	float: left;
+	margin-right: 5px;
+	width: 48.3%;
+	background-color: #E9E2D7;
+	padding: 15px;
+	box-sizing: border-box;
+	pointer: cursor;
+}
+
+.recent-article:last-child {
+	float: right;
+}
+
+.background-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.image-window-recent {
+	overflow: hidden;
+	height: 100px;
+	background-color: #aaaaaa;
+}
+
+.regular-articles {
+	float: left;
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+.regular-article {
+	float: left;
+	background-color: #E9E2D7;
+	padding: 5px;
+	margin-top: 8px;
+	height: 150px;
+	width: 100%;
+}
+
+.image-window-regular {
+	position: relative;
+	top: 20px;
+	overflow: hidden;
+	height: 120px;
+	float: left;
+	width: 33%;
+	background-color: #aaaaaa;
+	background-position: center;
+}
+
+.regular-post {
+	float: right;
+	width: 66%;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+
+.post-title {
+	margin-top: 5px;
+	font-weight: bold;
+	text-align: center;
+	height: 32px;
+	overflow: hidden;
+    font-family: "serbianFont", sans-serif;
+}
+
+.post-text {
+	margin-top: 15px;
+	font-size: 14px;
+	height: 84px;
+	overflow: hidden;
+    font-family: "serbianFont", sans-serif;
+}
+
+.nav-categories {
+	position: absolute;
+	background-color: #000000;
+	color: #ffffff;
+	width: 200px;
+	font-size: 24px;
+	left: -200px;
+	transition: 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.categorie {
+	padding: 8px 15px 10px 15px;
+	cursor: pointer;
+	border-bottom: 1px solid #333333;
+    font-family: "serbianFont", sans-serif;
+}
+
+.categorie:active {
+	background-color: #222222;
+}
+
+.nav-categories h1 {
+	padding: 20px 10px;
+	border-bottom: 1px solid #333333;
+    font-family: "serbianFont", sans-serif;
+}
+
+.post {
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.video-full {
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+.aligncenter {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 5px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 
+}
+
+.post-title-full {
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed black;
+	padding-bottom: 15px;
+    font-family: "serbianFont", sans-serif;
+}
+
+.pages {
+	width: 100%;
+	height: 100px;
+	float: left;
+	position: relative;
+	padding: 0 10px;
+	margin-top: 5px;
+	box-sizing: border-box;
+	text-align: center;
+    font-family: "serbianFont", sans-serif;
+	font-size: 14px;
+}
+
+.arrow-page {
+	float: right;
+	padding: 15px 10px;
+	border: 2px solid #aaaaaa;
+	background-color: #E9E2D7;
+	text-align: center;
+}
+
+.arrow-page:first-child {
+	float: left;
+}
+
+.header-img {
+    background-image: url('../images/zag5.jpg');
+	background-size: cover;
+	height: 160px;
+	background-position: top left;
+	width: 100%;
+	position: relative;
+	margin-top: 52.5px;
+}
+
+.current {
+    float: left;
+	padding: 15px 10px;
+	font-size: 24px;
+	position: relative;
+	text-align: center;
+}
+
+.empty-result {
+	background-color: #E9E2D7;
+	box-sizing: border-box;
+	padding: 20px;
+    font-family: "serbianFont", sans-serif;
+	
+}
+
+footer {
+	background-color: #000000;
+	height: 40px;
+	position: relative;
+	float: left;
+	width: 100%;
+	bottom: 0px;
+}
+
+footer p {
+	font-family: "serbianFont", sans-serif;
+	color: white;
+	font-weight: 600;
+	line-height: 3;
+	text-align: center;
+	font-size: 11px;
+}

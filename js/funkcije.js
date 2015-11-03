@@ -67,7 +67,7 @@ $(document).ready(function ()
         }, {duration: 500,easing: 'easeOutBack' ,queue: false})
     }, function () {
         $(this).children().first().animate({
-            backgroundSize: "100%"
+            backgroundSize: "120%"
         }, {duration: 500,easing: 'easeOutBack' ,queue: false});
     });
 
@@ -77,7 +77,7 @@ $(document).ready(function ()
         }, {duration: 500,easing: 'easeOutBack' ,queue: false})
     }, function () {
         $(this).children().first().animate({
-            backgroundSize: "100%"
+            backgroundSize: "120%"
         }, {duration: 500,easing: 'easeOutBack' ,queue: false});
     });
 

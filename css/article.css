@@ -42,7 +42,7 @@
     height: 175px;
     width: 390px;
     background: no-repeat;
-    background-size: 100%;
+    background-size: 120%;
 }
 
 .article-image-black {
@@ -61,7 +61,7 @@
     height: 175px;
     width: 390px;
     background: no-repeat center;
-    background-size: 100%;
+    background-size: 120%;
     position: absolute;
     bottom: 240px;
     left: 30px;
@@ -140,7 +140,7 @@
     /*position: relative;*/
     /*top: 45px;*/
     background: no-repeat center;
-    background-size: 100%;
+    background-size: 120%;
 }
 
 .r-article-image-black {
@@ -157,7 +157,7 @@
     height: 180px;
     width: 270px;
     background: no-repeat center;
-    background-size: 100%;
+    background-size: 120%;
     position: absolute;
     bottom: 105px;
     left: 30px;
