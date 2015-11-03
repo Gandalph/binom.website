@@ -5,9 +5,9 @@
  */
 function connect() {
     global $link;
-//     $link = mysqli_connect("localhost", "root", "kloki1313", "baza");
+    $link = mysqli_connect("localhost", "root", "kloki1313", "baza"); 
 //     $link = mysqli_connect("localhost", "root", "multitouch", "wordpress");
-    $link = mysqli_connect("alas", "mi11322", "multitouch", "mi11322");
+//     $link = mysqli_connect("alas", "mi11322", "multitouch", "mi11322");
     mysqli_query($link, "SET NAMES UTF8");
 }
 
