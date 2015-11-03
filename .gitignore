@@ -1,3 +1,4 @@
+baza/*
 .idea/
 arhiva/
 *.swp
@@ -5,4 +6,3 @@ delovisajta/
 tinymce/
 wordpress/
 kontrolna-tabla/
-baza/db.inc
