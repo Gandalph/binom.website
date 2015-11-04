@@ -74,7 +74,7 @@
 	    }
     	?>
     	<?php while(($row = mysqli_fetch_assoc($result)) != NULL): ?>
-		<div class="regular-article">
+        <div class="regular-article" onclick="window.location = 'ceo_post.php?post_id=<?= $row['id'] ?>'">
 			<div class="image-window-regular background-image" data-post-id="<?= $row['id']; ?>">
 			</div>
 			<div class="regular-post">
