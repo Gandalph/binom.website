@@ -36,7 +36,6 @@ $(document).ready(function () {
 	if((page_num+1) > page_max || page_max == 0)
 		$(".arrow-page").last().css({"visibility" : "hidden"});
 
-
 	$(".search-icon").on("click", function () {
 		$(".nav-search").animate({
 			top : 51,
@@ -70,7 +69,10 @@ $(document).ready(function () {
     
     $(window).scroll(function () {
         $(".header-img").css({"top" : ($(window).scrollTop() / 2) + "px" });
-    })
+    });
+
+    $(".empty-result[data-page-max='0']").hide();
+
 
 });
 
