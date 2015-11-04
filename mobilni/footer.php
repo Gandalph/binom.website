@@ -6,7 +6,8 @@
         ?>
         
         <?php
-            if($n == 0) {
+            $match_found = preg_match("/search/i", $_SERVER['REQUEST_URI']);
+            if($n == 0 && $match_found) {
                 echo "<div class=\"empty-result page-num\" data-page-max=\"0\">"
                         ."<p>Нема пронађених чланака</p>"
                     ."</div>";

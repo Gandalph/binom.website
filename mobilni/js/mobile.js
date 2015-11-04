@@ -71,9 +71,6 @@ $(document).ready(function () {
         $(".header-img").css({"top" : ($(window).scrollTop() / 2) + "px" });
     });
 
-    if(!location.pathname.contains("search"))
-	    $(".empty-result[data-page-max='0']").hide();
-
 
 });
 
